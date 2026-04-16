@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | AI駆動開発者 & UXアドボケイト</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">NAME<span>.</span></a>
+            </div>
+            <nav class="main-nav" aria-label="メインナビゲーション">
+                <ul class="nav-links">
+                    <li><a href="index.html">ホーム</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="projects.html" class="active">プロジェクト</a></li>
+                    <li><a href="cv.html">履歴書</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switch">
+                <a href="../projects.html" class="lang-btn">EN</a>
+                <span class="separator">|</span>
+                <a href="projects.html" class="lang-btn active">JP</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container">
+                <h1 class="hero-title">実績・プロジェクト</h1>
+                <p class="hero-description">高いアクセシビリティ基準とAIを活用したワークフローに焦点を当てた実績集です。</p>
+            </div>
+        </section>
+
+        <section class="projects-grid">
+            <div class="container">
+                <!-- プロジェクト 1 -->
+                <article class="project-card">
+                    <div class="project-info">
+                        <p class="hero-label">Webアプリケーション</p>
+                        <h2 class="project-name">アクセシブルなECインターフェース</h2>
+                        <p class="project-desc">スクリーンリーダーやキーボード操作に完全対応した、WCAG 2.1準拠のショッピング体験。すべてのユーザーが障壁なく利用できる設計です。</p>
+                        <ul class="tech-tags">
+                            <li>React</li>
+                            <li>Aria-Live</li>
+                            <li>Tailwind CSS</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">詳細を見る</a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="image-placeholder">プロジェクトのスクリーンショット</div>
+                    </div>
+                </article>
+
+                <!-- プロジェクト 2 -->
+                <article class="project-card reversed">
+                    <div class="project-info">
+                        <p class="hero-label">AI統合</p>
+                        <h2 class="project-name">スマート・コンテンツ・オプティマイザー</h2>
+                        <p class="project-desc">AIを活用して画像から代替テキストを自動生成し、SEOとアクセシビリティを同時に向上させるツール。開発効率を劇的に改善します。</p>
+                        <ul class="tech-tags">
+                            <li>Node.js</li>
+                            <li>Gemini API</li>
+                            <li>Python</li>
+                        </ul>
+                        <div class="project-links">
+                            <a href="#" class="btn btn-outline">GitHubで見る</a>
+                        </div>
+                    </div>
+                    <div class="project-visual">
+                        <div class="image-placeholder">プロジェクトのスクリーンショット</div>
+                    </div>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        /* プロジェクトページ専用スタイル（style.cssに移動してもOK） */
+        .projects-grid { padding: 60px 0; }
+        .project-card {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+            margin-bottom: 100px;
+        }
+        .project-card.reversed { direction: rtl; }
+        .project-card.reversed .project-info { direction: ltr; }
+        
+        .project-name { font-size: 2rem; margin: 1rem 0; font-weight: 400; }
+        .project-desc { color: var(--color-gray-dark); margin-bottom: 1.5rem; }
+        
+        .tech-tags {
+            list-style: none;
+            display: flex;
+            gap: 1rem;
+            margin-bottom: 2rem;
+            font-size: 0.85rem;
+            color: var(--color-silver);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .image-placeholder {
+            background: var(--color-gray-light);
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--color-silver);
+            border: 1px solid #eee;
+        }
+
+        @media (max-width: 768px) {
+            .project-card, .project-card.reversed {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                direction: ltr;
+            }
+        }
+    </style>
+</body>
+</html>

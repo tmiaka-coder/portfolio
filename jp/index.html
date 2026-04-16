@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ポートフォリオ | AI駆動開発者 & UXアドボケイト</title>
+    <!-- 共通CSSへのパスを親ディレクトリに設定 -->
+    <link rel="stylesheet" href="../style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- アクセシビリティ: メインコンテンツへスキップ -->
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">NAME<span>.</span></a>
+            </div>
+            
+            <nav class="main-nav" aria-label="メインナビゲーション">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">ホーム</a></li>
+                    <li><a href="projects.html">プロジェクト</a></li>
+                    <li><a href="cv.html">履歴書</a></li>
+                    <li><a href="contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+
+            <div class="lang-switch">
+                <!-- 英語版へ戻るリンクを親ディレクトリに設定 -->
+                <a href="../index.html" class="lang-btn" aria-label="Englishに切り替え">EN</a>
+                <span class="separator">|</span>
+                <a href="index.html" class="lang-btn active" aria-label="日本語に切り替え">JP</a>
+            </div>
+
+            <!-- モバイルメニュー用（ロジックはCSS/JSで制御） -->
+            <button class="menu-toggle" aria-label="メニューを開く">
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </button>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- ヒーローセクション -->
+        <section class="hero">
+            <div class="container">
+                <p class="hero-label">ニュージーランドを拠点に活動</p>
+                <h1 class="hero-title">AI-Driven Developer <br>& UX Advocate</h1>
+                <p class="hero-description">
+                    技術的な卓越性と人間中心のデザインを融合させ、
+                    アクセシブルで高性能なWebソリューションを構築します。
+                </p>
+                <div class="hero-cta">
+                    <a href="projects.html" class="btn btn-primary">プロジェクトを見る</a>
+                    <a href="contact.html" class="btn btn-outline">お問い合わせ</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- イントロセクション -->
+        <section class="intro">
+            <div class="container grid-2">
+                <div class="intro-text">
+                    <h2>モダンな解決策を、<br>グローバルな品質で。</h2>
+                </div>
+                <div class="intro-details">
+                    <p>私は効率的なデジタル体験の創出を専門としています。最新のAI技術を取り入れつつ、Webアクセシビリティ（WCAG）とパフォーマンスの最適化を重視し、ニュージーランドのテック業界に求められる、誰もが使いやすいインクルーシブなデザインを提供します。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2024 Your Name. All rights reserved.</p>
+            <div class="social-links">
+                <a href="#" aria-label="LinkedIn">LI</a>
+                <a href="#" aria-label="GitHub">GH</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
