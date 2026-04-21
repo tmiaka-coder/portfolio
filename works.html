@@ -9,25 +9,22 @@
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
-
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">Vicky</a>
-            </div>
-                <nav class="main-nav" aria-label="メインナビゲーション">
-                     <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="works.html" class="active">Works</a></li>
-                        <li><a href="services.html">Service</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </nav>
+            <div class="logo"><a href="index.html">Vicky</a></div>
+            <nav class="main-nav" aria-label="メインナビゲーション">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="works.html" class="active">Works</a></li>
+                    <li><a href="services.html">Service</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
             <div class="lang-switch">
-                <a href="projects.html" class="lang-btn active">EN</a>
+                <a href="works.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="jp/projects.html" class="lang-btn">JP</a>
+                <a href="jp/works.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
@@ -35,107 +32,16 @@
     <main id="main-content">
         <section class="page-header">
             <div class="container">
-                <h1 class="hero-title">Selected Works.</h1>
-                <p class="hero-description">A collection of projects focusing on high accessibility standards and AI-enhanced workflows.</p>
+                <h1 class="hero-title">Selected Works</h1>
+                <p class="hero-description">Showcasing web applications with a focus on accessibility and quality assurance.</p>
             </div>
         </section>
-
-        <section class="projects-grid">
-            <div class="container">
-                <!-- Project Card 1 -->
-                <article class="project-card">
-                    <div class="project-info">
-                        <p class="hero-label">Web Application</p>
-                        <h2 class="project-name">Accessible E-Commerce Interface</h2>
-                        <p class="project-desc">A fully WCAG 2.1 compliant shopping experience designed for screen readers and keyboard navigation.</p>
-                        <ul class="tech-tags">
-                            <li>React</li>
-                            <li>Aria-Live</li>
-                            <li>Tailwind CSS</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-outline">View Case Study</a>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <!-- Placeholder for image -->
-                        <div class="image-placeholder">Project Screenshot</div>
-                    </div>
-                </article>
-
-                <!-- Project Card 2 -->
-                <article class="project-card reversed">
-                    <div class="project-info">
-                        <p class="hero-label">AI Integration</p>
-                        <h2 class="project-name">Smart Content Optimizer</h2>
-                        <p class="project-desc">An AI-driven tool that automatically generates alternative text for images to improve SEO and accessibility.</p>
-                        <ul class="tech-tags">
-                            <li>Node.js</li>
-                            <li>Gemini API</li>
-                            <li>Python</li>
-                        </ul>
-                        <div class="project-links">
-                            <a href="#" class="btn btn-outline">View on GitHub</a>
-                        </div>
-                    </div>
-                    <div class="project-visual">
-                        <div class="image-placeholder">Project Screenshot</div>
-                    </div>
-                </article>
-            </div>
-        </section>
-    </main>
+        </main>
 
     <footer class="site-footer">
         <div class="container footer-container">
             <p class="copyright">&copy; 2026 Vicky. All rights reserved.</p>
         </div>
     </footer>
-
-    <style>
-        /* Projects Page Specific Styles */
-        .projects-grid { padding: 60px 0; }
-        .project-card {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-            margin-bottom: 100px;
-        }
-        .project-card.reversed { direction: rtl; }
-        .project-card.reversed .project-info { direction: ltr; }
-        
-        .project-name { font-size: 2rem; margin: 1rem 0; font-weight: 400; }
-        .project-desc { color: var(--color-gray-dark); margin-bottom: 1.5rem; }
-        
-        .tech-tags {
-            list-style: none;
-            display: flex;
-            gap: 1rem;
-            margin-bottom: 2rem;
-            font-size: 0.85rem;
-            color: var(--color-silver);
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-        
-        .image-placeholder {
-            background: var(--color-gray-light);
-            aspect-ratio: 16/9;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: var(--color-silver);
-            border: 1px solid #eee;
-        }
-
-        @media (max-width: 768px) {
-            .project-card, .project-card.reversed {
-                grid-template-columns: 1fr;
-                gap: 2rem;
-                direction: ltr;
-            }
-        }
-    </style>
 </body>
 </html>
