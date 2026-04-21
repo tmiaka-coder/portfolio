@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services| Vicky</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo">
+                <a href="index.html">Vicky</a>
+            </div>
+                <nav class="main-nav" aria-label="メインナビゲーション">
+                    <ul class="nav-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="works.html">Works</a></li>
+                        <li><a href="services.html" class="active">Service</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            
+            <div class="lang-switch">
+                <a href="profile.html" class="lang-btn active">EN</a>
+                <span class="separator">|</span>
+                <!-- Updated language switch link -->
+                <a href="jp/profile.html" class="lang-btn">JP</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="page-header">
+            <div class="container cv-header-flex">
+                <div>
+                    <h1 class="hero-title">Professional Profile.</h1>
+                    <p class="hero-description">Junior Web Developer and former QA Tester with a focus on Web Accessibility and UX consistency.</p>
+                </div>
+                <div class="download-area">
+                    <a href="assets/Miaka_Taniai_CV_EN.pdf" download class="btn btn-primary download-btn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right: 8px; vertical-align: middle;"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                        Download PDF CV
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="cv-content">
+            <div class="container grid-cv">
+                <!-- Sidebar: Skills & Info -->
+                <aside class="cv-sidebar">
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Technical Skills</h2>
+                        <ul class="skill-list">
+                            <li>HTML5 / CSS3 / JavaScript</li>
+                            <li>PHP / WordPress</li>
+                            <li>PWA (Progressive Web Apps)</li>
+                            <li>MySQL / GitHub / VS Code</li>
+                        </ul>
+                    </div>
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Specialised Skills</h2>
+                        <ul class="skill-list">
+                            <li>Web Accessibility (WCAG)</li>
+                            <li>Prompt Engineering (AI)</li>
+                            <li>Software QA (White-box)</li>
+                        </ul>
+                    </div>
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Languages</h2>
+                        <p>Japanese: Native</p>
+                        <p>English: Conversational (CEFR A2)</p>
+                        <p>Korean: Conversational</p>
+                    </div>
+                </aside>
+
+                <!-- Main: Experience & Education -->
+                <div class="cv-main">
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Summary</h2>
+                        <p>
+                            I am a passionate and detail-oriented Junior Web Developer and former QA Tester with a strong background in customer relations and quality assurance. I specialise in solving complex problems relating to the use of technology, specifically focusing on Web Accessibility and UX/UI consistency. I transitioned to IT after identifying UX flaws in existing systems, aiming to build better, more inclusive solutions for all users.
+                        </p>
+                    </div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Work Experience</h2>
+                        <div class="experience-item">
+                            <h3>QA Tester</h3>
+                            <p class="company-name">Nikken, Japan | July 2024 - Sept 2025</p>
+                            <ul>
+                                <li>Performed white-box testing and database validation for ERP systems (Payroll, HR, and Attendance).</li>
+                                <li>Maintained a high bug-detection rate by analysing database logic and system behaviours.</li>
+                                <li>Recognised for high productivity and proactive team support.</li>
+                            </ul>
+                        </div>
+                        <div class="experience-item">
+                            <h3>Service Advisor / Customer Relations</h3>
+                            <p class="company-name">Nextstage | April 2023 - July 2024</p>
+                            <ul>
+                                <li>Achieved top-tier sales performance in the Kyushu region through data-driven customer analysis.</li>
+                                <li>Process Improvement: Improved the booking system by transitioning from cold-calling to "at-visit" future bookings, significantly increasing reservation rates and reducing administrative load.</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="cv-section">
+                        <h2 class="cv-section-title">Education & Certifications</h2>
+                        <p><strong>Vocational Training in Web Design & Video Processing</strong><br>Intensive study of HTML, CSS, PHP, and WordPress.</p>
+                        <p><strong>Nagasaki Junshin University</strong><br>Bachelor of Data Science (2019-2023)</p>
+                        <p><strong>Certified Business Information Administrator (Advanced)</strong></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Vicky. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <style>
+        .cv-header-flex {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+        .download-area { margin-bottom: 2.5rem; }
+        .grid-cv {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 4rem;
+            padding: 60px 0;
+        }
+        .cv-section { margin-bottom: 3rem; }
+        .cv-section-title {
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--color-silver);
+            border-bottom: 1px solid var(--color-gray-light);
+            padding-bottom: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+        .skill-list { list-style: none; }
+        .skill-list li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .skill-list li::before {
+            content: "—";
+            position: absolute;
+            left: 0;
+            color: var(--color-silver);
+        }
+        .experience-item h3 { font-size: 1.2rem; margin-bottom: 0.2rem; }
+        .company-name { color: var(--color-gray-dark); font-style: italic; margin-bottom: 0.8rem; font-size: 0.95rem; }
+        .experience-item ul { padding-left: 1.2rem; margin-bottom: 2rem; color: var(--color-gray-dark); }
+        .experience-item li { margin-bottom: 0.5rem; }
+
+        @media (max-width: 850px) {
+            .grid-cv { grid-template-columns: 1fr; }
+            .cv-header-flex { flex-direction: column; align-items: flex-start; }
+        }
+    </style>
+</body>
+</html>
