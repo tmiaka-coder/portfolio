@@ -239,3 +239,31 @@ a:focus, button:focus {
     outline: 2px solid var(--color-silver);
     outline-offset: 3px;
 }
+/* Worksのカード全体のスタイル */
+.work-card {
+    display: flex; /* 横並びにする */
+    gap: 40px;    /* 画像と文章の間隔 */
+    margin-bottom: 60px;
+    align-items: center; /* 上下中央揃え */
+}
+
+/* 画像・動画エリア（左側） */
+.work-visual {
+    flex: 1; /* 幅を均等に分ける */
+    max-width: 500px;
+}
+
+/* 説明文エリア（右側） */
+.work-content {
+    flex: 1;
+}
+
+/* スマホで見るときは縦並びにする */
+@media (max-width: 768px) {
+    .work-card {
+        flex-direction: column;
+    }
+    .work-visual {
+        max-width: 100%;
+    }
+}
