@@ -69,7 +69,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* 崩れ防止のため折り返しを制限 */
     gap: 20px;
 }
 
@@ -95,7 +95,9 @@ body {
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links a {
@@ -105,6 +107,7 @@ body {
     transition: var(--transition);
     padding: 5px 0;
     cursor: pointer;
+    white-space: nowrap;
 }
 
 .nav-links a:hover,
@@ -126,7 +129,7 @@ body {
 .lang-switch {
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 4px;
 }
 
 .lang-btn {
@@ -157,7 +160,7 @@ body {
 /* --- Common Page Elements --- */
 .page-header {
     padding: 80px 0 40px;
-    text-align: left; /* スクリーンショットに合わせ左揃えへ調整 */
+    text-align: left;
 }
 
 .hero-title {
@@ -171,6 +174,78 @@ body {
     color: var(--color-gray-text);
     font-size: 1.1rem;
     font-weight: 400;
+}
+
+/* --- Contact Section & Icon Fixes --- */
+.contact-section {
+    padding: 40px 0 100px;
+    text-align: center;
+}
+
+.contact-instruction {
+    margin-bottom: 60px;
+    color: var(--color-gray-text);
+}
+
+/* 巨大化を防ぐためのコンテナ設定 */
+.contact-grid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+    min-height: 200px;
+}
+
+.contact-card {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+    padding: 20px;
+    transition: var(--transition);
+    max-width: 200px; /* カードの最大幅を制限 */
+}
+
+/* アイコンが巨大化するのを防ぐ最重要ポイント */
+.contact-icon-wrapper {
+    width: 64px;  /* 明示的なサイズ指定 */
+    height: 64px; /* 明示的なサイズ指定 */
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-svg {
+    width: 100% !important; /* ラッパーのサイズに強制的に合わせる */
+    height: 100% !important;
+    max-width: 64px;
+    max-height: 64px;
+    stroke: var(--color-accent);
+    stroke-width: 1.5;
+    fill: none;
+    transition: var(--transition);
+}
+
+/* ホバー時のアニメーション */
+.svg-open {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transform: translateY(5px);
+}
+
+.contact-card:hover .svg-closed {
+    opacity: 0;
+    transform: translateY(-5px);
+}
+
+.contact-card:hover .svg-open {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* --- Profile (About) Specific Styles --- */
@@ -199,65 +274,6 @@ body {
     margin-bottom: 1.5rem;
 }
 
-.about-text h3 {
-    font-size: 1.1rem;
-    border-left: 3px solid var(--color-accent);
-    padding-left: 15px;
-    margin: 2rem 0 1rem;
-}
-
-/* --- Contact Section Styles --- */
-.contact-section {
-    padding: 40px 0 100px;
-}
-
-.contact-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 40px;
-    margin-top: 60px;
-}
-
-.contact-card {
-    text-align: center;
-    padding: 40px;
-    border: 1px solid var(--color-gray-mid);
-    border-radius: 4px;
-    background: #fff;
-    transition: var(--transition);
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    cursor: pointer;
-    text-decoration: none;
-    color: inherit;
-}
-
-.contact-card:hover {
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-}
-
-/* --- Icon Hover Animation --- */
-.contact-icon-wrapper {
-    width: 80px;
-    height: 80px;
-    margin: 0 auto 25px;
-    position: relative;
-}
-
-.contact-svg {
-    width: 100%;
-    height: 100%;
-    stroke: var(--color-accent);
-    transition: var(--transition);
-    position: absolute;
-    top: 0; left: 0;
-}
-
-.svg-open { opacity: 0; transform: translateY(5px); }
-.contact-card:hover .svg-closed { opacity: 0; transform: translateY(-5px); }
-.contact-card:hover .svg-open { opacity: 1; transform: translateY(0); }
-
 /* --- Footer --- */
 .site-footer {
     padding: 60px 0;
@@ -281,11 +297,18 @@ body {
         flex-direction: column;
         align-items: flex-start;
     }
+
+    .nav-links {
+        gap: 1rem;
+    }
 }
 
 @media (max-width: 768px) {
     .hero-title { font-size: 2.2rem; }
-    .nav-links { gap: 1.5rem; }
+    .nav-links { 
+        flex-wrap: wrap;
+        gap: 1rem; 
+    }
 }
 
 /* --- Accessibility: Reduced Motion --- */
