@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>作品詳細：Kiwi Talkboard | Miaka</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo"><a href="../../index.html">Miaka</a></div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="../../index.html">ホーム</a></li>
+                    <li><a href="../../works.html" class="active">実績</a></li>
+                    <li><a href="../../services.html">サービス</a></li>
+                    <li><a href="../../about.html">プロフィール</a></li>
+                    <li><a href="../../contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="main-content" class="container">
+        <section class="work-detail-header">
+            <div class="work-card">
+                <div class="work-visual">
+                    <img src="../../../assets/images/talkboard-icon.png" alt="Kiwi Talkboard アプリアイコン" class="app-icon">
+                </div>
+                <div class="work-content">
+                    <h1>Kiwi Talkboard</h1>
+                    <p class="hero-label">App Development / PHP & MySQL</p>
+                    <p class="hero-description">NZ移住者と現地を繋ぐ、安全でアクセシブルな掲示板アプリ</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="work-full-description">
+            <div class="grid-2">
+                <div class="intro-text">
+                    <h2>01. 作品概要</h2>
+                </div>
+                <div class="intro-details">
+                    <p>ニュージーランドでの生活や情報交換をスムーズにするための、階層型（スレッド式）掲示板アプリです。PHPとMySQLを用いたバックエンド処理と、モダンなUIを実現するTailwind CSSを組み合わせ、リアルタイムに近い感覚で投稿や返信ができる環境を構築しました。</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="intro-text">
+                    <h2>02. 開発の背景と目的</h2>
+                </div>
+                <div class="intro-details">
+                    <p>2026年8月のニュージーランド移住計画を見据え、現地でのコミュニティ形成や情報収集に役立つツールを自作したいと考えたのがきっかけです。</p>
+                </div>
+            </div>
+
+            <div class="grid-2 highlight-box">
+                <div class="intro-text">
+                    <h2>03. リスク管理とセキュリティ</h2>
+                </div>
+                <div class="intro-details">
+                    <h3>トレーサビリティのためのIPアドレス保存機能</h3>
+                    <p><strong>目的：</strong> 匿名投稿による誹謗中傷やスパム投稿（荒らし行為）を抑制し、万が一のトラブル時に発信元を特定できる仕組みを構築しました。</p>
+                    <p><strong>実装内容：</strong> PHPの <code>$_SERVER['REMOTE_ADDR']</code> を活用し、データベースに送信元IPを自動記録。バックエンド側で静かにセキュリティ性を高めています。</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="intro-text">
+                    <h2>04. 使用技術（Tech Stack）</h2>
+                </div>
+                <div class="intro-details">
+                    <p>Frontend: HTML5, Tailwind CSS, JavaScript (Fetch API)<br>
+                       Backend: PHP 8.x<br>
+                       Database: MySQL (MariaDB)<br>
+                       Infrastructure: Lolipop Rental Server</p>
+                </div>
+            </div>
+
+            <div class="grid-2">
+                <div class="intro-text">
+                    <h2>05. こだわりのポイント</h2>
+                </div>
+                <div class="intro-details">
+                    <ul>
+                        <li><strong>アクセシビリティ最優先の設計：</strong> 「誰一人取り残さない」という理念のもと、視覚的なコントラストの確保や、JavaScriptによるフィルタリング検索機能を実装しました。</li>
+                        <li><strong>法的遵守への意識：</strong> 利用規約の同意確認やIP保存など、Webサービスを安全に運用するための法的・倫理的側面を考慮した設計を行いました。</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
+            <a href="../../../works/kiwitalkboard.html" class="lang-btn">English Version</a>
+        </div>
+    </footer>
+</body>
+</html>
