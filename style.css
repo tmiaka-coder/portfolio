@@ -267,3 +267,43 @@ a:focus, button:focus {
         max-width: 100%;
     }
 }
+/* アプリ詳細ページ用のスタイル */
+.app-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+    object-fit: cover;
+}
+
+.work-detail-header {
+    padding: 60px 0;
+}
+
+/* ★ここを横並び（grid）から縦並び（block）にする調整 */
+.work-full-description .work-full-description-item {
+    margin-bottom: 60px;
+    border-top: 1px solid var(--color-gray-light);
+    padding-top: 40px;
+    /* 縦並びを明示 */
+    display: block; 
+}
+
+/* 見出しのデザイン */
+.work-full-description .intro-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px; /* 見出しの下にスペースを作る */
+    font-weight: 600;
+}
+
+/* 本文のデザイン */
+.work-full-description .intro-details {
+    max-width: 800px; /* 読みやすい幅に制限する */
+}
+
+.highlight-box {
+    background-color: var(--color-gray-light);
+    padding: 40px;
+    margin: 40px 0;
+    border-radius: 8px;
+}
