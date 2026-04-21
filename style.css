@@ -1,14 +1,14 @@
 /* --- Root Variables --- */
 :root {
-    --color-text: #333333;
+    --color-text: #1A1A1A;
     --color-bg: #ffffff;
     --color-accent: #000000;
     --color-gray-light: #f4f4f4;
-    --color-gray-mid: #eeeeee;
-    --color-gray-text: #666666;
+    --color-gray-mid: #E5E5E5;
+    --color-gray-text: #4A4A4A;
     --font-main: 'Inter', "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     --transition: all 0.3s ease;
-    --focus-outline: 3px solid #005bb5; /* アクセシビリティ：フォーカス時の視認性向上 */
+    --focus-outline: 3px solid #007AFF; /* アクセシビリティ：フォーカス時の視認性向上 */
 }
 
 /* --- Base Styles --- */
@@ -54,14 +54,15 @@ body {
     outline: var(--focus-outline);
 }
 
-/* --- Header --- */
+/* --- Header (Unified Design) --- */
 .site-header {
-    padding: 30px 0;
+    padding: 20px 0;
     border-bottom: 1px solid var(--color-gray-mid);
-    background: #fff;
+    background: rgba(255, 255, 255, 0.98);
     position: sticky;
     top: 0;
     z-index: 100;
+    backdrop-filter: blur(8px);
 }
 
 .header-container {
@@ -73,29 +74,37 @@ body {
 }
 
 .logo a {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-weight: 600;
     text-decoration: none;
     color: var(--color-accent);
-    letter-spacing: 0.05em;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
 }
 
 .logo a:focus {
     outline: var(--focus-outline);
 }
 
+.main-nav {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 2.5rem;
 }
 
 .nav-links a {
     text-decoration: none;
     color: var(--color-gray-text);
-    font-size: 0.95rem;
+    font-size: 0.85rem;
     transition: var(--transition);
     padding: 5px 0;
+    cursor: pointer;
 }
 
 .nav-links a:hover,
@@ -110,20 +119,25 @@ body {
 .nav-links a.active {
     color: var(--color-accent);
     font-weight: 600;
-    border-bottom: 2px solid var(--color-accent);
+    border-bottom: 1px solid var(--color-accent);
 }
 
-/* --- Language Switch --- */
+/* --- Language Switch (Unified) --- */
 .lang-switch {
     display: flex;
     align-items: center;
-    gap: 10px;
-    font-size: 0.85rem;
+    gap: 8px;
 }
 
 .lang-btn {
+    background: none;
+    border: none;
+    font-size: 0.75rem;
+    cursor: pointer;
+    color: #C0C0C0; /* Silver */
+    padding: 4px 8px;
     text-decoration: none;
-    color: var(--color-gray-text);
+    transition: var(--transition);
 }
 
 .lang-btn.active {
@@ -131,27 +145,65 @@ body {
     font-weight: 600;
 }
 
+.lang-btn:hover {
+    color: var(--color-accent);
+}
+
 .separator {
     color: var(--color-gray-mid);
+    font-size: 0.75rem;
 }
 
 /* --- Common Page Elements --- */
 .page-header {
     padding: 80px 0 40px;
-    text-align: center;
+    text-align: left; /* スクリーンショットに合わせ左揃えへ調整 */
 }
 
 .hero-title {
     font-size: 3rem;
-    margin-bottom: 10px;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    margin-bottom: 15px;
+    letter-spacing: 0.05em;
+    font-weight: 600;
 }
 
 .hero-description {
     color: var(--color-gray-text);
     font-size: 1.1rem;
     font-weight: 400;
+}
+
+/* --- Profile (About) Specific Styles --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 60px;
+    margin-top: 40px;
+    align-items: start;
+}
+
+.profile-img {
+    width: 100%;
+    border-radius: 4px;
+    object-fit: cover;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.job-title {
+    font-size: 0.9rem;
+    color: var(--color-gray-text);
+    margin-bottom: 1.5rem;
+}
+
+.about-text h3 {
+    font-size: 1.1rem;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 15px;
+    margin: 2rem 0 1rem;
 }
 
 /* --- Contact Section Styles --- */
@@ -170,35 +222,27 @@ body {
     text-align: center;
     padding: 40px;
     border: 1px solid var(--color-gray-mid);
-    border-radius: 12px;
+    border-radius: 4px;
     background: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: var(--transition);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     cursor: pointer;
-    text-decoration: none; /* リンクとして使う場合 */
+    text-decoration: none;
     color: inherit;
 }
 
 .contact-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 40px rgba(0,0,0,0.05);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
 }
 
-.contact-card h3 {
-    margin-bottom: 20px;
-    font-size: 1.3rem;
-    letter-spacing: 0.05em;
-    color: var(--color-accent);
-}
-
-/* --- Icon Hover Animation Logic --- */
+/* --- Icon Hover Animation --- */
 .contact-icon-wrapper {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     margin: 0 auto 25px;
-    position: relative; /* 重ね合わせの基準 */
+    position: relative;
 }
 
 .contact-svg {
@@ -207,53 +251,12 @@ body {
     stroke: var(--color-accent);
     transition: var(--transition);
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 0; left: 0;
 }
 
-/* 初期状態：開いたアイコンを隠しておく */
-.svg-open {
-    opacity: 0;
-    transform: translateY(5px);
-}
-
-/* カードにホバーした時の動き */
-.contact-card:hover .svg-closed {
-    opacity: 0;
-    transform: translateY(-5px);
-}
-
-.contact-card:hover .svg-open {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.contact-note {
-    font-size: 0.9rem;
-    color: var(--color-gray-text);
-    margin-bottom: 25px;
-    min-height: 3em;
-}
-
-.contact-btn {
-    display: block;
-    width: 100%;
-    padding: 16px;
-    background-color: var(--color-accent);
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    font-weight: 600;
-    border-radius: 6px;
-    transition: background-color 0.3s, opacity 0.3s;
-}
-
-.contact-btn:hover,
-.contact-btn:focus {
-    background-color: #333;
-    outline: var(--focus-outline);
-    outline-offset: 4px;
-}
+.svg-open { opacity: 0; transform: translateY(5px); }
+.contact-card:hover .svg-closed { opacity: 0; transform: translateY(-5px); }
+.contact-card:hover .svg-open { opacity: 1; transform: translateY(0); }
 
 /* --- Footer --- */
 .site-footer {
@@ -263,35 +266,32 @@ body {
 }
 
 .copyright {
-    font-size: 0.85rem;
+    font-size: 0.8rem;
     color: var(--color-gray-text);
+    letter-spacing: 1px;
 }
 
 /* --- Responsive --- */
-@media (max-width: 768px) {
-    .header-container {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    .hero-title {
-        font-size: 2.2rem;
-    }
-
-    .contact-grid {
+@media (max-width: 900px) {
+    .about-grid {
         grid-template-columns: 1fr;
     }
-
-    .contact-card {
-        padding: 30px 20px;
+    
+    .header-container {
+        flex-direction: column;
+        align-items: flex-start;
     }
+}
+
+@media (max-width: 768px) {
+    .hero-title { font-size: 2.2rem; }
+    .nav-links { gap: 1.5rem; }
 }
 
 /* --- Accessibility: Reduced Motion --- */
 @media (prefers-reduced-motion: reduce) {
     * {
         animation-duration: 0.01ms !important;
-        animation-iteration-count: 1 !important;
         transition-duration: 0.01ms !important;
         scroll-behavior: auto !important;
     }
