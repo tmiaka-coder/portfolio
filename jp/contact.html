@@ -1,14 +1,5 @@
 <!DOCTYPE html>
 <html lang="ja">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>お問い合わせ | Miaka</title>
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
-</head>
-<body>
-    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
     <header class="site-header">
         <div class="container header-container">
             <div class="logo"><a href="index.html">Miaka</a></div>
@@ -21,13 +12,15 @@
                     <li><a href="contact.html" class="active">お問い合わせ</a></li>
                 </ul>
             </nav>
+            <!-- 言語切り替えが必要な場合はこちらを有効化 -->
             <div class="lang-switch">
                 <a href="../contact.html" class="lang-btn">EN</a>
                 <span class="separator">|</span>
                 <a href="contact.html" class="lang-btn active">JP</a>
-            </div>
+            </div> 
         </div>
     </header>
+    
     <main id="main-content" class="container">
         <section class="page-header">
             <h1 class="hero-title">CONTACT</h1>
@@ -35,28 +28,59 @@
         </section>
     
         <section class="contact-section">
-            <div class="contact-container">
-                <p class="contact-message">アイコンをクリックしてメッセージを送ってください。</p>
-                
-                <a href="https://docs.google.com/forms/d/e/あなたのフォームID/viewform" 
-                   class="contact-icon-link" 
-                   target="_blank" 
-                   rel="noopener noreferrer" 
-                   aria-label="お問い合わせフォームを新しいタブで開く">
-                   
-                    <div class="envelope-wrapper">
-                        <img src="../assets/images/envelope-closed.png" alt="閉じた封筒" class="envelope-img is-closed">
-                        <img src="../assets/images/envelope-opened.png" alt="開いた封筒" class="envelope-img is-opened">
+            <p style="text-align: center; color: var(--color-gray-text);">ご都合の良い方法でご連絡ください。</p>
+            
+            <div class="contact-grid">
+                <!-- 方法1: Googleフォーム -->
+                <div class="contact-card">
+                    <h3>Contact Form</h3>
+                    <div class="contact-icon-wrapper">
+                        <!-- フォームをイメージしたアイコン -->
+                        <svg class="contact-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                            <polyline points="14 2 14 8 20 8"></polyline>
+                            <line x1="16" y1="13" x2="8" y2="13"></line>
+                            <line x1="16" y1="17" x2="8" y2="17"></line>
+                            <polyline points="10 9 9 9 8 9"></polyline>
+                        </svg>
                     </div>
-                    
-                </a>
+                    <p class="contact-note">ブラウザから直接入力できます。</p>
+                    <a href="https://docs.google.com/forms/d/e/あなたのフォームID/viewform" 
+                       class="contact-btn" 
+                       target="_blank" 
+                       rel="noopener noreferrer" 
+                       aria-label="お問い合わせフォームを新しいタブで開く">
+                        フォームを開く
+                    </a>
+                </div>
+    
+                <!-- 方法2: 直接メール -->
+                <div class="contact-card">
+                    <h3>Direct Email</h3>
+                    <div class="contact-icon-wrapper">
+                        <!-- メールアイコン -->
+                        <div class="contact-icon-wrapper">
+                            <!-- 閉じたアイコン -->
+                            <svg class="contact-svg svg-closed" ...> (パスデータ) </svg>
+                            <!-- 開いたアイコン -->
+                            <svg class="contact-svg svg-open" ...> (パスデータ) </svg>
+                        </div>      
+                    </div>
+                    <p class="contact-note">お使いのメールアプリが起動します。</p>
+                    <a href="mailto:t.miaka1023@gmail.com?subject=お問い合わせ" 
+                       class="contact-btn" 
+                       aria-label="メールアプリを起動してお問い合わせする">
+                        メールを送る
+                    </a>
+                </div>
             </div>
         </section>
     </main>
+    
     <footer class="site-footer">
         <div class="container footer-container">
             <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
         </div>
-    </footer>
+    </footer>    
 </body>
 </html>
