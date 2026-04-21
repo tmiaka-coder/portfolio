@@ -30,14 +30,45 @@
     </header>
 
     <main id="main-content">
-        <section class="page-header">
+        <section class="works-section">
             <div class="container">
-                <h1 class="hero-title">Selected Works</h1>
-                <p class="hero-description">Showcasing web applications with a focus on accessibility and quality assurance.</p>
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-category="all">All</button>
+                    <button class="filter-btn" data-category="app">App</button>
+                    <button class="filter-btn" data-category="video">Video</button>
+                    <button class="filter-btn" data-category="design">Banner</button>
+                </div>
+        
+                <article class="work-card" data-category="app">
+                    <div class="work-visual">
+                        <img src="assets/images/app-project.png" alt="App Preview">
+                    </div>
+                    <div class="work-content">
+                        <span class="category-tag">App Development</span>
+                        <h2>NZ Trace (PWA)</h2>
+                        <p><strong>Goal:</strong> Create a simple record-keeping tool for daily activities.</p>
+                        <p><strong>Process:</strong> Focused on high-contrast accessibility and offline functionality for New Zealand users.</p>
+                        <div class="work-links">
+                            <a href="#" class="btn btn-small">View Project</a>
+                        </div>
+                    </div>
+                </article>
+        
+                <article class="work-card" data-category="video">
+                    <div class="work-visual">
+                        <div class="video-container">
+                            <iframe src="https://www.youtube.com/embed/あなたの動画ID" frameborder="0" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                    <div class="work-content">
+                        <span class="category-tag">Video Editing</span>
+                        <h2>Training Course Showcase</h2>
+                        <p><strong>Process:</strong> Planning storyboard → Shooting → Editing in Premiere Pro.</p>
+                        <p>Emphasis on clear communication and rhythmic editing to keep viewers engaged.</p>
+                    </div>
+                </article>
             </div>
         </section>
-        </main>
-
     <footer class="site-footer">
         <div class="container footer-container">
             <p class="copyright">&copy; 2026 Vicky. All rights reserved.</p>
