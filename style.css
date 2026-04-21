@@ -287,3 +287,111 @@ a:hover {
         display: none; /* シンプルにするためスマホではナビを隠すか、ハンバーガーメニューが必要になります */
     }
 }
+/* --- Contact Page Styles (Updated for Animation) --- */
+.contact-section {
+    padding: 100px 0;
+    text-align: center;
+}
+
+.contact-message {
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+    letter-spacing: 0.05em;
+    color: var(--color-gray-text);
+}
+
+/* 封筒アイコンのリンク */
+.contact-icon-link {
+    display: inline-block;
+    transition: transform 0.3s ease; /* 浮き上がるアニメーション */
+}
+
+/* ホバーとフォーカス（キーボード操作）時に浮き上がる */
+.contact-icon-link:hover,
+.contact-icon-link:focus {
+    transform: translateY(-8px);
+    outline: none; /* デフォルトの青枠を消す */
+}
+
+/* 2枚の画像を重ねるための舞台設定 */
+.envelope-wrapper {
+    position: relative;
+    width: 200px; /* 封筒の横幅。デザインに合わせて調整 */
+    height: 150px; /* 封筒の高さ。画像に合わせる */
+    margin: 0 auto;
+}
+
+/* 2枚の画像共通の基本スタイル */
+.envelope-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: opacity 0.3s ease; /* 切り替わりの滑らかさ */
+}
+
+/* 初期状態：閉じた封筒は見せる、開いた封筒は隠す */
+.envelope-img.is-closed {
+    opacity: 1;
+}
+
+.envelope-img.is-opened {
+    opacity: 0;
+}
+
+/* 【重要】リンク（aタグ）にホバー/フォーカスした時の画像切り替え */
+.contact-icon-link:hover .envelope-img.is-closed,
+.contact-icon-link:focus .envelope-img.is-closed {
+    opacity: 0; /* 閉じた封筒を透明にする */
+}
+
+.contact-icon-link:hover .envelope-img.is-opened,
+.contact-icon-link:focus .envelope-img.is-opened {
+    opacity: 1; /* 開いた封筒を見せる */
+}
+
+/* アクセシビリティ：フォーカス時の見た目 */
+.contact-icon-link:focus::after {
+    content: '';
+    position: absolute;
+    top: -10px; left: -10px; right: -10px; bottom: -10px;
+    border: 2px solid var(--color-accent);
+    border-radius: 8px;
+}
+/* --- About Page Style Adjustment --- */
+.about-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* 写真を少し小さめ、テキストを広めに設定 */
+    gap: 40px;
+    align-items: start;
+    margin-top: 40px;
+}
+
+.profile-img {
+    width: 100%;
+    max-height: 600px; /* 写真の最大高さを制限 */
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+}
+
+.about-text h3 {
+    font-size: 1.1rem;
+    color: var(--color-accent);
+    margin-bottom: 10px;
+    border-left: 3px solid var(--color-accent);
+    padding-left: 10px;
+}
+
+.bio-section, .personal-section, .future-vision, .skills {
+    margin-bottom: 30px;
+}
+
+/* スマホでは縦並び */
+@media (max-width: 768px) {
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+}
