@@ -1,334 +1,242 @@
-/* -------------------------------------------------------------------------- */
-/* Theme: Adult Stylish (Minimalist White, Silver, Black)                    */
-/* Principles: Accessibility, Clean UX, Responsive                           */
-/* -------------------------------------------------------------------------- */
-
+/* --- Root Variables --- */
 :root {
-    --color-white: #ffffff;
-    --color-black: #1a1a1a;
-    --color-silver: #C0C0C0;
-    --color-gray-light: #f5f5f5;
-    --color-gray-dark: #4a4a4a;
-    --transition: all 0.3s ease;
-    --font-main: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    --color-text: #333333;
+    --color-bg: #ffffff;
+    --color-accent: #000000;
+    --color-gray-light: #f4f4f4;
+    --color-gray-mid: #eeeeee;
+    --color-gray-text: #666666;
+    --font-main: 'Inter', "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
 }
 
+/* --- Base Styles --- */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
     font-family: var(--font-main);
-    background-color: var(--color-white);
-    color: var(--color-black);
+    color: var(--color-text);
     line-height: 1.6;
-    overflow-x: hidden;
+    background-color: var(--color-bg);
 }
 
-/* Accessibility: Skip Link */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: opacity 0.3s;
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+/* --- Accessibility (Skip Link) --- */
 .skip-link {
     position: absolute;
     top: -40px;
     left: 0;
-    background: var(--color-black);
+    background: var(--color-accent);
     color: white;
     padding: 8px;
     z-index: 100;
     transition: top 0.3s;
 }
+
 .skip-link:focus {
     top: 0;
 }
 
-/* Layout Containers */
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-    padding: 0 2rem;
-}
-
-/* Header & Nav */
+/* --- Header --- */
 .site-header {
-    height: 80px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid var(--color-gray-light);
-    position: sticky;
-    top: 0;
-    background: rgba(255, 255, 255, 0.95);
-    z-index: 1000;
-    backdrop-filter: blur(5px);
+    padding: 30px 0;
+    border-bottom: 1px solid var(--color-gray-mid);
 }
 
 .header-container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 100%;
 }
 
-.logo a {
-    font-weight: 600;
+.logo {
     font-size: 1.5rem;
-    text-decoration: none;
-    color: var(--color-black);
-    letter-spacing: -0.5px;
-}
-
-.logo span {
-    color: var(--color-silver);
+    font-weight: 600;
+    letter-spacing: 1px;
 }
 
 .nav-links {
     display: flex;
     list-style: none;
-    gap: 2.5rem;
+    gap: 30px;
 }
 
-.nav-links a {
-    text-decoration: none;
-    color: var(--color-gray-dark);
-    font-size: 0.95rem;
-    font-weight: 400;
-    transition: var(--transition);
-}
-
-.nav-links a:hover, 
 .nav-links a.active {
-    color: var(--color-black);
+    font-weight: 600;
+    border-bottom: 2px solid var(--color-accent);
 }
 
-/* Language Switch */
 .lang-switch {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    font-size: 0.85rem;
-}
-
-.lang-btn {
-    text-decoration: none;
-    color: var(--color-silver);
+    gap: 10px;
+    font-size: 0.9rem;
 }
 
 .lang-btn.active {
-    color: var(--color-black);
     font-weight: 600;
 }
 
-/* Hero Section */
-.hero {
-    padding: 120px 0;
-    min-height: 70vh;
-    display: flex;
-    align-items: center;
+.separator {
+    color: var(--color-gray-mid);
 }
 
-.hero-label {
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: var(--color-silver);
-    margin-bottom: 1rem;
+/* --- Page Header (Works Hero) --- */
+.page-header {
+    padding: 80px 0 40px;
 }
 
 .hero-title {
-    font-size: clamp(2.5rem, 8vw, 4.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    margin-bottom: 2rem;
-    letter-spacing: -2px;
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: 600;
 }
 
 .hero-description {
-    max-width: 600px;
-    font-size: 1.2rem;
-    color: var(--color-gray-dark);
-    margin-bottom: 2.5rem;
+    font-size: 1.1rem;
+    color: var(--color-gray-text);
+    max-width: 700px;
 }
 
-/* Buttons */
-.btn {
-    display: inline-block;
-    padding: 12px 32px;
-    text-decoration: none;
-    font-size: 0.95rem;
-    transition: var(--transition);
-    border-radius: 4px;
-    margin-right: 1rem;
+/* --- Works Grid (Horizontal Layout) --- */
+.works-list {
+    padding-bottom: 100px;
 }
 
-.btn-primary {
-    background: var(--color-black);
-    color: white;
-}
-
-.btn-primary:hover {
-    background: #333;
-}
-
-.btn-outline {
-    border: 1px solid var(--color-silver);
-    color: var(--color-black);
-}
-
-.btn-outline:hover {
-    background: var(--color-gray-light);
-}
-
-/* Intro Section */
-.intro {
-    padding: 100px 0;
-    border-top: 1px solid var(--color-gray-light);
-}
-
-.grid-2 {
-    display: grid;
-    grid-template-columns: 1fr 1.5fr;
-    gap: 4rem;
-}
-
-.intro-text h2 {
-    font-size: 2.5rem;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-/* Footer */
-.site-footer {
-    padding: 40px 0;
-    border-top: 1px solid var(--color-gray-light);
-    color: var(--color-gray-dark);
-    font-size: 0.85rem;
-}
-
-.footer-container {
+.works-grid {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.work-card-horizontal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
     align-items: center;
 }
 
-/* Responsive Design */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none; /* In a real app, you'd add a mobile menu toggle here */
-    }
-
-    .grid-2 {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-    }
-
-    .hero {
-        padding: 80px 0;
-    }
-
-    .hero-title {
-        font-size: 3rem;
-    }
+.work-visual img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+    background-color: var(--color-gray-light);
 }
 
-/* Accessibility Focus States */
-a:focus, button:focus {
-    outline: 2px solid var(--color-silver);
-    outline-offset: 3px;
-}
-/* Worksのカード全体のスタイル */
-.work-card {
-    display: flex; /* 横並びにする */
-    gap: 40px;    /* 画像と文章の間隔 */
-    margin-bottom: 60px;
-    align-items: center; /* 上下中央揃え */
+.category-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-gray-text);
 }
 
-/* 画像・動画エリア（左側） */
-.work-visual {
-    flex: 1; /* 幅を均等に分ける */
-    max-width: 500px;
+.work-content h2 {
+    font-size: 2rem;
+    margin: 10px 0 20px;
 }
 
-/* 説明文エリア（右側） */
-.work-content {
-    flex: 1;
+.work-summary {
+    margin-bottom: 30px;
+    color: var(--color-gray-text);
 }
 
-/* スマホで見るときは縦並びにする */
-@media (max-width: 768px) {
-    .work-card {
-        flex-direction: column;
-    }
-    .work-visual {
-        max-width: 100%;
-    }
-}
-/* アプリ詳細ページ用のスタイル */
-.app-icon {
-    width: 150px;
-    height: 150px;
-    border-radius: 30px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-    object-fit: cover;
+/* --- Buttons --- */
+.btn-outline {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid var(--color-accent);
+    font-weight: 600;
+    font-size: 0.9rem;
 }
 
+.btn-outline:hover {
+    background-color: var(--color-accent);
+    color: #fff;
+    opacity: 1;
+}
+
+/* --- Work Detail Page Styles --- */
 .work-detail-header {
     padding: 60px 0;
 }
 
-/* ★ここを横並び（grid）から縦並び（block）にする調整 */
-.work-full-description .work-full-description-item {
-    margin-bottom: 60px;
-    border-top: 1px solid var(--color-gray-light);
-    padding-top: 40px;
-    /* 縦並びを明示 */
-    display: block; 
+.work-detail-header .work-card {
+    display: flex;
+    gap: 40px;
+    align-items: center;
 }
 
-/* 見出しのデザイン */
-.work-full-description .intro-text h2 {
-    font-size: 1.8rem;
-    margin-bottom: 20px; /* 見出しの下にスペースを作る */
+.app-icon {
+    width: 150px;
+    height: 150px;
+    border-radius: 30px;
+    object-fit: cover;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+}
+
+.hero-label {
+    font-size: 0.9rem;
+    color: var(--color-gray-text);
+    margin-bottom: 10px;
+}
+
+/* 縦並び詳細セクション */
+.work-full-description {
+    margin-top: 40px;
+}
+
+.work-full-description-item {
+    border-top: 1px solid var(--color-gray-mid);
+    padding: 60px 0;
+}
+
+.work-full-description-item h2 {
+    font-size: 2rem;
+    margin-bottom: 25px;
     font-weight: 600;
 }
 
-/* 本文のデザイン */
-.work-full-description .intro-details {
-    max-width: 800px; /* 読みやすい幅に制限する */
+.intro-details {
+    max-width: 800px;
+    font-size: 1.05rem;
+    color: #444;
+}
+
+.intro-details p {
+    margin-bottom: 20px;
 }
 
 .highlight-box {
     background-color: var(--color-gray-light);
-    padding: 40px;
-    margin: 40px 0;
-    border-radius: 8px;
-}
-/* 既存のスタイルに続けて末尾に追加、または既存の .work-full-description 周りを上書きしてください */
-
-/* --- Work Detail Specifics --- */
-.app-icon {
-    width: 120px;
-    height: 120px;
-    border-radius: 24px;
-    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
-}
-
-.work-banner-img {
-    width: 100%;
-    height: auto;
+    padding: 60px;
     border-radius: 8px;
 }
 
+/* Video specific */
 .video-container {
     position: relative;
-    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    padding-bottom: 56.25%;
     height: 0;
     overflow: hidden;
-    border-radius: 8px;
+    width: 100%;
 }
 
 .video-container iframe {
@@ -337,84 +245,45 @@ a:focus, button:focus {
     left: 0;
     width: 100%;
     height: 100%;
-}
-
-/* --- Accordion (Details/Summary) --- */
-.work-full-description {
-    margin-top: 40px;
-}
-
-.work-full-description-item {
-    border-top: 1px solid #eeeeee;
-    transition: background-color 0.3s ease;
-}
-
-.work-full-description-item summary {
-    padding: 24px 0;
-    list-style: none;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    outline: none;
-}
-
-/* Focus state for accessibility */
-.work-full-description-item summary:focus {
-    color: var(--color-accent, #007bff);
-}
-
-.work-full-description-item summary::-webkit-details-marker {
-    display: none;
-}
-
-.work-full-description-item summary h2 {
-    font-size: 1.25rem;
-    margin: 0;
-    font-weight: 600;
-}
-
-/* Custom Icon (+/-) */
-.work-full-description-item summary .icon::before {
-    content: "+";
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: #999;
-}
-
-.work-full-description-item[open] summary .icon::before {
-    content: "−";
-}
-
-/* Content inside accordion */
-.work-full-description-item .intro-details {
-    padding: 0 0 32px 0;
-    line-height: 1.8;
-    color: #444;
-    max-width: 800px;
-    animation: slideDown 0.3s ease-out;
-}
-
-.highlight-box {
-    background-color: #f9f9f9;
-    padding: 0 20px; /* details内なのでsummaryの余白と合わせる調整 */
     border-radius: 8px;
 }
 
-@keyframes slideDown {
-    from {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+/* --- Footer --- */
+.site-footer {
+    padding: 60px 0;
+    border-top: 1px solid var(--color-gray-mid);
+    text-align: center;
 }
 
-/* Responsive Adjustments */
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.copyright {
+    font-size: 0.9rem;
+    color: var(--color-gray-text);
+}
+
+/* --- Responsive --- */
 @media (max-width: 768px) {
-    .work-full-description-item summary h2 {
-        font-size: 1.1rem;
+    .hero-title {
+        font-size: 2.2rem;
+    }
+
+    .work-card-horizontal {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .work-detail-header .work-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 20px;
+    }
+
+    .nav-links {
+        display: none; /* シンプルにするためスマホではナビを隠すか、ハンバーガーメニューが必要になります */
     }
 }

@@ -40,44 +40,32 @@
         </section>
 
         <section class="work-full-description">
-            <details class="work-full-description-item" open>
-                <summary class="intro-text">
-                    <h2>01. 作品概要</h2>
-                    <span class="icon"></span>
-                </summary>
+            <div class="work-full-description-item">
+                <h2>01. 作品概要</h2>
                 <div class="intro-details">
-                    <p>ニュージーランドでの生活や情報交換をスムーズにするための、階層型（スレッド式）掲示板アプリです。PHPとMySQLを用いたバックエンド処理と、モダンなUIを実現するTailwind CSSを組み合わせ、リアルタイムに近い感覚で投稿や返信ができる環境を構築しました。</p>
+                    <p>ニュージーランドでの生活や情報交換をスムーズにするための、階層型（スレッド式）掲示板アプリです。PHPとMySQLを用いたバックエンド処理と、モダンなUIを実現するTailwind CSSを組み合わせました。</p>
                 </div>
-            </details>
+            </div>
 
-            <details class="work-full-description-item">
-                <summary class="intro-text">
-                    <h2>02. 開発の背景と目的</h2>
-                    <span class="icon"></span>
-                </summary>
+            <div class="work-full-description-item">
+                <h2>02. 開発の背景と目的</h2>
                 <div class="intro-details">
-                    <p>2026年8月のニュージーランド移住計画を見据え、現地でのコミュニティ形成や情報収集に役立つツールを自作したいと考えたのがきっかけです。</p>
+                    <p>2026年8月の移住を見据え、現地でのコミュニティ形成に役立つツールを自作したいと考えたのがきっかけです。</p>
                 </div>
-            </details>
+            </div>
 
-            <details class="work-full-description-item highlight-box">
-                <summary class="intro-text">
-                    <h2>03. リスク管理とセキュリティ</h2>
-                    <span class="icon"></span>
-                </summary>
+            <div class="work-full-description-item highlight-box">
+                <h2>03. リスク管理とセキュリティ</h2>
                 <div class="intro-details">
-                    <h3>IPアドレス保存機能</h3>
-                    <p><strong>目的：</strong> 匿名投稿による誹謗中傷を抑制し、トラブル時に発信元を特定できる仕組みを構築しました。</p>
-                    <p><strong>実装内容：</strong> PHPの <code>$_SERVER['REMOTE_ADDR']</code> を活用し、データベースに送信元IPを自動記録。バックエンド側で静かにセキュリティ性を高めています。</p>
+                    <p>誹謗中傷抑制のため、送信元IPアドレスを自動記録する機能を実装。バックエンド側で静かにセキュリティ性を高めています。</p>
                 </div>
-            </details>
+            </div>
         </section>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-container">
-            <p>&copy; 2026 Miaka.All rights reserved.</p>
-            <a href="../../../works/app/app-kiwitalkboard.html" class="lang-btn">English Version</a>
+            <p>&copy; 2026 Miaka.</p>
         </div>
     </footer>
 </body>
