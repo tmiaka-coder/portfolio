@@ -5,14 +5,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>サービス | Miaka</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+
     <header class="site-header">
         <div class="container header-container">
             <div class="logo"><a href="index.html">Miaka</a></div>
-            <nav class="main-nav" aria-label="メインナビゲーション">
+            <nav class="main-nav">
                 <ul class="nav-links">
                     <li><a href="index.html">ホーム</a></li>
                     <li><a href="works.html">実績</a></li>
@@ -22,7 +23,7 @@
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../services.html" class="lang-btn">EN</a>
+                <a href="../en/services.html" class="lang-btn">EN</a>
                 <span class="separator">|</span>
                 <a href="services.html" class="lang-btn active">JP</a>
             </div>
@@ -30,16 +31,94 @@
     </header>
 
     <main id="main-content">
-        <section class="page-header">
+        <!-- Page Header -->
+        <section class="container" style="padding: 80px 20px 40px;">
+            <span class="section-label">Our Value</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Quality <br>& Inclusion.</h1>
+            <p style="color: var(--color-gray-text); max-width: 600px;">
+                単なる「制作」の枠を超え、アクセシビリティへの深い理解と、厳格な品質管理（QA）に基づいた信頼性の高いWebソリューションを提供します。
+            </p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="container" style="padding-bottom: 100px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+                
+                <!-- Service 1: Accessibility -->
+                <div style="padding: 40px; background: #f9f9f9; border-radius: 8px; border-top: 4px solid var(--color-accent);">
+                    <span class="section-label" style="font-size: 0.65rem;">01. Compliance</span>
+                    <h2 style="font-size: 1.5rem; margin: 15px 0;">アクセシビリティ構築</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-text); margin-bottom: 20px;">
+                        WCAG 2.2やJIS X 8341-3に基づき、あらゆる利用環境で情報が正しく伝わるサイトを構築します。2024年4月に施行された改正障害者差別解消法に伴う「合理的配慮」への具体的な対応も、技術面からサポートいたします。
+                    </p>
+                    <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
+                        <li>・ウェブアクセシビリティ診断</li>
+                        <li>・スクリーンリーダー最適化</li>
+                        <li>・セマンティックなHTML実装</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: QA & Quality -->
+                <div style="padding: 40px; background: #f9f9f9; border-radius: 8px; border-top: 4px solid var(--color-accent);">
+                    <span class="section-label" style="font-size: 0.65rem;">02. Integrity</span>
+                    <h2 style="font-size: 1.5rem; margin: 15px 0;">品質保証 (QA)</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-text); margin-bottom: 20px;">
+                        ERPシステムのテスター経験を活かし、緻密な検証を実施。バグの早期発見はもちろん、実機による網羅的なテストで、公開後のトラブルを最小限に抑えます。
+                    </p>
+                    <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
+                        <li>・機能テスト・回帰テスト</li>
+                        <li>・マルチデバイス・ブラウザ検証</li>
+                        <li>・ユーザビリティ評価</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Visual & Frontend -->
+                <div style="padding: 40px; background: #f9f9f9; border-radius: 8px; border-top: 4px solid var(--color-accent);">
+                    <span class="section-label" style="font-size: 0.65rem;">03. Creativity</span>
+                    <h2 style="font-size: 1.5rem; margin: 15px 0;">フロントエンド開発</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-text); margin-bottom: 20px;">
+                        保守性が高く、パフォーマンスに優れたコーディングを行います。レスポンシブ対応はもちろん、SEOや表示速度まで考慮したモダンな開発を提供します。
+                    </p>
+                    <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
+                        <li>・カスタムWebサイト構築</li>
+                        <li>・UIコンポーネント設計</li>
+                        <li>・パフォーマンス最適化</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section style="background: #fafafa; padding: 100px 0;">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div>
+                    <span class="section-label">Why Miaka</span>
+                    <h2 style="font-size: 2.2rem; margin: 20px 0; letter-spacing: -0.01em;">接客の心と、<br>テスターの眼。</h2>
+                </div>
+                <div>
+                    <p style="color: var(--color-gray-text); margin-bottom: 20px; line-height: 1.8;">
+                        自動車業界での「接客」で培った、相手の不便に気づく想像力。そしてIT業界での「テスター」として培った、綻びを見逃さない厳格な視点。
+                    </p>
+                    <p style="color: var(--color-gray-text); line-height: 1.8;">
+                        私はアクセシビリティを単なる「仕様」ではなく、デジタル上の「おもてなし」と捉えています。使う人が迷わず、安心できる体験を、確かな技術で形にします。
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: var(--color-accent); color: #fff; padding: 100px 0; text-align: center;">
             <div class="container">
-                <h1 class="hero-title">提供できること</h1>
-                <p class="hero-description">エンジニアリングの専門知識を通じ、デザインと機能の架け橋となります。</p>
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 20px;">品質の高いWebサイトを、共に創りませんか？</h2>
+                <a href="contact.html" class="cta-button">お問い合わせはこちら</a>
             </div>
         </section>
     </main>
+
     <footer class="site-footer">
-        <div class="container footer-container">
-            <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
 </body>
