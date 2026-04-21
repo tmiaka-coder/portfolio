@@ -5,66 +5,87 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>ポートフォリオ | Miaka</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">Miaka</a>
-            </div>
-            
-            <nav class="main-nav" aria-label="メインナビゲーション">
+            <div class="logo"><a href="index.html">Miaka</a></div>
+            <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="index.html" class="active">ホーム</a></li>
-                    <li><a href="works.html">実績</a></li>
-                    <li><a href="services.html">サービス</a></li>
-                    <li><a href="about.html">プロフィール</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
-
             <div class="lang-switch">
-                <a href="../index.html" class="lang-btn" aria-label="Englishへ切り替え">EN</a>
+                <a href="../index.html" class="lang-btn">EN</a>
                 <span class="separator">|</span>
-                <a href="index.html" class="lang-btn active" aria-label="日本語ページ">JP</a>
+                <a href="index.html" class="lang-btn active">JP</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <section class="hero">
-            <div class="container">
-                <p class="hero-label">ニュージーランドを拠点にするエンジニア</p>
-                <h1 class="hero-title">AIを駆使した開発と <br>UXへのこだわり</h1>
-                <p class="hero-description">
-                    確かな技術力と人間中心のデザインを融合させ、
-                    アクセシブルで高性能なWebソリューションを構築します。
+        <!-- ヒーローセクション：インパクト最大化 -->
+        <section class="container" style="padding: 120px 20px 60px;">
+            <h1 class="hero-title">
+                Beyond <br>Standard.
+                <span class="hero-accent">誠実さと、品質と、アクセシビリティ。</span>
+            </h1>
+            <div class="scroll-indicator">Scroll to explore</div>
+        </section>
+
+        <!-- フィーチャーセクション：思考と実績 -->
+        <section class="container featured-section">
+            <div class="statement-box">
+                <span class="section-label">Vision</span>
+                <p class="statement-text">
+                    「動けばいい」を、卒業する。<br>
+                    テスターの眼でバグを許さず、<br>
+                    接客の心でユーザーに寄り添う。
                 </p>
-                <div class="hero-cta">
-                    <a href="works.html" class="btn btn-primary">実績を見る</a>
-                    <a href="contact.html" class="btn btn-outline">お問い合わせ</a>
+                <p style="color: var(--color-gray-text);">
+                    ERPシステムの品質管理を経験したからこそ、私の作るコードには「妥協」という文字はありません。2026年、ニュージーランドへ。世界基準のアクセシビリティを、あなたのプロジェクトに。
+                </p>
+                <a href="about.html" class="contact-btn" style="margin-top: 30px;">Read More</a>
+            </div>
+
+            <div class="works-preview">
+                <span class="section-label">Selected Works</span>
+                <div class="work-preview-grid">
+                    <a href="works/app/app-kiwitalkboard.html" class="work-item">
+                        <div class="work-thumb">
+                            <span style="font-size: 0.7rem; color: #999;">Application Development</span>
+                        </div>
+                        <p class="work-title">Kiwi Talkboard</p>
+                    </a>
+                    <a href="works/banner/banner-bread.html" class="work-item">
+                        <div class="work-thumb">
+                            <span style="font-size: 0.7rem; color: #999;">Graphic Design</span>
+                        </div>
+                        <p class="work-title">Salt Bread Banner</p>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="intro">
-            <div class="container grid-2">
-                <div class="intro-text">
-                    <h2>モダンな解決策と <br>グローバルスタンダード</h2>
-                </div>
-                <div class="intro-details">
-                    <p>私は効率的で心地よいデジタル体験の創造を専門としています。最新のAI技術を取り入れつつ、Webアクセシビリティ（WCAG）とパフォーマンスの最適化を重視し、誰もが使いやすい包括的なデザインをニュージーランドのテックシーンへ提供します。</p>
-                </div>
+        <!-- CTAセクション -->
+        <section style="background: var(--color-accent); color: #fff; padding: 100px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2rem; margin-bottom: 20px;">Let's build something honest.</h2>
+                <p style="opacity: 0.8; margin-bottom: 40px;">法的遵守とアクセシビリティを、一過性のトレンドではなく「基盤」に。</p>
+                <a href="contact.html" class="cta-button">お問い合わせ</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-container">
-            <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
 </body>

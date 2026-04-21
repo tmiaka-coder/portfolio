@@ -5,37 +5,108 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | Vicky</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="index.html">Vicky</a></div>
-            <nav class="main-nav" aria-label="メインナビゲーション">
+            <div class="logo"><a href="../index.html">Vicky</a></div>
+            <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="works.html">Works</a></li>
-                    <li><a href="services.html">Service</a></li>
+                    <li><a href="services.html">Services</a></li>
                     <li><a href="about.html" class="active">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="about.html" class="lang-btn active">EN</a>
+                <a href="../index.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="jp/about.html" class="lang-btn">JP</a>
+                <a href="../jp/about.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <section class="page-header">
+        <!-- Page Header -->
+        <section class="container" style="padding: 80px 20px 40px;">
+            <span class="section-label">Profile</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Beyond <br>Standard.</h1>
+            <p style="color: var(--color-gray-text); max-width: 600px;">A creator who understands the friction of the real world and builds digital experiences that welcome everyone.</p>
+        </section>
+
+        <!-- Biography Section -->
+        <section class="container" style="padding-bottom: 100px;">
+            <div class="about-grid" style="display: grid; grid-template-columns: 1fr 1.5fr; gap: 80px; align-items: start;">
+                <div class="about-visual">
+                    <!-- Placeholder for profile image -->
+                    <div class="about-visual">
+                        <img src="assets/images/profile-photo.jpg" alt="Miakaのポートレート" class="profile-img">
+                    </div>
+                </div>
+
+                <div class="about-text">
+                    <div style="margin-bottom: 40px;">
+                        <h2 style="font-size: 2.5rem; margin-bottom: 10px;">Miaka Taniai（Vicky）</h2>
+                        <p class="section-label" style="color: var(--color-accent); font-weight: 600;">Aspiring Frontend Developer & QA Advocate</p>
+                    </div>
+
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 15px; border-left: 3px solid var(--color-accent); padding-left: 15px;">The Turning Point</h3>
+                        <p style="line-height: 1.8; color: var(--color-gray-text); margin-bottom: 15px;">
+                            After graduating from Nagasaki Junshin Catholic University, I started my career in the automotive industry, working in sales and customer service. Dealing with complex internal CRM systems daily, I often felt frustrated by recurring bugs and poor usability.
+                        </p>
+                        <p style="line-height: 1.8; color: var(--color-gray-text);">
+                            "I want to be the one who fixes these frustrations from the inside." This realization led me to transition into the IT industry, starting as a software tester for enterprise-level ERP systems.
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 15px; border-left: 3px solid var(--color-accent); padding-left: 15px;">Quality as a Foundation</h3>
+                        <p style="line-height: 1.8; color: var(--color-gray-text); margin-bottom: 15px;">
+                            In the world of QA (Quality Assurance), I developed a sharp eye for detail and a deep understanding of digital reliability. However, I soon realized that "testing after development" isn't enough.
+                        </p>
+                        <p style="line-height: 1.8; color: var(--color-gray-text);">
+                            I believe that high quality and accessibility should be woven into the code from the very first line. Combining my "Hospitality Mindset" from sales with my "Precision Mindset" from QA, I now focus on building websites that are inclusive by design.
+                        </p>
+                    </div>
+
+                    <div style="margin-bottom: 40px;">
+                        <h3 style="font-size: 1.25rem; margin-bottom: 15px; border-left: 3px solid var(--color-accent); padding-left: 15px;">2026: The New Chapter</h3>
+                        <p style="line-height: 1.8; color: var(--color-gray-text);">
+                            I am currently preparing for my relocation to New Zealand in August 2026. My goal is to contribute to the NZ tech community by delivering honest, accessible, and legally compliant web solutions that bridge the gap between technology and people.
+                        </p>
+                    </div>
+
+                    <div style="background: #f9f9f9; padding: 30px; border-radius: 8px;">
+                        <h3 style="font-size: 1rem; margin-bottom: 15px; text-transform: uppercase; letter-spacing: 0.1em;">Currently Exploring</h3>
+                        <ul style="list-style: none; font-size: 0.9rem; color: var(--color-gray-text); display: grid; grid-template-columns: 1fr 1fr; gap: 10px;">
+                            <li>• Web Accessibility (WCAG 2.2)</li>
+                            <li>• Frontend: React / Tailwind CSS</li>
+                            <li>• ITIL 4 Service Management</li>
+                            <li>• English Communication</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: var(--color-accent); color: #fff; padding: 100px 0; text-align: center;">
             <div class="container">
-                <h1 class="hero-title">About Vicky</h1>
-                <p class="hero-description">A passionate developer dedicated to building inclusive digital futures.</p>
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 20px;">Want to know more?</h2>
+                <a href="contact.html" class="cta-button">Get in Touch</a>
             </div>
         </section>
     </main>
-    </body>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="copyright">&copy; 2026 Miaka. Built with integrity.</p>
+        </div>
+    </footer>
+</body>
 </html>

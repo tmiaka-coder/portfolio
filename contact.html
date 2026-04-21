@@ -5,113 +5,85 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact | Vicky</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">Vicky</a>
-            </div>
-                <nav class="main-nav" aria-label="メインナビゲーション">
-                    <ul class="nav-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="works.html">Works</a></li>
-                        <li><a href="services.html">Service</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="contact.html" class="active">Contact</a></li>
-                    </ul>
-                </nav>
+            <div class="logo"><a href="../index.html">Vicky</a></div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html" class="active">Contact</a></li>
+                </ul>
+            </nav>
             <div class="lang-switch">
-                <a href="contact.html" class="lang-btn active">EN</a>
+                <a href="../index.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="jp/contact.html" class="lang-btn">JP</a>
+                <a href="../jp/contact.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <section class="page-header">
-            <div class="container">
-                <h1 class="hero-title">Get in Touch.</h1>
-                <p class="hero-description">Have a project in mind or looking for a developer? I'd love to hear from you.</p>
-            </div>
+        <!-- Page Header -->
+        <section class="container" style="padding: 80px 20px 40px;">
+            <span class="section-label">Connect</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Let's Start <br>a Conversation.</h1>
+            <p style="color: var(--color-gray-text); max-width: 600px;">If you have any questions about web accessibility, quality assurance, or project inquiries, please feel free to reach out.</p>
         </section>
 
-        <section class="contact-section">
-            <div class="container grid-2">
+        <!-- Contact Section -->
+        <section class="container" style="padding-bottom: 120px;">
+            <div style="display: grid; grid-template-columns: 1fr 1.2fr; gap: 80px; align-items: start;">
+                
+                <!-- Information & Privacy -->
                 <div class="contact-info">
-                    <p class="hero-label">Contact Details</p>
-                    <h2 class="section-subtitle">Let's connect.</h2>
-                    <p>I am currently based in New Zealand and available for new opportunities or collaborations.</p>
-                    
-                    <div class="contact-method">
-                        <h3>Email</h3>
-                        <p><a href="mailto:your.email@example.com">your.email@example.com</a></p>
+                    <div style="margin-bottom: 40px;">
+                        <h2 style="font-size: 1.25rem; margin-bottom: 20px;">Integrity in Data</h2>
+                        <p style="font-size: 0.95rem; color: var(--color-gray-text); line-height: 1.8; margin-bottom: 20px;">
+                            To ensure your privacy, this website does not store your personal information on any third-party databases. When you click the contact button, your local email client will open to send the message directly to me.
+                        </p>
                     </div>
-                    <div class="contact-method">
-                        <h3>Social</h3>
-                        <p><a href="#">LinkedIn</a> / <a href="#">GitHub</a></p>
+
+                    <div style="border-top: 1px solid #eee; padding-top: 40px;">
+                        <h3 style="font-size: 0.9rem; text-transform: uppercase; letter-spacing: 0.1em; margin-bottom: 20px;">Response Time</h3>
+                        <p style="font-size: 0.95rem; color: var(--color-gray-text);">I typically respond within 1-2 business days. Based in Japan (GMT+9).</p>
                     </div>
                 </div>
 
-                <div class="contact-form-container">
-                    <form action="#" method="POST" class="contact-form">
-                        <div class="form-group">
-                            <label for="name">Full Name</label>
-                            <input type="text" id="name" name="name" required placeholder="John Doe">
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email Address</label>
-                            <input type="email" id="email" name="email" required placeholder="john@example.com">
-                        </div>
-                        <div class="form-group">
-                            <label for="subject">Subject</label>
-                            <input type="text" id="subject" name="subject" required placeholder="Project Inquiry">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required placeholder="Tell me more about..."></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
+                <!-- Contact Action Card -->
+                <div style="background: #f9f9f9; padding: 60px 40px; border-radius: 8px; text-align: center;">
+                    <div style="margin-bottom: 30px;">
+                        <!-- Email Icon (Inline SVG) -->
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" style="color: var(--color-accent); margin-bottom: 20px;">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 10px;">Direct Email</h3>
+                        <p style="color: var(--color-gray-text); font-size: 0.95rem;">Send an inquiry via your preferred email app.</p>
+                    </div>
+
+                    <a href="mailto:t.miaka1023@gmail.com" class="cta-button" style="width: 100%; box-sizing: border-box; background: #000; color: #fff; border-color: #000;">Send Message</a>
+                    
+                    <p style="margin-top: 25px; font-size: 0.8rem; color: #999;">
+                        t.miaka1023@gmail.com
+                    </p>
                 </div>
+
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-container">
-            <p class="copyright">&copy; 2026 Vicky. All rights reserved.</p>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
-
-    <style>
-        .contact-section { padding: 60px 0; }
-        .contact-method { margin-top: 2rem; }
-        .contact-method h3 { font-size: 0.9rem; text-transform: uppercase; color: var(--color-silver); margin-bottom: 0.5rem; }
-        .contact-method a { color: var(--color-black); text-decoration: none; border-bottom: 1px solid var(--color-silver); }
-
-        .contact-form { display: grid; gap: 1.5rem; }
-        .form-group { display: flex; flex-direction: column; gap: 0.5rem; }
-        .form-group label { font-size: 0.9rem; font-weight: 600; }
-        .form-group input, .form-group textarea {
-            padding: 12px;
-            border: 1px solid var(--color-silver);
-            border-radius: 4px;
-            font-family: inherit;
-            font-size: 1rem;
-        }
-        .form-group input:focus, .form-group textarea:focus {
-            outline: 2px solid var(--color-black);
-            border-color: var(--color-black);
-        }
-
-        @media (max-width: 768px) {
-            .grid-2 { grid-template-columns: 1fr; gap: 3rem; }
-        }
-    </style>
 </body>
 </html>

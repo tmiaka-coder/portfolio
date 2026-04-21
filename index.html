@@ -3,82 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio | Vicky</title>
+    <title>Vicky | Quality & Accessibility Design</title>
+    <!-- 外部CSSを参照 -->
     <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts: Inter for professional minimalist look -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Accessibility: Skip to Content link -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo">
-                <a href="index.html">Vicky</a>
-            </div>
-            
-            <nav class="main-nav" aria-label="メインナビゲーション">
-    <ul class="nav-links">
-        <li><a href="index.html" class="active">Home</a></li>
-        <li><a href="works.html">Works</a></li>
-        <li><a href="services.html">Service</a></li>
-        <li><a href="profile.html">About</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
-</nav>
-
+            <div class="logo"><a href="index.html">Vicky</a></div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="en/works.html">Works</a></li>
+                    <li><a href="en/services.html">Service</a></li>
+                    <li><a href="en/about.html">About</a></li>
+                    <li><a href="en/contact.html">Contact</a></li>
+                </ul>
+            </nav>
             <div class="lang-switch">
-                <a href="index.html" class="lang-btn active" aria-label="Switch to English">EN</a>
+                <a href="index.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="jp/index.html" class="lang-btn" aria-label="Switch to Japanese">JP</a>
+                <a href="jp/index.html" class="lang-btn">JP</a>
             </div>
-
-            <!-- Mobile Menu Toggle (Implemented in CSS for simplicity) -->
-            <button class="menu-toggle" aria-label="Open Menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </button>
         </div>
     </header>
 
     <main id="main-content">
-        <!-- Hero Section -->
-        <section class="hero">
-            <div class="container">
-                <p class="hero-label">Based in New Zealand</p>
-                <h1 class="hero-title">AI-Driven Developer <br>& UX Advocate</h1>
-                <p class="hero-description">
-                    Combining technical excellence with human-centric design to build 
-                    accessible, high-performance web solutions.
+        <!-- Hero Section: Maximum Impact -->
+        <section class="container" style="padding: 120px 20px 60px;">
+            <h1 class="hero-title">
+                Beyond <br>Standard.
+                <span class="hero-accent">Integrity, Quality, and Accessibility.</span>
+            </h1>
+            <div class="scroll-indicator">Scroll to explore</div>
+        </section>
+
+        <!-- Featured Section: Philosophy & Work -->
+        <section class="container featured-section">
+            <div class="statement-box">
+                <span class="section-label">Vision</span>
+                <p class="statement-text">
+                    Beyond "Just Functional."<br>
+                    Zero tolerance for bugs,<br>
+                    Infinite empathy for users.
                 </p>
-                <div class="hero-cta">
-                    <a href="projects.html" class="btn btn-primary">View Projects</a>
-                    <a href="contact.html" class="btn btn-outline">Get in Touch</a>
+                <p style="color: var(--color-gray-text);">
+                    With experience in Quality Assurance for major ERP systems, I don't compromise on code integrity. Moving to New Zealand in 2026. Bringing world-class accessibility to your next project.
+                </p>
+                <a href="en/about.html" class="contact-btn" style="margin-top: 30px;">Read More</a>
+            </div>
+
+            <div class="works-preview">
+                <span class="section-label">Selected Works</span>
+                <div class="work-preview-grid">
+                    <a href="en/works/app/app-kiwitalkboard.html" class="work-item">
+                        <div class="work-thumb">
+                            <span style="font-size: 0.7rem; color: #999;">Application Development</span>
+                        </div>
+                        <p class="work-title">Kiwi Talkboard</p>
+                    </a>
+                    <a href="en/works/banner/banner-bread.html" class="work-item">
+                        <div class="work-thumb">
+                            <span style="font-size: 0.7rem; color: #999;">Graphic Design</span>
+                        </div>
+                        <p class="work-title">Salt Bread Banner</p>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Brief Intro / About Preview -->
-        <section class="intro">
-            <div class="container grid-2">
-                <div class="intro-text">
-                    <h2>Modern Solutions, <br>Global Standards</h2>
-                </div>
-                <div class="intro-details">
-                    <p>I specialize in creating efficient digital experiences. My approach integrates cutting-edge AI technologies with a strong focus on web accessibility (WCAG) and performance optimization, ensuring inclusive designs for the NZ tech landscape.</p>
-                </div>
+        <!-- CTA Section: Improved Visibility -->
+        <section style="background: var(--color-accent); color: #fff; padding: 120px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: clamp(2rem, 5vw, 3rem); font-weight: 800; margin-bottom: 20px; letter-spacing: -0.02em;">Let's build something honest.</h2>
+                <p style="opacity: 0.8; margin-bottom: 40px; font-size: 1.1rem;">Making compliance and accessibility the foundation, not just a trend.</p>
+                <!-- Application of cta-button class defined in style.css -->
+                <a href="en/contact.html" class="cta-button">Inquiry</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-container">
-            <p class="copyright">&copy; 2026 Vicky. All rights reserved.</p>
-            <div class="social-links">
-                <a href="#" aria-label="LinkedIn">LI</a>
-                <a href="#" aria-label="GitHub">GH</a>
-            </div>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
 </body>

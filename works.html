@@ -1,88 +1,99 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>実績 | Miaka</title>
-    <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Works | Vicky</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="index.html">Miaka</a></div>
-            <nav class="main-nav" aria-label="メインナビゲーション">
+            <div class="logo"><a href="../index.html">Vicky</a></div>
+            <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="index.html">ホーム</a></li>
-                    <li><a href="works.html" class="active">実績</a></li>
-                    <li><a href="services.html">サービス</a></li>
-                    <li><a href="about.html">プロフィール</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="works.html" class="active">Works</a></li>
+                    <li><a href="en/services.html">Service</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../works.html" class="lang-btn">EN</a>
+                <a href="../index.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="works.html" class="lang-btn active">JP</a>
+                <a href="../jp/works.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <section class="page-header">
-            <div class="container">
-                <h1 class="hero-title">制作実績</h1>
-                <p class="hero-description">アクセシビリティと法的遵守に重点を置いた、デザインとエンジニアリングの軌跡を紹介します。</p>
+        <!-- Page Header -->
+        <section class="container" style="padding: 80px 20px 40px;">
+            <span class="section-label">Archive</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Selected <br>Works.</h1>
+            <p style="color: var(--color-gray-text); max-width: 600px;">A collection of projects focused on high quality, legal compliance, and inclusive design for everyone.</p>
+        </section>
+
+        <!-- Works Grid -->
+        <section class="container" style="padding-bottom: 100px;">
+            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
+                
+                <!-- Work Item 1: App -->
+                <a href="works/app/app-kiwitalkboard.html" class="work-item">
+                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
+                        <!-- Image placeholder -->
+                        <span style="font-size: 0.8rem; color: #999;">Web Application / PHP</span>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Development</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">Kiwi Talkboard</h2>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">A secure and accessible community board for NZ residents.</p>
+                    </div>
+                </a>
+
+                <!-- Work Item 2: Banner -->
+                <a href="works/banner/banner-bread.html" class="work-item">
+                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
+                        <span style="font-size: 0.8rem; color: #999;">Banner Design / Photoshop</span>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Design</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">Salt Bread Banner</h2>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">Visual strategy focusing on target-specific aesthetics.</p>
+                    </div>
+                </a>
+
+                <!-- Work Item 3: Movie -->
+                <a href="works/movie/video-yakitori.html" class="work-item">
+                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
+                        <span style="font-size: 0.8rem; color: #999;">Video Production / Marketing</span>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Movie</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">SNS Promotion Video</h2>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">15-second high-impact shorts for a local Yakitori restaurant.</p>
+                    </div>
+                </a>
+
             </div>
         </section>
 
-        <section class="works-list container">
-            <div class="works-grid">
-                
-                <article class="work-card-horizontal">
-                    <div class="work-visual">
-                        <img src="../assets/images/talkboard-icon.png" alt="Kiwi Talkboard アイコン">
-                    </div>
-                    <div class="work-content">
-                        <span class="category-tag">App Development</span>
-                        <h2>Kiwi Talkboard</h2>
-                        <p class="work-summary">NZ生活支援掲示板。バックエンドのセキュリティ設計とアクセシビリティを追求したWebアプリ。</p>
-                        <a href="works/app/app-kiwitalkboard.html" class="btn-outline btn-small">詳細を見る</a>
-                    </div>
-                </article>
-
-                <article class="work-card-horizontal">
-                    <div class="work-visual">
-                        <img src="../assets/images/banner-salt-pan.jpg" alt="塩パン専門店告知バナー">
-                    </div>
-                    <div class="work-content">
-                        <span class="category-tag">Banner Design</span>
-                        <h2>塩パン専門店オープン告知</h2>
-                        <p class="work-summary">補色を活用した視覚戦略。ターゲットのライフスタイルを深く分析したデザイン設計。</p>
-                        <a href="works/banner/banner-bread.html" class="btn-outline btn-small">詳細を見る</a>
-                    </div>
-                </article>
-
-                <article class="work-card-horizontal">
-                    <div class="work-visual">
-                        <img src="../assets/images/movie-yakitori-thumb.jpg" alt="焼き鳥店SNS動画">
-                    </div>
-                    <div class="work-content">
-                        <span class="category-tag">Video Production</span>
-                        <h2>焼き鳥店SNSプロモーション</h2>
-                        <p class="work-summary">15秒で体験価値を伝えるストーリー構成。シズル感と活気を重視したSNS用動画。</p>
-                        <a href="works/movie/movie-showcase.html" class="btn-outline btn-small">詳細を見る</a>
-                    </div>
-                </article>
-
+        <!-- CTA Section -->
+        <section style="background: var(--color-accent); color: #fff; padding: 100px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 20px;">Interested in working together?</h2>
+                <a href="contact.html" class="cta-button">Contact Me</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-container">
-            <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
 </body>

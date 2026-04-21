@@ -3,39 +3,115 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Service | Vicky</title>
+    <title>Services | Vicky</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
+
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="index.html">Vicky</a></div>
-            <nav class="main-nav" aria-label="メインナビゲーション">
+            <div class="logo"><a href="../index.html">Vicky</a></div>
+            <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../index.html">Home</a></li>
                     <li><a href="works.html">Works</a></li>
-                    <li><a href="services.html" class="active">Service</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="services.html" class="lang-btn active">EN</a>
+                <a href="../index.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="jp/services.html" class="lang-btn">JP</a>
+                <a href="../jp/services.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <section class="page-header">
+        <!-- Page Header -->
+        <section class="container" style="padding: 80px 20px 40px;">
+            <span class="section-label">Our Value</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Beyond <br>Development.</h1>
+            <p style="color: var(--color-gray-text); max-width: 600px;">Providing web solutions where high accessibility and rigorous quality assurance meet to create a reliable digital experience.</p>
+        </section>
+
+        <!-- Services Section -->
+        <section class="container" style="padding-bottom: 100px;">
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px;">
+                
+                <!-- Service 1: Accessibility -->
+                <div style="padding: 40px; background: #f9f9f9; border-radius: 8px; border-top: 4px solid var(--color-accent);">
+                    <span class="section-label" style="font-size: 0.65rem;">01. Compliance</span>
+                    <h2 style="font-size: 1.5rem; margin: 15px 0;">Inclusive Web Design</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-text); margin-bottom: 20px;">Ensuring your website meets WCAG 2.1/2.2 and NZ's Web Accessibility Standards. We don't just fix errors; we design for everyone, regardless of their ability or device.</p>
+                    <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
+                        <li>• Web Accessibility Audit</li>
+                        <li>• Screen Reader Optimization</li>
+                        <li>• Semantic HTML Construction</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: QA & Quality -->
+                <div style="padding: 40px; background: #f9f9f9; border-radius: 8px; border-top: 4px solid var(--color-accent);">
+                    <span class="section-label" style="font-size: 0.65rem;">02. Integrity</span>
+                    <h2 style="font-size: 1.5rem; margin: 15px 0;">Quality Assurance (QA)</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-text); margin-bottom: 20px;">Leveraging experience in enterprise ERP testing. We provide rigorous multi-device testing and bug tracking to ensure your product is stable and reliable from launch.</p>
+                    <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
+                        <li>• Functional & Regression Testing</li>
+                        <li>• Multi-Browser Verification</li>
+                        <li>• User Experience (UX) Analysis</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Visual & Frontend -->
+                <div style="padding: 40px; background: #f9f9f9; border-radius: 8px; border-top: 4px solid var(--color-accent);">
+                    <span class="section-label" style="font-size: 0.65rem;">03. Creativity</span>
+                    <h2 style="font-size: 1.5rem; margin: 15px 0;">Frontend Development</h2>
+                    <p style="font-size: 0.95rem; color: var(--color-gray-text); margin-bottom: 20px;">Creating clean, performant, and maintainable code. Specializing in modern CSS frameworks and mobile-first responsive design for a seamless user journey.</p>
+                    <ul style="list-style: none; font-size: 0.85rem; line-height: 2;">
+                        <li>• Custom Web Development</li>
+                        <li>• UI Design & Prototyping</li>
+                        <li>• SEO & Performance Tuning</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Why Choose Section -->
+        <section style="background: #fafafa; padding: 100px 0;">
+            <div class="container" style="display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center;">
+                <div>
+                    <span class="section-label">Why Vicky</span>
+                    <h2 style="font-size: 2.2rem; margin: 20px 0; letter-spacing: -0.01em;">Mindset of Service, <br>Precision of QA.</h2>
+                </div>
+                <div>
+                    <p style="color: var(--color-gray-text); margin-bottom: 20px; line-height: 1.8;">
+                        Born from the frontline of customer service and polished in the rigorous world of software testing, my approach is unique. I treat accessibility not as a checklist, but as an essential part of hospitality in the digital world.
+                    </p>
+                    <p style="color: var(--color-gray-text); line-height: 1.8;">
+                        Whether you are a startup in New Zealand or an established business looking to comply with new regulations, I provide the technical bridge to reach all users effectively.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: var(--color-accent); color: #fff; padding: 100px 0; text-align: center;">
             <div class="container">
-                <h1 class="hero-title">What I Offer</h1>
-                <p class="hero-description">Bridging the gap between design and functionality through expert engineering.</p>
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 20px;">Ready to elevate your quality?</h2>
+                <a href="contact.html" class="cta-button">Start a Conversation</a>
             </div>
         </section>
     </main>
-    </body>
+
+    <footer class="site-footer">
+        <div class="container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
+        </div>
+    </footer>
+</body>
 </html>
