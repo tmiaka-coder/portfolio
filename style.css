@@ -307,3 +307,114 @@ a:focus, button:focus {
     margin: 40px 0;
     border-radius: 8px;
 }
+/* 既存のスタイルに続けて末尾に追加、または既存の .work-full-description 周りを上書きしてください */
+
+/* --- Work Detail Specifics --- */
+.app-icon {
+    width: 120px;
+    height: 120px;
+    border-radius: 24px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.12);
+}
+
+.work-banner-img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+    height: 0;
+    overflow: hidden;
+    border-radius: 8px;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* --- Accordion (Details/Summary) --- */
+.work-full-description {
+    margin-top: 40px;
+}
+
+.work-full-description-item {
+    border-top: 1px solid #eeeeee;
+    transition: background-color 0.3s ease;
+}
+
+.work-full-description-item summary {
+    padding: 24px 0;
+    list-style: none;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: none;
+}
+
+/* Focus state for accessibility */
+.work-full-description-item summary:focus {
+    color: var(--color-accent, #007bff);
+}
+
+.work-full-description-item summary::-webkit-details-marker {
+    display: none;
+}
+
+.work-full-description-item summary h2 {
+    font-size: 1.25rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Custom Icon (+/-) */
+.work-full-description-item summary .icon::before {
+    content: "+";
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: #999;
+}
+
+.work-full-description-item[open] summary .icon::before {
+    content: "−";
+}
+
+/* Content inside accordion */
+.work-full-description-item .intro-details {
+    padding: 0 0 32px 0;
+    line-height: 1.8;
+    color: #444;
+    max-width: 800px;
+    animation: slideDown 0.3s ease-out;
+}
+
+.highlight-box {
+    background-color: #f9f9f9;
+    padding: 0 20px; /* details内なのでsummaryの余白と合わせる調整 */
+    border-radius: 8px;
+}
+
+@keyframes slideDown {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .work-full-description-item summary h2 {
+        font-size: 1.1rem;
+    }
+}
