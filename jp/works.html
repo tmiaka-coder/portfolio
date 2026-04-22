@@ -15,7 +15,14 @@
             <nav class="main-nav" aria-label="メインナビゲーション">
                 <ul class="nav-links">
                     <li><a href="index.html">ホーム</a></li>
-                    <li><a href="works.html" class="active">実績</a></li>
+                    <li class="dropdown">
+                        <a href="works.html" class="active" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="works-app.html">アプリ制作</a></li>
+                            <li><a href="works-banner.html">バナー制作</a></li>
+                            <li><a href="works-movie.html">動画編集</a></li>
+                        </ul>
+                    </li>
                     <li><a href="services.html">サービス</a></li>
                     <li><a href="about.html">プロフィール</a></li>
                     <li><a href="contact.html">お問い合わせ</a></li>
@@ -30,13 +37,12 @@
     </header>
 
     <main id="main-content">
-        <section class="page-header">
-            <div class="container">
-                <h1 class="hero-title">制作実績</h1>
-                <p class="hero-description">アクセシビリティと法的遵守に重点を置いた、デザインとエンジニアリングの軌跡を紹介します。</p>
-            </div>
-        </section>
-
+        <!-- Page Header -->
+<section class="container" style="padding: 80px 20px 40px;">
+    <span class="section-label">Archive</span>
+    <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Selected <br>Works.</h1>
+    <p style="color: var(--color-gray-text); max-width: 600px;">テスターとして培った品質へのこだわりと、誰もが使いやすいインクルーシブなデザインを意識しました。</p>
+</section>
         <section class="works-list container">
             <div class="works-grid">
                 <article class="work-card">

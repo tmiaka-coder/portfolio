@@ -15,7 +15,14 @@
             <nav class="main-nav" aria-label="メインナビゲーション">
                 <ul class="nav-links">
                     <li><a href="index.html">ホーム</a></li>
-                    <li><a href="works.html">実績</a></li>
+                    <li class="dropdown">
+                        <a href="works.html" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="works-app.html">アプリ制作</a></li>
+                            <li><a href="works-banner.html">バナー制作</a></li>
+                            <li><a href="works-movie.html">動画編集</a></li>
+                        </ul>
+                    </li>
                     <li><a href="services.html">サービス</a></li>
                     <li><a href="about.html" class="active">プロフィール</a></li>
                     <li><a href="contact.html">お問い合わせ</a></li>
@@ -29,12 +36,14 @@
         </div>
     </header>
 
-    <main id="main-content" class="container">
-        <section class="page-header">
-            <h1 class="hero-title">About Me</h1>
-            <p class="hero-description">品質への眼差しと、アクティブな冒険心を胸に。</p>
+    <main id="main-content">
+        <!-- Page Header -->
+        <section class="container" style="padding: 80px 20px 0px;">
+            <span class="section-label">Archive</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Selected <br>Works.</h1>
+            <p style="color: var(--color-gray-text); max-width: 600px;">テスターとして培った品質へのこだわりと、<br>アクセシビリティを意識して作成しました。</p>
         </section>
-
+        <section class="container" style="padding: 20px 20px 0px;">
         <section class="about-content">
             <div class="about-grid">
                 <!-- 左側：写真 -->

@@ -16,7 +16,14 @@
             <nav class="main-nav" aria-label="メインナビゲーション">
                 <ul class="nav-links">
                     <li><a href="index.html">ホーム</a></li>
-                    <li><a href="works.html">実績</a></li>
+                    <li class="dropdown">
+                        <a href="works.html" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="works-app.html">アプリ制作</a></li>
+                            <li><a href="works-banner.html">バナー制作</a></li>
+                            <li><a href="works-movie.html">動画編集</a></li>
+                        </ul>
+                    </li>
                     <li><a href="services.html">サービス</a></li>
                     <li><a href="about.html">プロフィール</a></li>
                     <li><a href="contact.html" class="active">お問い合わせ</a></li>
@@ -31,11 +38,12 @@
     </header>
     
     <main id="main-content" class="container">
-        <section class="page-header">
-            <h1 class="hero-title">CONTACT</h1>
-            <p class="hero-description">Connect with Me</p>
-        </section>
-    
+        <!-- Page Header -->
+<section class="container" style="padding: 80px 20px 40px;">
+    <span class="section-label">Connect</span>
+    <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Let's Start <br>a Conversation.</h1>
+    <p style="color: var(--color-gray-text); max-width: 600px;">制作のご相談、お見積もりなどお気軽にご相談ください。</p>
+</section>
         <section class="contact-section">
             <p class="contact-instruction">ご都合の良い方法でご連絡ください。</p>
             
