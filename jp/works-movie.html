@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>動画編集 | Miaka</title>
+    <link rel="stylesheet" href="../style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ヘッダー -->
+    <header class="site-header">
+    <div class="container header-container">
+        <div class="logo"><a href="index.html">Miaka</a></div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" >ホーム</a></li>
+                <li class="dropdown">
+                    <a href="works.html" class="active" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="works-app.html">アプリ制作</a></li>
+                        <li><a href="works-banner.html">バナー制作</a></li>
+                        <li><a href="works-movie.html">動画編集</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">サービス</a></li>
+                <li><a href="about.html">プロフィール</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <a href="../index.html" class="lang-btn">EN</a>
+            <span class="separator">|</span>
+            <a href="index.html" class="lang-btn active">JP</a>
+        </div>
+    </div>
+
+    <main class="works-container">
+        <header class="page-header">
+            <h1>Application Development</h1>
+            <p>課題解決のための、使いやすさを追求したアプリ開発。</p>
+        </header>
+
+        <!-- 実績アイテム1 -->
+        <article class="work-card">
+            <div class="work-image">
+                <!--  -->
+                <img src="https://via.placeholder.com/600x450" alt="集中力を高めるタスク管理アプリのスクリーンショット">
+            </div>
+            <div class="work-content">
+                <span class="work-category">Productivity</span>
+                <h2 class="work-title">Focus Timer App</h2>
+                <p class="work-description">
+                    作業時間を可視化し、集中力を最大化させるためのタイマーアプリです。シンプルながらもカスタマイズ性の高い通知設定を搭載しています。
+                </p>
+                <div class="tag-container">
+                    <span class="tag">Swift</span>
+                    <span class="tag">Firebase</span>
+                    <span class="tag">UX Design</span>
+                </div>
+                <a href="#" class="btn-detail">詳細を見る</a>
+            </div>
+        </article>
+
+        <!-- 実績アイテム2 -->
+        <article class="work-card">
+            <div class="work-image">
+                <!--  -->
+                <img src="https://via.placeholder.com/600x450" alt="シニア向け歩数計アプリのスクリーンショット">
+            </div>
+            <div class="work-content">
+                <span class="work-category">Health & Fitness</span>
+                <h2 class="work-title">Daily Health Tracker</h2>
+                <p class="work-description">
+                    毎日の歩数と水分補給をワンタップで記録。アクセシビリティを重視し、視覚情報の優先順位を整理したデザインが特徴です。
+                </p>
+                <div class="tag-container">
+                    <span class="tag">Kotlin</span>
+                    <span class="tag">Accessibility</span>
+                    <span class="tag">UI Design</span>
+                </div>
+                <a href="#" class="btn-detail">詳細を見る</a>
+            </div>
+        </article>
+
+        <!-- 戻るボタン -->
+        <section class="back-to-works">
+            <a href="works.html" class="btn-back">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <line x1="19" y1="12" x2="5" y2="12"></line>
+                    <polyline points="12 19 5 12 12 5"></polyline>
+                </svg>
+                Works一覧へ戻る
+            </a>
+        </section>
+
+    </main>
+
+</body>
+</html>
