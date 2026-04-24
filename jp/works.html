@@ -3,90 +3,101 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>実績 | Miaka</title>
+    <title>アプリ開発 | Miaka</title>
     <link rel="stylesheet" href="../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
-    <header class="site-header">
-        <div class="container header-container">
-            <div class="logo"><a href="index.html">Miaka</a></div>
-            <nav class="main-nav" aria-label="メインナビゲーション">
-                <ul class="nav-links">
-                    <li><a href="index.html">ホーム</a></li>
-                    <li class="dropdown">
-                        <a href="works.html" class="active" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="works-app.html">アプリ制作</a></li>
-                            <li><a href="works-banner.html">バナー制作</a></li>
-                            <li><a href="works-movie.html">動画編集</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="services.html">サービス</a></li>
-                    <li><a href="about.html">プロフィール</a></li>
-                    <li><a href="contact.html">お問い合わせ</a></li>
-                </ul>
-            </nav>
-            <div class="lang-switch">
-                <a href="../works.html" class="lang-btn">EN</a>
-                <span class="separator">|</span>
-                <a href="works.html" class="lang-btn active">JP</a>
-            </div>
-        </div>
-    </header>
 
+    <!-- ヘッダー -->
+    <header class="site-header">
+    <div class="container header-container">
+        <div class="logo"><a href="index.html">Miaka</a></div>
+        <nav class="main-nav">
+            <ul class="nav-links">
+                <li><a href="index.html" >ホーム</a></li>
+                <li class="dropdown">
+                    <a href="works.html" class="active" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="works-app.html">アプリ制作</a></li>
+                        <li><a href="works-banner.html">バナー制作</a></li>
+                        <li><a href="works-movie.html">動画編集</a></li>
+                    </ul>
+                </li>
+                <li><a href="services.html">サービス</a></li>
+                <li><a href="about.html">プロフィール</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </nav>
+        <div class="lang-switch">
+            <a href="../index.html" class="lang-btn">EN</a>
+            <span class="separator">|</span>
+            <a href="index.html" class="lang-btn active">JP</a>
+        </div>
+    </div>
     <main id="main-content">
         <!-- Page Header -->
-<section class="container" style="padding: 80px 20px 40px;">
-    <span class="section-label">Archive</span>
-    <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Selected <br>Works.</h1>
-    <p style="color: var(--color-gray-text); max-width: 600px;">テスターとして培った品質へのこだわりと、誰もが使いやすいインクルーシブなデザインを意識しました。</p>
-</section>
-        <section class="works-list container">
-            <div class="works-grid">
-                <article class="work-card">
-                    <div class="work-visual">
-                        <img src="../assets/images/talkboard-icon.png" alt="Kiwi Talkboard アイコン">
+        <section class="container" style="padding: 80px 20px 40px;">
+            <span class="section-label">Archive</span>
+            <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Selected <br>Works.</h1>
+            <p style="color: var(--color-gray-text); max-width: 600px;">テスターとして培った品質へのこだわりと、誰もが使いやすいインクルーシブなデザインを意識しました。</p>
+        </section>
+        <!-- Works Grid -->
+        <section class="container" style="padding-bottom: 100px;">
+            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
+                
+                <!-- Work Item 1: App -->
+                <a href="works/app/app-kiwitalkboard.html" class="work-item">
+                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
+                        <!-- Image placeholder -->
+                        <img src="../assets/images/appKIWI.jpg" alt="Kiwi Talkboard アプリ開発画面のプレビュー" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
-                    <div class="work-content">
-                        <span class="category-tag">App Development</span>
-                        <h2>Kiwi Talkboard</h2>
-                        <p>NZ生活支援掲示板。バックエンドのセキュリティ設計とアクセシビリティを追求したWebアプリ。</p>
-                        <a href="works/app/app-kiwitalkboard.html" class="btn-outline btn-small">詳細を見る</a>
+                    <div style="margin-top: 15px;">
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Development</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">Kiwi Talkboard</h2>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">NZ生活支援掲示板。バックエンドのセキュリティ設計とアクセシビリティを追求したWebアプリ。.</p>
                     </div>
-                </article>
+                </a>
 
-                <article class="work-card">
-                    <div class="work-visual">
-                        <img src="../assets/images/banner-salt-pan.jpg" alt="塩パン専門店告知バナー">
+                <!-- Work Item 2: Banner -->
+                <a href="works/banner/banner-bread.html" class="work-item">
+                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
+                        <img src="../assets/images/banner-salt-pan.jpg" alt="パン屋さん広告のプレビュー" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
-                    <div class="work-content">
-                        <span class="category-tag">Banner Design</span>
-                        <h2>塩パン専門店オープン告知</h2>
-                        <p>補色を活用した視覚戦略。ターゲットのライフスタイルを深く分析したデザイン設計。</p>
-                        <a href="works/banner/banner-bread.html" class="btn-outline btn-small">詳細を見る</a>
+                    <div style="margin-top: 15px;">
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Design</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">塩パン専門店オープン広告バナー</h2>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">補色を活用した視覚戦略。ターゲットのライフスタイルを深く分析したデザイン設計。</p>
                     </div>
-                </article>
+                </a>
 
-                <article class="work-card">
-                    <div class="work-visual">
-                        <img src="../assets/images/movie-yakitori-thumb.jpg" alt="焼き鳥店SNS動画サムネイル">
+                <!-- Work Item 3: Movie -->
+                <a href="works/movie/video-yakitori.html" class="work-item">
+                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
+                        <img src="../assets/images/shotyakitori.png" alt="ショート焼き鳥屋紹介サムネ" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
-                    <div class="work-content">
-                        <span class="category-tag">Video Production</span>
-                        <h2>焼き鳥店SNSプロモーション</h2>
-                        <p>15秒で体験価値を伝えるストーリー構成。シズル感と活気を重視したSNS用ショート動画。</p>
-                        <a href="works/movie/movie-showcase.html" class="btn-outline btn-small">詳細を見る</a>
+                    <div style="margin-top: 15px;">
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Movie</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">焼き鳥店SNSプロモーション</h2>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">15秒で体験価値を伝えるストーリー構成。シズル感と活気を重視したSNS用ショート動画。</p>
                     </div>
-                </article>
+                </a>
+
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section style="background: var(--color-accent); color: #fff; padding: 100px 0; text-align: center;">
+            <div class="container">
+                <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 20px;">Interested in working together?</h2>
+                <a href="contact.html" class="cta-button">Contact Me</a>
             </div>
         </section>
     </main>
 
     <footer class="site-footer">
-        <div class="container footer-container">
-            <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
+        <div class="container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
 </body>

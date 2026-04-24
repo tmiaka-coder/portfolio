@@ -579,3 +579,86 @@ img, svg {
 .btn-back:hover svg {
     transform: translateX(-5px);
 }
+.works-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px 24px;
+    padding: 40px 0;
+}
+.work-card {
+    display: flex;
+    flex-direction: column;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s ease;
+}
+/* 準備中のカードは少し薄く表示して区別する */
+.work-card.is-placeholder {
+    opacity: 0.7;
+    border: 1px dashed #ccc; /* 破線にして準備中感を出す */
+}
+.work-card:not(.is-placeholder):hover {
+    transform: translateY(-5px);
+}
+.work-visual {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.work-visual img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.placeholder-text {
+    color: #999;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+}
+.work-content {
+    padding: 20px 0;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+.category-tag {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    color: var(--color-gray-text, #666);
+    margin-bottom: 8px;
+    display: block;
+}
+.work-card h2 {
+    font-size: 1.25rem;
+    margin: 0 0 12px 0;
+    line-height: 1.4;
+}
+.work-card p {
+    font-size: 0.95rem;
+    color: #444;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+.btn-small {
+    align-self: flex-start;
+}
+/* Coming Soonボタンのスタイル */
+.btn-disabled {
+    background-color: #eee;
+    color: #999;
+    border: 1px solid #ddd;
+    cursor: not-allowed;
+    pointer-events: none;
+}
+@media (max-width: 480px) {
+    .works-grid {
+        grid-template-columns: 1fr;
+        gap: 32px;
+    }
+}
