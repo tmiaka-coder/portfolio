@@ -1,101 +1,339 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>動画編集 | Miaka</title>
-    <link rel="stylesheet" href="../style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <title>Video Production | Vicky</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        .movie-hero {
+            padding: 80px 0 48px;
+            border-bottom: 1px solid var(--color-gray-mid);
+        }
+
+        .movie-hero-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: end;
+        }
+
+        .filmstrip {
+            display: flex;
+            gap: 4px;
+            align-items: center;
+            margin-top: 8px;
+        }
+
+        .filmstrip-cell {
+            width: 16px;
+            height: 10px;
+            background: var(--color-gray-mid);
+            border-radius: 1px;
+        }
+
+        .filmstrip-cell:nth-child(even) {
+            background: var(--color-accent);
+            opacity: 0.3;
+        }
+
+        .video-works {
+            padding: 60px 0 120px;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .video-card {
+            display: grid;
+            grid-template-columns: 1.4fr 1fr;
+            border-bottom: 1px solid var(--color-gray-mid);
+            text-decoration: none;
+            color: inherit;
+            transition: background 0.3s ease;
+            overflow: hidden;
+        }
+
+        .video-card:first-child { border-top: 1px solid var(--color-gray-mid); }
+        .video-card:hover { background: var(--color-gray-light); }
+        .video-card:hover .vc-thumbnail img { transform: scale(1.04); }
+        .video-card:hover .vc-arrow { transform: translateX(6px); }
+
+        .vc-thumbnail {
+            position: relative;
+            aspect-ratio: 16/9;
+            overflow: hidden;
+            background: #111;
+        }
+
+        .vc-thumbnail img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+            opacity: 0.9;
+        }
+
+        .vc-play {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .vc-play-btn {
+            width: 52px;
+            height: 52px;
+            border-radius: 50%;
+            background: rgba(255,255,255,0.15);
+            backdrop-filter: blur(4px);
+            border: 1px solid rgba(255,255,255,0.4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: background 0.3s ease, transform 0.3s ease;
+        }
+
+        .video-card:hover .vc-play-btn {
+            background: rgba(255,255,255,0.3);
+            transform: scale(1.08);
+        }
+
+        .vc-duration {
+            position: absolute;
+            bottom: 10px;
+            right: 12px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            color: #fff;
+            background: rgba(0,0,0,0.55);
+            padding: 2px 7px;
+            border-radius: 2px;
+            letter-spacing: 0.05em;
+        }
+
+        .vc-content {
+            padding: 32px 36px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .vc-top { display: flex; flex-direction: column; gap: 12px; }
+
+        .vc-category {
+            font-size: 0.62rem;
+            font-weight: 600;
+            letter-spacing: 0.25em;
+            text-transform: uppercase;
+            color: var(--color-gray-text);
+        }
+
+        .vc-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            line-height: 1.35;
+        }
+
+        .vc-desc {
+            font-size: 0.85rem;
+            color: var(--color-gray-text);
+            line-height: 1.75;
+        }
+
+        .vc-bottom {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 24px;
+        }
+
+        .vc-tags { display: flex; gap: 6px; flex-wrap: wrap; }
+
+        .vc-tag {
+            font-size: 0.68rem;
+            padding: 2px 8px;
+            border: 1px solid var(--color-gray-mid);
+            border-radius: 2px;
+            color: var(--color-gray-text);
+        }
+
+        .vc-arrow {
+            width: 18px; height: 18px;
+            flex-shrink: 0;
+            color: var(--color-gray-text);
+            transition: transform 0.3s ease;
+        }
+
+        .video-card.is-placeholder {
+            opacity: 0.4;
+            pointer-events: none;
+        }
+
+        .vc-thumbnail.is-placeholder-thumb {
+            background: var(--color-gray-light);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .back-nav { padding: 40px 0 60px; border-top: 1px solid var(--color-gray-mid); }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            text-decoration: none;
+            color: var(--color-gray-text);
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            transition: color 0.3s ease;
+        }
+
+        .back-link:hover { color: var(--color-accent); }
+        .back-link:hover svg { transform: translateX(-4px); }
+        .back-link svg { transition: transform 0.3s ease; }
+
+        @media (max-width: 900px) {
+            .movie-hero-row { grid-template-columns: 1fr; gap: 20px; }
+            .video-card { grid-template-columns: 1fr; }
+            .vc-content { padding: 20px 0; }
+        }
+    </style>
 </head>
 <body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
 
-    <!-- ヘッダー -->
     <header class="site-header">
-    <div class="container header-container">
-        <div class="logo"><a href="index.html">Miaka</a></div>
-        <nav class="main-nav">
-            <ul class="nav-links">
-                <li><a href="index.html" >ホーム</a></li>
-                <li class="dropdown">
-                    <a href="works.html" class="active" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="works-app.html">アプリ制作</a></li>
-                        <li><a href="works-banner.html">バナー制作</a></li>
-                        <li><a href="works-movie.html">動画編集</a></li>
-                    </ul>
-                </li>
-                <li><a href="services.html">サービス</a></li>
-                <li><a href="about.html">プロフィール</a></li>
-                <li><a href="contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
-        <div class="lang-switch">
-            <a href="../index.html" class="lang-btn">EN</a>
-            <span class="separator">|</span>
-            <a href="index.html" class="lang-btn active">JP</a>
+        <div class="container header-container">
+            <div class="logo"><a href="index.html">Vicky</a></div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li class="dropdown">
+                        <a href="works.html" class="active" aria-haspopup="true" aria-expanded="false">Works<span class="arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="works-app.html">App Development</a></li>
+                            <li><a href="works-banner.html">Banner Design</a></li>
+                            <li><a href="works-movie.html">Video Production</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switch">
+                <a href="works-movie.html" class="lang-btn active">EN</a>
+                <span class="separator">|</span>
+                <a href="jp/works-movie.html" class="lang-btn">JP</a>
+            </div>
         </div>
-    </div>
+    </header>
 
-    <main class="works-container">
-        <header class="page-header">
-            <h1>Application Development</h1>
-            <p>課題解決のための、使いやすさを追求したアプリ開発。</p>
-        </header>
-
-        <!-- 実績アイテム1 -->
-        <article class="work-card">
-            <div class="work-image">
-                <!--  -->
-                <img src="https://via.placeholder.com/600x450" alt="集中力を高めるタスク管理アプリのスクリーンショット">
-            </div>
-            <div class="work-content">
-                <span class="work-category">Productivity</span>
-                <h2 class="work-title">Focus Timer App</h2>
-                <p class="work-description">
-                    作業時間を可視化し、集中力を最大化させるためのタイマーアプリです。シンプルながらもカスタマイズ性の高い通知設定を搭載しています。
-                </p>
-                <div class="tag-container">
-                    <span class="tag">Swift</span>
-                    <span class="tag">Firebase</span>
-                    <span class="tag">UX Design</span>
+    <main id="main-content">
+        <div class="container">
+            <section class="movie-hero" aria-labelledby="page-heading">
+                <div class="movie-hero-row">
+                    <div>
+                        <span class="section-label">Movie</span>
+                        <h1 id="page-heading" class="hero-title" style="font-size: clamp(2.5rem, 7vw, 4rem); margin-top: 16px;">
+                            Video<br>Production.
+                        </h1>
+                        <div class="filmstrip" aria-hidden="true">
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                            <div class="filmstrip-cell"></div>
+                        </div>
+                    </div>
+                    <div>
+                        <p style="color: var(--color-gray-text); line-height: 1.85; font-size: 0.95rem;">
+                            Condensing experience into seconds. Each video is story-boarded around a clear hook, narrative arc, and CTA — designed to maximize completion rates and drive real-world action on social media.
+                        </p>
+                    </div>
                 </div>
-                <a href="#" class="btn-detail">詳細を見る</a>
-            </div>
-        </article>
+            </section>
 
-        <!-- 実績アイテム2 -->
-        <article class="work-card">
-            <div class="work-image">
-                <!--  -->
-                <img src="https://via.placeholder.com/600x450" alt="シニア向け歩数計アプリのスクリーンショット">
-            </div>
-            <div class="work-content">
-                <span class="work-category">Health & Fitness</span>
-                <h2 class="work-title">Daily Health Tracker</h2>
-                <p class="work-description">
-                    毎日の歩数と水分補給をワンタップで記録。アクセシビリティを重視し、視覚情報の優先順位を整理したデザインが特徴です。
-                </p>
-                <div class="tag-container">
-                    <span class="tag">Kotlin</span>
-                    <span class="tag">Accessibility</span>
-                    <span class="tag">UI Design</span>
+            <section class="video-works" aria-label="Video production projects">
+
+                <a href="works/movie/movie-showcase.html"
+                   class="video-card"
+                   aria-label="View details: Yakitori Restaurant SNS Promotion Video">
+                    <div class="vc-thumbnail">
+                        <img src="assets/images/shotyakitori.png"
+                             alt="Yakitori restaurant SNS promotion video thumbnail. Opens with a close-up of the grill for immediate visual impact.">
+                        <div class="vc-play" aria-hidden="true">
+                            <div class="vc-play-btn">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="#fff" stroke="none">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <span class="vc-duration" aria-label="Duration: 15 seconds">0:15</span>
+                    </div>
+                    <div class="vc-content">
+                        <div class="vc-top">
+                            <span class="vc-category">SNS Short / Instagram Reel</span>
+                            <span class="vc-title">Yakitori Restaurant<br>SNS Promotion Video</span>
+                            <p class="vc-desc">A 15-second short packed with sizzle and energy. The narrative arc — grill close-up → chef's craft → happy guests — builds atmosphere and guides viewers naturally toward a visit CTA.</p>
+                        </div>
+                        <div class="vc-bottom">
+                            <div class="vc-tags">
+                                <span class="vc-tag">Premiere Pro</span>
+                                <span class="vc-tag">SNS Marketing</span>
+                                <span class="vc-tag">Story Design</span>
+                            </div>
+                            <svg class="vc-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/>
+                            </svg>
+                        </div>
+                    </div>
+                </a>
+
+                <div class="video-card is-placeholder" role="presentation" aria-hidden="true">
+                    <div class="vc-thumbnail is-placeholder-thumb">
+                        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ccc" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round">
+                            <polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/>
+                        </svg>
+                    </div>
+                    <div class="vc-content">
+                        <div class="vc-top">
+                            <span class="vc-category">Coming Soon</span>
+                            <span class="vc-title">Next Video Work</span>
+                            <p class="vc-desc">Currently in production. Stay tuned for updates.</p>
+                        </div>
+                        <div class="vc-bottom">
+                            <div class="vc-tags"><span class="vc-tag">TBD</span></div>
+                        </div>
+                    </div>
                 </div>
-                <a href="#" class="btn-detail">詳細を見る</a>
-            </div>
-        </article>
 
-        <!-- 戻るボタン -->
-        <section class="back-to-works">
-            <a href="works.html" class="btn-back">
-                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="19" y1="12" x2="5" y2="12"></line>
-                    <polyline points="12 19 5 12 12 5"></polyline>
-                </svg>
-                Works一覧へ戻る
-            </a>
-        </section>
+            </section>
 
+            <nav class="back-nav" aria-label="Return to works list">
+                <a href="works.html" class="back-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    Back to All Works
+                </a>
+            </nav>
+        </div>
     </main>
 
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
+        </div>
+    </footer>
 </body>
 </html>
