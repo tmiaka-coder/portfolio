@@ -68,6 +68,25 @@
                         </a>
                         <p style="font-size: 0.75rem; color: var(--color-gray-text); margin-top: 10px;">
                             *File size: approx. 150KB
+                            <div class="cv-download-section">
+                                <!-- 
+                                  aria-describedby: リンクの説明として下の注意文を紐付けます 
+                                  aria-label: 視覚障害者向けに「パスワード保護されたCV」であることを強調します
+                                -->
+                                <a 
+                                  href="../portfolio/assets/Miaka_Taniai_CV_EN.pdf" 
+                                  class="download-button" 
+                                  aria-describedby="cv-note"
+                                  aria-label="Download CV (PDF, Password Protected)"
+                                >
+                                  Download CV (English)
+                                </a>
+                              
+                                <p id="cv-note" class="text-sm text-gray-600 mt-2">
+                                  <strong>Note:</strong> To protect personal information, this PDF is password-protected. <br>
+                                  Please <a href="../portfolio/contact.html">contact me</a> to request the password, or use the one previously provided.
+                                </p>
+                              </div>
                         </p>
                     </div>
                 </div>
@@ -104,7 +123,7 @@
                 </div>
             </div>
         </section>
-
+        <br>
         <!-- Vision Section -->
         <section style="background: #000; color: #fff; padding: 100px 0; text-align: center;">
             <div class="container">
