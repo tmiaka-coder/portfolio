@@ -6,162 +6,33 @@
     <title>App Development | Vicky</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
-    <style>
-        .app-hero-inner {
-            display: grid;
-            grid-template-columns: 1fr auto;
-            align-items: end;
-            gap: 40px;
-            padding: 80px 0 40px;
-            border-bottom: 1px solid var(--color-gray-mid);
-        }
-
-        .app-count {
-            font-size: clamp(5rem, 12vw, 9rem);
-            font-weight: 800;
-            line-height: 1;
-            color: var(--color-gray-mid);
-            letter-spacing: -0.04em;
-            user-select: none;
-        }
-
-        .works-list {
-            padding: 0 0 120px;
-        }
-
-        .works-list-item {
-            display: grid;
-            grid-template-columns: 48px 200px 1fr auto;
-            align-items: center;
-            gap: 36px;
-            padding: 28px 0;
-            border-bottom: 1px solid var(--color-gray-mid);
-            text-decoration: none;
-            color: inherit;
-            transition: padding-left 0.3s ease;
-            position: relative;
-        }
-
-        .works-list-item:hover { padding-left: 12px; }
-        .works-list-item:hover .item-num { color: var(--color-accent); }
-        .works-list-item:hover .item-arrow { transform: translateX(6px); }
-
-        .item-num {
-            font-size: 0.7rem;
-            font-weight: 600;
-            letter-spacing: 0.15em;
-            color: var(--color-gray-mid);
-            transition: color 0.3s ease;
-        }
-
-        .item-meta { display: flex; flex-direction: column; gap: 5px; }
-
-        .item-category {
-            font-size: 0.62rem;
-            font-weight: 600;
-            letter-spacing: 0.25em;
-            text-transform: uppercase;
-            color: var(--color-gray-text);
-        }
-
-        .item-title {
-            font-size: 1.15rem;
-            font-weight: 600;
-            line-height: 1.25;
-        }
-
-        .item-desc {
-            font-size: 0.85rem;
-            color: var(--color-gray-text);
-            line-height: 1.75;
-        }
-
-        .item-tags {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 5px;
-        }
-
-        .item-tag {
-            font-size: 0.68rem;
-            padding: 2px 9px;
-            border: 1px solid var(--color-gray-mid);
-            border-radius: 2px;
-            color: var(--color-gray-text);
-            white-space: nowrap;
-        }
-
-        .item-arrow {
-            width: 18px; height: 18px;
-            flex-shrink: 0;
-            color: var(--color-gray-text);
-            transition: transform 0.3s ease;
-        }
-
-        .works-list-item.is-placeholder {
-            opacity: 0.4;
-            cursor: default;
-            pointer-events: none;
-        }
-
-        .back-nav { padding: 40px 0 60px; border-top: 1px solid var(--color-gray-mid); }
-
-        .back-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            text-decoration: none;
-            color: var(--color-gray-text);
-            font-size: 0.85rem;
-            font-weight: 600;
-            letter-spacing: 0.05em;
-            transition: color 0.3s ease;
-        }
-
-        .back-link:hover { color: var(--color-accent); }
-        .back-link:hover svg { transform: translateX(-4px); }
-        .back-link svg { transition: transform 0.3s ease; }
-
-        @media (max-width: 900px) {
-            .app-hero-inner { grid-template-columns: 1fr; padding-top: 60px; }
-            .app-count { display: none; }
-            .works-list-item {
-                grid-template-columns: 36px 1fr;
-                grid-template-rows: auto auto auto;
-            }
-            .item-desc { grid-column: 2; }
-            .item-tags { grid-column: 2; flex-direction: row; flex-wrap: wrap; justify-content: flex-start; }
-            .item-arrow { display: none; }
-        }
-    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="index.html">Vicky</a></div>
+            <div class="logo"><a href="../portfolio/index.html">Vicky</a></div>
             <nav class="main-nav" aria-label="Main navigation">
                 <ul class="nav-links">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="../portfolio/index.html">Home</a></li>
                     <li class="dropdown">
-                        <a href="works.html" class="active" aria-haspopup="true" aria-expanded="false">Works<span class="arrow">▾</span></a>
+                        <a href="../portfolio/works.html" class="active" aria-haspopup="true" aria-expanded="false">Works<span class="arrow">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="works-app.html">App Development</a></li>
-                            <li><a href="works-banner.html">Banner Design</a></li>
-                            <li><a href="works-movie.html">Video Production</a></li>
+                            <li><a href="../portfolio/works-app.html">App Development</a></li>
+                            <li><a href="../portfolio/works-banner.html">Banner Design</a></li>
+                            <li><a href="../portfolio/works-movie.html">Video Production</a></li>
                         </ul>
                     </li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="../portfolio/services.html">Services</a></li>
+                    <li><a href="../portfolio/about.html">About</a></li>
+                    <li><a href="../portfolio/contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="works-app.html" class="lang-btn active">EN</a>
+                <a href="../portfolio/works.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="jp/works-app.html" class="lang-btn">JP</a>
+                <a href="../portfolio/jp/works.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
@@ -183,7 +54,7 @@
 
             <section class="works-list" aria-label="App development projects">
 
-                <a href="works/app/app-kiwitalkboard.html" class="works-list-item" aria-label="View details of Kiwi Talkboard">
+                <a href="../portfolio/works/app/app-kiwitalkboard.html" class="works-list-item" aria-label="View details of Kiwi Talkboard">
                     <span class="item-num" aria-hidden="true">01</span>
                     <div class="item-meta">
                         <span class="item-category">Web App</span>
@@ -217,7 +88,7 @@
             </section>
 
             <nav class="back-nav" aria-label="Return to works list">
-                <a href="works.html" class="back-link">
+                <a href="../portfolio/works.html" class="back-link">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
                     </svg>
