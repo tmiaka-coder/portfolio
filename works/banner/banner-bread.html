@@ -3,62 +3,142 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品詳細：塩パン専門店バナー | Miaka</title>
-    <link rel="stylesheet" href="../../../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>塩パン専門店バナー | Miaka</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="../../index.html">Miaka</a></div>
-            <nav class="main-nav">
+            <div class="logo"><a href="../../jp/index.html">Miaka</a></div>
+            <nav class="main-nav" aria-label="メインナビゲーション">
                 <ul class="nav-links">
-                    <li><a href="../../index.html">ホーム</a></li>
-                    <li><a href="../../works.html" class="active">実績</a></li>
-                    <li><a href="../../services.html">サービス</a></li>
-                    <li><a href="../../about.html">プロフィール</a></li>
-                    <li><a href="../../contact.html">お問い合わせ</a></li>
+                    <li><a href="../../jp/index.html">ホーム</a></li>
+                    <li class="dropdown">
+                        <a href="../../jp/works.html" class="active" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../jp/works-app.html">アプリ制作</a></li>
+                            <li><a href="../../jp/works-banner.html">バナー制作</a></li>
+                            <li><a href="../../jp/works-movie.html">動画編集</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../jp/services.html">サービス</a></li>
+                    <li><a href="../../jp/about.html">プロフィール</a></li>
+                    <li><a href="../../jp/contact.html">お問い合わせ</a></li>
                 </ul>
             </nav>
+            <div class="lang-switch">
+                <a href="../../works/banner/banner-bread.html" class="lang-btn">EN</a>
+                <span class="separator">|</span>
+                <a href="../../jp/works/banner/banner-bread.html" class="lang-btn active">JP</a>
+            </div>
         </div>
     </header>
 
-    <main id="main-content" class="container">
-        <section class="work-detail-header">
-            <div class="work-card">
-                <div class="work-visual">
-                    <img src="../../../assets/images/banner-salt-pan.jpg" alt="塩パン専門店バナー" class="work-banner-img">
-                </div>
-                <div class="work-content">
-                    <h1>塩パン専門店 オープン告知バナー</h1>
-                    <p class="hero-label">Banner Design / Photoshop</p>
-                    <p class="hero-description">ターゲット特化型の視覚戦略で「美味しさ」を伝えるデザイン</p>
+    <main id="main-content">
+        <section class="detail-hero">
+            <div class="container">
+                <div class="detail-hero-grid">
+                    <div class="detail-visual-wrapper">
+                        <div class="detail-main-image">
+                            <img src="../../assets/images/banner-salt-pan.jpg" alt="塩パン専門店オープン告知バナー">
+                        </div>
+                        <div class="detail-meta-grid">
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Category</span>
+                                <span class="detail-meta-value">Banner Design</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Year</span>
+                                <span class="detail-meta-value">2025</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Tool</span>
+                                <span class="detail-meta-value">Photoshop</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Format</span>
+                                <span class="detail-meta-value">1200×628px</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-content-header">
+                        <span class="detail-category">Banner Design</span>
+                        <h1 class="detail-title">塩パン専門店<br>オープン告知バナー</h1>
+                        <p class="detail-subtitle">
+                            補色理論に基づいた視覚戦略と、ターゲット層の深い分析によって設計された、専門店としての信頼感を演出するバナーデザイン。
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="work-full-description">
-            <div class="work-full-description-item">
-                <h2>01. ターゲット</h2>
-                <div class="intro-details">
-                    <p>30代〜40代女性、近隣の主婦・会社員。素材の良さに価値を感じる層に向けた構成です。</p>
-                </div>
-            </div>
+        <section class="detail-body">
+            <div class="container">
 
-            <div class="work-full-description-item highlight-box">
-                <h2>02. デザイン戦略</h2>
-                <div class="intro-details">
-                    <p>パンの焼き色（オレンジ）の補色に近いブルーを採用し、メイン商品を視覚的に際立たせました。縦書きコピーを採用することで「専門店」としての信頼感を演出しています。</p>
-                </div>
+                <article class="detail-section">
+                    <span class="section-number">01</span>
+                    <h2 class="section-heading">ターゲット設定</h2>
+                    <div class="section-content">
+                        <p>
+                            30代〜40代女性、近隣の主婦・会社員層を主要ターゲットとして設定。素材の良さや製法へのこだわりに価値を感じる、品質重視の消費者層に訴求する構成としました。
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-section highlight-section">
+                    <span class="section-number">02</span>
+                    <h2 class="section-heading">デザイン戦略</h2>
+                    <div class="section-content">
+                        <p><strong>補色を活用した視覚的インパクト</strong></p>
+                        <p>
+                            パンの焼き色（オレンジ）の補色に近いブルーを背景に採用することで、メイン商品である塩パンを視覚的に際立たせています。この配色により、一瞬で目を引くバナーを実現しました。
+                        </p>
+
+                        <p><strong>縦書きコピーによる信頼感の演出</strong></p>
+                        <p>
+                            縦書きのキャッチコピーを採用することで、「専門店」としての格式と信頼性を表現。和のテイストを感じさせることで、国産素材や職人技といったイメージを暗に訴求しています。
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-section">
+                    <span class="section-number">03</span>
+                    <h2 class="section-heading">こだわりのポイント</h2>
+                    <div class="section-content">
+                        <ul>
+                            <li>高解像度の商品写真を使用し、パンの質感やシズル感を最大限に引き出す</li>
+                            <li>視認性を確保しつつ、余白を十分に確保した洗練されたレイアウト</li>
+                            <li>SNS広告での使用を想定し、スマートフォン表示でも文字が読みやすいサイズ設計</li>
+                        </ul>
+                    </div>
+                </article>
+
             </div>
         </section>
+
+        <nav class="detail-nav">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="../../jp/works-banner.html" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    バナー制作一覧へ戻る
+                </a>
+                
+                <a href="../../jp/contact.html" class="contact-btn" style="margin: 0;">
+                    お問い合わせ
+                </a>
+            </div>
+        </nav>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-container">
-            <p>&copy; 2026 Miaka.</p>
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
 </body>

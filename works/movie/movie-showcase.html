@@ -3,64 +3,150 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>作品詳細：焼き鳥店SNS動画 | Miaka</title>
-    <link rel="stylesheet" href="../../../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>焼き鳥店SNSプロモーション動画 | Miaka</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="../../index.html">Miaka</a></div>
-            <nav class="main-nav">
+            <div class="logo"><a href="../../jp/index.html">Miaka</a></div>
+            <nav class="main-nav" aria-label="メインナビゲーション">
                 <ul class="nav-links">
-                    <li><a href="../../index.html">ホーム</a></li>
-                    <li><a href="../../works.html" class="active">実績</a></li>
-                    <li><a href="../../services.html">サービス</a></li>
-                    <li><a href="../../about.html">プロフィール</a></li>
-                    <li><a href="../../contact.html">お問い合わせ</a></li>
+                    <li><a href="../../jp/index.html">ホーム</a></li>
+                    <li class="dropdown">
+                        <a href="../../jp/works.html" class="active" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="../../jp/works-app.html">アプリ制作</a></li>
+                            <li><a href="../../jp/works-banner.html">バナー制作</a></li>
+                            <li><a href="../../jp/works-movie.html">動画編集</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="../../jp/services.html">サービス</a></li>
+                    <li><a href="../../jp/about.html">プロフィール</a></li>
+                    <li><a href="../../jp/contact.html">お問い合わせ</a></li>
                 </ul>
             </nav>
+            <div class="lang-switch">
+                <a href="../../works/movie/movie-showcase.html" class="lang-btn">EN</a>
+                <span class="separator">|</span>
+                <a href="../../jp/works/movie/movie-showcase.html" class="lang-btn active">JP</a>
+            </div>
         </div>
     </header>
 
-    <main id="main-content" class="container">
-        <section class="work-detail-header">
-            <div class="work-card">
-                <div class="work-visual">
-                    <div class="video-container">
-                        <iframe src="https://youtube.com/shorts/6oMqAQQnYYs" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <main id="main-content">
+        <section class="detail-hero">
+            <div class="container">
+                <div class="detail-hero-grid">
+                    <div class="detail-visual-wrapper">
+                        <div class="detail-main-video">
+                            <iframe src="https://www.youtube.com/embed/6oMqAQQnYYs" 
+                                    title="焼き鳥店SNSプロモーション動画" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="detail-meta-grid">
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Category</span>
+                                <span class="detail-meta-value">SNS Short</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Duration</span>
+                                <span class="detail-meta-value">15 seconds</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Platform</span>
+                                <span class="detail-meta-value">Instagram / TikTok</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Tool</span>
+                                <span class="detail-meta-value">Premiere Pro</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-content-header">
+                        <span class="detail-category">Video Production</span>
+                        <h1 class="detail-title">焼き鳥店<br>SNSプロモーション動画</h1>
+                        <p class="detail-subtitle">
+                            シズル感と活気を15秒に凝縮し、視聴完了率と来店意欲を最大化するストーリー設計。SNS最適化された縦型ショート動画。
+                        </p>
                     </div>
                 </div>
-                <div class="work-content">
-                    <h1>焼き鳥店SNSプロモーション動画</h1>
-                    <p class="hero-label">Video Production / SNS Marketing</p>
-                    <p class="hero-description">シズル感と活気を15秒に凝縮し、来店意欲を高めるショート動画</p>
-                </div>
             </div>
         </section>
 
-        <section class="work-full-description">
-            <div class="work-full-description-item">
-                <h2>01. 作品の概要</h2>
-                <div class="intro-details">
-                    <p>飲食店の「シズル感」と「活気」を重視した、Instagram/TikTok向けのリール動画です。「お店の体験価値」を15秒で直感的に伝える構成にしました。</p>
-                </div>
-            </div>
+        <section class="detail-body">
+            <div class="container">
 
-            <div class="work-full-description-item highlight-box">
-                <h2>02. 制作のポイント</h2>
-                <div class="intro-details">
-                    <p>冒頭の焼き台のアップによる視覚的フックから、職人技、楽しそうな客席へと繋げるストーリー構成。最後に来店予約などのCTAへと自然に誘導しています。</p>
-                </div>
+                <article class="detail-section">
+                    <span class="section-number">01</span>
+                    <h2 class="section-heading">制作の目的</h2>
+                    <div class="section-content">
+                        <p>
+                            飲食店の「シズル感」と「活気」を重視した、Instagram Reels / TikTok向けのショート動画です。「お店の体験価値」を15秒という短時間で直感的に伝え、来店行動へつなげることを目標としました。
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-section highlight-section">
+                    <span class="section-number">02</span>
+                    <h2 class="section-heading">ストーリー構成のポイント</h2>
+                    <div class="section-content">
+                        <p><strong>3幕構成による視聴完了率の向上</strong></p>
+                        <ul>
+                            <li>
+                                <strong>冒頭（0〜3秒）:</strong> 焼き台の炎と串のアップで視覚的フックを作り、スクロールを止める
+                            </li>
+                            <li>
+                                <strong>中盤（4〜10秒）:</strong> 職人の手さばきや食材の質感を映し、「本格派」の印象を強化
+                            </li>
+                            <li>
+                                <strong>終盤（11〜15秒）:</strong> 楽しそうな客席の様子からCTA（来店予約・アカウントフォロー）へ自然に誘導
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <article class="detail-section">
+                    <span class="section-number">03</span>
+                    <h2 class="section-heading">技術的なこだわり</h2>
+                    <div class="section-content">
+                        <ul>
+                            <li>縦型9:16フォーマットでスマートフォン画面を最大限活用</li>
+                            <li>音声なしでも理解できるよう、視覚情報とテロップで完結する構成</li>
+                            <li>カラーグレーディングで暖色を強調し、食欲を刺激する色調に調整</li>
+                            <li>SNSアルゴリズムを意識し、最初の3秒でのエンゲージメント獲得を最優先</li>
+                        </ul>
+                    </div>
+                </article>
+
             </div>
         </section>
+
+        <nav class="detail-nav">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="../../jp/works-movie.html" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    動画編集一覧へ戻る
+                </a>
+                
+                <a href="../../jp/contact.html" class="contact-btn" style="margin: 0;">
+                    お問い合わせ
+                </a>
+            </div>
+        </nav>
     </main>
 
     <footer class="site-footer">
         <div class="container footer-container">
-            <p>&copy; 2026 Miaka.</p>
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
 </body>

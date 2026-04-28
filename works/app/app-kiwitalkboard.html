@@ -4,12 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kiwi Talkboard | Vicky</title>
-    <!-- Linking to your existing style.css -->
     <link rel="stylesheet" href="../../style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Accessibility: Skip to main content -->
     <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <div class="container header-container">
@@ -20,9 +18,9 @@
                     <li class="dropdown">
                         <a href="../../works.html" class="active" aria-haspopup="true" aria-expanded="false">Works<span class="arrow">▾</span></a>
                         <ul class="dropdown-menu">
-                            <li><a href="../app/app-kiwitalkboard.html">App Development</a></li>
-                            <li><a href="../banner/banner-bread.html">Banner Design</a></li>
-                            <li><a href="../movie/movie-showcase.html">Video Production</a></li>
+                            <li><a href="../../works/app/app-kiwitalkboard.html">App Development</a></li>
+                            <li><a href="../../works/banner/banner-bread.html">Banner Design</a></li>
+                            <li><a href="../../works/movie/movie-showcase.html">Video Production</a></li>
                         </ul>
                     </li>
             
@@ -32,95 +30,154 @@
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../../works.html" class="lang-btn active">EN</a>
+                <a href="../../works/app/app-kiwitalkboard.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="../../jp/works.html" class="lang-btn">JP</a>
+                <a href="../../jp/works/app/app-kiwitalkboard.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
 
-    <main id="main-content" class="container">
-        <section class="work-detail-header">
-            <div class="work-card">
-                <div class="work-visual">
-                    <img src="../../assets/images/appKIWI.jpg" alt="Kiwi Talkboard App Icon" class="app-icon">
-                </div>
-                <div class="work-content">
-                    <h1>Kiwi Talkboard</h1>
-                    <p class="hero-label">App Development / PHP & MySQL</p>
-                    <p class="hero-description">A secure and accessible community board connecting New Zealand migrants and locals.</p>
+    <main id="main-content">
+        <section class="detail-hero">
+            <div class="container">
+                <div class="detail-hero-grid">
+                    <div class="detail-visual-wrapper">
+                        <div class="detail-main-image">
+                            <img src="../../assets/images/appKIWI.jpg" alt="Kiwi Talkboard application main screen">
+                        </div>
+                        <div class="detail-meta-grid">
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Category</span>
+                                <span class="detail-meta-value">Web Application</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Year</span>
+                                <span class="detail-meta-value">2025</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Role</span>
+                                <span class="detail-meta-value">Full-stack Dev</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Timeline</span>
+                                <span class="detail-meta-value">6h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-content-header">
+                        <span class="detail-category">App Development</span>
+                        <h1 class="detail-title">Kiwi Talkboard</h1>
+                        <p class="detail-subtitle">
+                            A secure, thread-based community board connecting Japanese residents in New Zealand. Built with PHP & MySQL backend and Tailwind CSS for a modern, near-realtime posting experience.
+                        </p>
+                    </div>
                 </div>
             </div>
         </section>
 
-        <section class="work-full-description">
-            <div class="work-section-title">
-                <h2>Project Introduction</h2>
-            </div>
+        <section class="detail-body">
+            <div class="container">
 
-            <!-- 01. Overview -->
-            <div class="work-full-description-item">
-                <h3>01. Project Overview</h3>
-                <div class="intro-details">
-                    <p>
-                        Kiwi Talkboard is a hierarchical (thread-based) bulletin board application designed to facilitate smooth information exchange for life in New Zealand. 
-                        By combining backend processing using PHP and MySQL with a modern UI via Tailwind CSS, I developed an environment where posts and replies feel near-instant and seamless.
-                    </p>
-                </div>
-            </div>
+                <article class="detail-section">
+                    <span class="section-number">01</span>
+                    <h2 class="section-heading">Project Overview</h2>
+                    <div class="section-content">
+                        <p>
+                            Kiwi Talkboard is a hierarchical (thread-based) bulletin board application designed to facilitate smooth information exchange for life in New Zealand. By combining backend processing using PHP and MySQL with a modern UI via Tailwind CSS, I developed an environment where posts and replies feel near-instant and seamless.
+                        </p>
+                    </div>
+                </article>
 
-            <!-- 02. Background -->
-            <div class="work-full-description-item">
-                <h3>02. Background & Purpose</h3>
-                <div class="intro-details">
-                    <p>
-                        This project was inspired by my plans to relocate to New Zealand in August 2026. 
-                        I wanted to build a practical tool to help with local community integration and information gathering before and after my move.
-                    </p>
-                </div>
-            </div>
+                <article class="detail-section">
+                    <span class="section-number">02</span>
+                    <h2 class="section-heading">Background & Purpose</h2>
+                    <div class="section-content">
+                        <p>
+                            This project was inspired by my plans to relocate to New Zealand in August 2026. I wanted to build a practical tool to help with local community integration and information gathering before and after my move, while also demonstrating my technical capabilities.
+                        </p>
+                    </div>
+                </article>
 
-            <!-- 03. Core Features -->
-            <div class="work-full-description-item highlight-box">
-                <h3>03. Key Focus: Risk Management & Security</h3>
-                <div class="intro-details">
-                    <p><strong>IP Address Logging for Traceability</strong></p>
-                    <ul>
-                        <li><strong>Purpose:</strong> To deter online harassment and spam caused by anonymous posting, ensuring a mechanism to identify the source in case of trouble.</li>
-                        <li><strong>Implementation:</strong> Utilizing PHP's <code>$_SERVER['REMOTE_ADDR']</code>, the system automatically logs the sender's IP address into the <code>ip_address</code> column of the database during every post or reply. This silently enhances security on the backend without compromising user convenience.</li>
-                    </ul>
-                </div>
-            </div>
+                <article class="detail-section highlight-section">
+                    <span class="section-number">03</span>
+                    <h2 class="section-heading">Key Focus: Risk Management & Security</h2>
+                    <div class="section-content">
+                        <p><strong>IP Address Logging for Traceability</strong></p>
+                        <ul>
+                            <li>
+                                <strong>Purpose:</strong> To deter online harassment and spam caused by anonymous posting, ensuring a mechanism to identify the source in case of trouble.
+                            </li>
+                            <li>
+                                <strong>Implementation:</strong> Utilizing PHP's <code>$_SERVER['REMOTE_ADDR']</code>, the system automatically logs the sender's IP address into the <code>ip_address</code> column of the database during every post or reply. This silently enhances security on the backend without compromising user convenience.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
 
-            <!-- 04. Tech Stack -->
-            <div class="work-full-description-item">
-                <h3>04. Tech Stack</h3>
-                <div class="intro-details">
-                    <ul class="tech-list">
-                        <li><strong>Frontend:</strong> HTML5, Tailwind CSS, JavaScript (Fetch API)</li>
-                        <li><strong>Backend:</strong> PHP 8.x</li>
-                        <li><strong>Database:</strong> MySQL (MariaDB)</li>
-                        <li><strong>Infrastructure:</strong> Lolipop Rental Server</li>
-                    </ul>
-                </div>
-            </div>
+                <article class="detail-section">
+                    <span class="section-number">04</span>
+                    <h2 class="section-heading">Tech Stack</h2>
+                    <div class="section-content">
+                        <div class="tech-stack-grid">
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Frontend</span>
+                                <p class="tech-value">HTML5, Tailwind CSS, JavaScript (Fetch API)</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Backend</span>
+                                <p class="tech-value">PHP 8.x</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Database</span>
+                                <p class="tech-value">MySQL (MariaDB)</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Infrastructure</span>
+                                <p class="tech-value">Lolipop Rental Server</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
 
-            <!-- 05. Points of Commitment -->
-            <div class="work-full-description-item">
-                <h3>05. Design Philosophy & Commitment</h3>
-                <div class="intro-details">
-                    <p><strong>Accessibility-First Design:</strong></p>
-                    <p>Guided by the principle of "leaving no one behind," I prioritized high visual contrast and implemented an instant filtering search function using JavaScript. I focused intensely on making information easy to find and read for everyone.</p>
-                    
-                    <p><strong>Awareness of Legal Compliance:</strong></p>
-                    <p>Beyond simple functionality, the design considers the legal and ethical aspects of operating a web service, such as requiring agreement to Terms of Service and logging IP addresses for safe community management.</p>
-                </div>
+                <article class="detail-section">
+                    <span class="section-number">05</span>
+                    <h2 class="section-heading">Design Philosophy & Commitment</h2>
+                    <div class="section-content">
+                        <p><strong>Accessibility-First Design</strong></p>
+                        <p>
+                            Guided by the principle of "leaving no one behind," I prioritized high visual contrast and implemented an instant filtering search function using JavaScript. I focused intensely on making information easy to find and read for everyone.
+                        </p>
+
+                        <p><strong>Awareness of Legal Compliance</strong></p>
+                        <p>
+                            Beyond simple functionality, the design considers the legal and ethical aspects of operating a web service, such as requiring agreement to Terms of Service and logging IP addresses for safe community management.
+                        </p>
+                    </div>
+                </article>
+
             </div>
         </section>
-    </main>   
+
+        <nav class="detail-nav">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="../../works.html" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    Back to App Development
+                </a>
+                
+                <a href="../../contact.html" class="contact-btn" style="margin: 0;">
+                    Contact Me
+                </a>
+            </div>
+        </nav>
+    </main>
+
     <footer class="site-footer">
         <div class="container footer-container">
-            <p>&copy; 2026 Miaka.</p>
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
 </body>
