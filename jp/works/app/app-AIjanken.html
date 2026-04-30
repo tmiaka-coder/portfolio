@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIじゃんけん | Miaka</title>
+    <link rel="stylesheet" href="../../../style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo"><a href="../../../jp/index.html">Miaka</a></div>
+            <nav class="main-nav">
+                <ul class="nav-links">
+                    <li><a href="../../../jp/index.html"class="active">ホーム</a></li>
+                    <li><a href="../../../jp/works.html"class="active">実績</a></li>
+                    <li><a href="../../../jp/services.html">サービス</a></li>
+                    <li><a href="../../../jp/about.html">プロフィール</a></li>
+                    <li><a href="../../../jp/contact.html">お問い合わせ</a></li>
+</ul>
+            </nav>
+            <div class="lang-switch">
+                <a href="../../../works/app/app-AIjanken.html" class="lang-btn">EN</a>
+                <span class="separator">|</span>
+                <a href="#" class="lang-btn active">JP</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <section class="detail-hero">
+            <div class="container">
+                <div class="detail-hero-grid">
+                    <div class="detail-visual-wrapper">
+                        <div class="detail-main-image">
+                            <!-- アップロードされたアイコン画像 -->
+                            <img src="../../../assets/images/appjynken.png" alt="AIじゃんけんアプリのアイコン：グー・チョキ・パーの記号">
+                        </div>
+                        <div class="detail-meta-grid">
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Category</span>
+                                <span class="detail-meta-value">Web Application / AI</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Year</span>
+                                <span class="detail-meta-value">2026</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Role</span>
+                                <span class="detail-meta-value">Frontend & AI Logic</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Timeline</span>
+                                <span class="detail-meta-value">12h</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="detail-content-header">
+                        <span class="detail-category">App Development</span>
+                        <h1 class="detail-title">AIじゃんけんアプリ</h1>
+                        <p class="detail-subtitle">
+                            ブラウザのカメラを通じてユーザーの手をリアルタイムに認識し、AIと対戦できるアプリ。GoogleのMediaPipe Handsを活用し、サーバーレスで高度な画像解析を実現しました。
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="detail-body">
+            <div class="container">
+
+                <article class="detail-section">
+                    <span class="section-number">01</span>
+                    <h2 class="section-heading">プロジェクト概要</h2>
+                    <div class="section-content">
+                        <p>
+                            AIじゃんけんは、ユーザーの手の動きをリアルタイムで認識し、AI相手に対戦できるブラウザベースのアプリケーションです。フロントエンドで <strong>MediaPipe Hands</strong> を動作させることで、専用のバックエンドサーバーを介さずに低遅延な画像解析を可能にしました。また、<strong>PWA（Progressive Web App）</strong> に対応しており、インストール不要でネイティブアプリのような操作感を提供します。
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-section">
+                    <span class="section-number">02</span>
+                    <h2 class="section-heading">開発の背景と目的</h2>
+                    <div class="section-content">
+                        <p>
+                            「AI技術をいかに日常の遊びに落とし込み、UXを最大化できるか」という挑戦から始まりました。複雑な機材やアプリのインストールという心理的ハードルを排除し、URL一つで誰もがAIの凄さを体感できるツールを目指しました。
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-section highlight-section">
+                    <span class="section-number">03</span>
+                    <h2 class="section-heading">注力ポイント：UIとAIロジック</h2>
+                    <div class="section-content">
+                        <p><strong>モバイル最適化と没入感のあるレイアウト</strong></p>
+                        <p>
+                            一般的な動画レイアウトではスマホ画面で自分とCPUが上下に離れてしまい、対戦の臨場感が損なわれる問題がありました。そこで <strong>CSS Grid</strong> を活用し、モバイル環境でも強制的に左右横並びのレイアウトを維持。視線の移動を最小限に抑え、対面でじゃんけんをしているような直感的な操作性を構築しました。
+                        </p>
+                        <p><strong>高精度なハンドトラッキングの実装</strong></p>
+                        <p>
+                            MediaPipe Handsから取得した21箇所の関節座標（Landmarks）を解析するアルゴリズムを実装。各指の先端と第2関節の相対位置をJavaScriptで計算し、「立っている指の数」からグー・チョキ・パーを判別する独自のロジックを開発しました。
+                        </p>
+                    </div>
+                </article>
+
+                <article class="detail-section">
+                    <span class="section-number">04</span>
+                    <h2 class="section-heading">使用技術（テックスタック）</h2>
+                    <div class="section-content">
+                        <div class="tech-stack-grid">
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Frontend</span>
+                                <p class="tech-value">HTML5, Tailwind CSS, JavaScript (ES6+)</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">AI Engine</span>
+                                <p class="tech-value">MediaPipe Hands</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Web API</span>
+                                <p class="tech-value">Camera API, Service Worker (PWA)</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="detail-section">
+                    <span class="section-number">05</span>
+                    <h2 class="section-heading">デザイン哲学とこだわり</h2>
+                    <div class="section-content">
+                        <p><strong>アクセシビリティとUXの一貫性</strong></p>
+                        <p>
+                            「アクセシビリティ最優先」の考えに基づき、<code>aria-live</code> 属性を活用。AIの判定結果や勝敗が決まった瞬間、スクリーンリーダーが即座に状況を読み上げる設計にしました。また、PWA化によりホーム画面からの直接起動を可能にし、利便性を高めています。
+                        </p>
+
+                        <p><strong>プライバシーとセキュリティ</strong></p>
+                        <p>
+                            カメラ映像の解析をすべてクライアントサイド（ブラウザ内）で完結させる「プライバシー重視」の設計を行い、映像データをサーバーに送信しません。また、DOM操作において <code>textContent</code> を徹底することで、インジェクション攻撃を防ぐセキュアな実装を心がけました。
+                        </p>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <nav class="detail-nav">
+            <div class="container" style="display: flex; justify-content: space-between; align-items: center;">
+                <a href="../../works.html" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    制作実績一覧へ戻る
+                </a>
+                
+                <a href="../../contact.html" class="contact-btn" style="margin: 0;">
+                    お問い合わせ
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
+        </div>
+    </footer>
+</body>
+</html>
