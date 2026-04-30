@@ -6,6 +6,7 @@
     <title>Works | Vicky</title>
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -38,64 +39,22 @@
             <p style="color: var(--color-gray-text); max-width: 600px;">A collection of projects focused on high quality, legal compliance, and inclusive design for everyone.</p>
         </section>
 
-        <!-- App Development Section -->
-        <section class="container" style="padding-bottom: 80px;" aria-labelledby="section-app">
-            <h2 id="section-app" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">APP DEVELOPMENT</h2>
-            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
-                
-                <!-- Kiwi Talkboard -->
-                <a href="works/app/app-kiwitalkboard.html" class="work-item">
-                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
-                        <img src="assets/images/appKIWI.jpg" alt="Kiwi Talkboard app preview" style="width: 100%; height: auto; border-radius: 4px;">
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Web Application</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">Kiwi Talkboard</h2>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">A secure, accessible community board connecting Japanese residents in New Zealand.</p>
-                    </div>
-                </a>
-
+        <!-- Filter Buttons -->
+        <nav class="container" style="padding-bottom: 40px;" aria-label="Works category filter">
+            <div class="filter-buttons" role="group" aria-label="Filter by category">
+                <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">All</button>
+                <button type="button" class="filter-btn" data-category="app" aria-pressed="false">App</button>
+                <button type="button" class="filter-btn" data-category="banner" aria-pressed="false">Banner</button>
+                <button type="button" class="filter-btn" data-category="movie" aria-pressed="false">Movie</button>
             </div>
-        </section>
+        </nav>
 
-        <!-- Banner Design Section -->
-        <section class="container" style="padding-bottom: 80px;" aria-labelledby="section-banner">
-            <h2 id="section-banner" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">BANNER DESIGN</h2>
-            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
-                
-                <!-- Bread Shop Banner -->
-                <a href="works/banner/banner-bread.html" class="work-item">
-                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
-                        <img src="assets/images/banner-salt-pan.jpg" alt="Bakery advertisement preview" style="width: 100%; height: auto; border-radius: 4px;">
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Advertisement</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">Bakery Advertisement</h2>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">Visual strategies tailored to specific target audiences.</p>
-                    </div>
-                </a>
-
+        <!-- Works Grid -->
+        <section class="container" style="padding-bottom: 100px;">
+            <div id="works-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Works will be dynamically inserted here by JavaScript -->
             </div>
-        </section>
-
-        <!-- Video Production Section -->
-        <section class="container" style="padding-bottom: 100px;" aria-labelledby="section-movie">
-            <h2 id="section-movie" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">VIDEO PRODUCTION</h2>
-            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
-                
-                <!-- Showcase Movie -->
-                <a href="works/movie/movie-showcase.html" class="work-item">
-                    <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
-                        <img src="assets/images/shotyakitori.png" alt="Yakitori shop short video thumbnail" style="width: 100%; height: auto; border-radius: 4px;">
-                    </div>
-                    <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Short Form</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">Yakitori Shop Video</h2>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">Short-form high-impact videos for social media.</p>
-                    </div>
-                </a>
-
-            </div>
+            <p id="no-results" class="text-center text-gray-500 py-12" style="display: none;">No works found</p>
         </section>
 
         <!-- CTA Section -->
@@ -112,5 +71,234 @@
             <p class="copyright">&copy; 2026 Miaka. Designed with Heart & Accessibility.</p>
         </div>
     </footer>
+
+    <script>
+        /**
+         * Works Data Array
+         * To add new works, append objects to this array.
+         * Required fields: id, category, title, description, image, link
+         * category: 'app' | 'banner' | 'movie'
+         */
+        const worksData = [
+            {
+                id: 1,
+                category: 'app',
+                categoryLabel: 'WEB APPLICATION',
+                title: 'Kiwi Talkboard',
+                description: 'A secure, accessible community board connecting Japanese residents in New Zealand.',
+                image: 'assets/images/appKIWI.jpg',
+                imageAlt: 'Kiwi Talkboard app preview',
+                link: 'works/app/app-kiwitalkboard.html'
+            },
+            {
+                id: 2,
+                category: 'banner',
+                categoryLabel: 'ADVERTISEMENT',
+                title: 'Bakery Advertisement',
+                description: 'Visual strategies tailored to specific target audiences.',
+                image: 'assets/images/banner-salt-pan.jpg',
+                imageAlt: 'Bakery advertisement preview',
+                link: 'works/banner/banner-bread.html'
+            },
+            {
+                id: 3,
+                category: 'movie',
+                categoryLabel: 'SHORT FORM',
+                title: 'Yakitori Shop Video',
+                description: 'Short-form high-impact videos for social media.',
+                image: 'assets/images/shotyakitori.png',
+                imageAlt: 'Yakitori shop short video thumbnail',
+                link: 'works/movie/movie-showcase.html'
+            }
+            // To add new works:
+            // {
+            //     id: 4,
+            //     category: 'lp',
+            //     categoryLabel: 'LANDING PAGE',
+            //     title: 'New Work Title',
+            //     description: 'Work description',
+            //     image: 'image path',
+            //     imageAlt: 'Image description',
+            //     link: 'detail page path'
+            // }
+        ];
+
+        /**
+         * Category definitions
+         * Add entries here for new categories
+         */
+        const categories = {
+            all: { label: 'All', ariaLabel: 'All works' },
+            app: { label: 'App', ariaLabel: 'App development works' },
+            banner: { label: 'Banner', ariaLabel: 'Banner design works' },
+            movie: { label: 'Movie', ariaLabel: 'Video production works' }
+        };
+
+        /**
+         * Function to create work card HTML
+         * @param {Object} work - Work data object
+         * @returns {string} - HTML string
+         */
+        function createWorkCard(work) {
+            return `
+                <article class="work-item group">
+                    <a href="${work.link}" class="block">
+                        <div class="work-thumb aspect-video bg-gray-100 rounded overflow-hidden">
+                            <img src="${work.image}" alt="${work.imageAlt}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        </div>
+                        <div class="mt-4">
+                            <span class="section-label text-[0.6rem] tracking-widest mb-2 block">${work.categoryLabel}</span>
+                            <h2 class="work-title text-xl font-semibold">${work.title}</h2>
+                            <p class="text-sm text-gray-600 mt-2 leading-relaxed">${work.description}</p>
+                        </div>
+                    </a>
+                </article>
+            `;
+        }
+
+        /**
+         * Function to filter and display works
+         * @param {string} category - Category to filter by ('all' for all works)
+         */
+        function filterWorks(category) {
+            const grid = document.getElementById('works-grid');
+            const noResults = document.getElementById('no-results');
+            
+            // Filter works
+            const filteredWorks = category === 'all' 
+                ? worksData 
+                : worksData.filter(work => work.category === category);
+
+            // Generate cards
+            if (filteredWorks.length > 0) {
+                grid.innerHTML = filteredWorks.map(work => createWorkCard(work)).join('');
+                grid.style.display = 'grid';
+                noResults.style.display = 'none';
+            } else {
+                grid.innerHTML = '';
+                grid.style.display = 'none';
+                noResults.style.display = 'block';
+            }
+        }
+
+        /**
+         * Function to update filter button states
+         * @param {HTMLElement} activeButton - Active button element
+         */
+        function updateButtonState(activeButton) {
+            // Set all buttons to aria-pressed="false"
+            document.querySelectorAll('.filter-btn').forEach(btn => {
+                btn.setAttribute('aria-pressed', 'false');
+                btn.classList.remove('active');
+            });
+            
+            // Set selected button to aria-pressed="true"
+            activeButton.setAttribute('aria-pressed', 'true');
+            activeButton.classList.add('active');
+        }
+
+        /**
+         * Initialization function
+         */
+        function init() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            
+            // Initial display: all works
+            filterWorks('all');
+
+            // Set up click events
+            filterButtons.forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const category = this.dataset.category;
+                    filterWorks(category);
+                    updateButtonState(this);
+                });
+
+                // Keyboard navigation (Enter/Space to activate)
+                btn.addEventListener('keydown', function(e) {
+                    if (e.key === 'Enter' || e.key === ' ') {
+                        e.preventDefault();
+                        this.click();
+                    }
+                });
+            });
+        }
+
+        // Initialize after DOM loads
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+
+    <style>
+        /* Filter button styles */
+        .filter-buttons {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+        }
+
+        .filter-btn {
+            padding: 10px 20px;
+            border: 1px solid #e5e5e5;
+            background: #fff;
+            color: #666;
+            font-size: 0.875rem;
+            font-family: 'Inter', sans-serif;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            border-radius: 2px;
+        }
+
+        .filter-btn:hover {
+            border-color: #333;
+            color: #333;
+        }
+
+        .filter-btn.active {
+            background: #1a1a1a;
+            border-color: #1a1a1a;
+            color: #fff;
+        }
+
+        .filter-btn:focus {
+            outline: 2px solid #1a1a1a;
+            outline-offset: 2px;
+        }
+
+        /* Grid layout */
+        .grid {
+            display: grid;
+        }
+
+        .grid-cols-1 {
+            grid-template-columns: repeat(1, minmax(0, 1fr));
+        }
+
+        @media (min-width: 768px) {
+            .md\:grid-cols-2 {
+                grid-template-columns: repeat(2, minmax(0, 1fr));
+            }
+        }
+
+        @media (min-width: 1024px) {
+            .lg\:grid-cols-3 {
+                grid-template-columns: repeat(3, minmax(0, 1fr));
+            }
+        }
+
+        .gap-8 {
+            gap: 2rem;
+        }
+
+        /* Work item transitions */
+        .work-item {
+            opacity: 1;
+            transition: opacity 0.3s ease;
+        }
+
+        .work-item[hidden] {
+            display: none;
+        }
+    </style>
 </body>
 </html>
