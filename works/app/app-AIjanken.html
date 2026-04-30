@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kiwi Talkboard | Vicky</title>
+    <title>AI Janken | Vicky</title>
     <link rel="stylesheet" href="../../style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
@@ -23,16 +23,15 @@
                             <li><a href="../../works/movie/movie-showcase.html">Video Production</a></li>
                         </ul>
                     </li>
-            
                     <li><a href="../../services.html">Service</a></li>
                     <li><a href="../../about.html">About</a></li>
                     <li><a href="../../contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../../works/app/app-kiwitalkboard.html" class="lang-btn active">EN</a>
+                <a href="#" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="../../jp/works/app/app-kiwitalkboard.html" class="lang-btn">JP</a>
+                <a href="../../jp/works/app/app-janken.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
@@ -43,33 +42,34 @@
                 <div class="detail-hero-grid">
                     <div class="detail-visual-wrapper">
                         <div class="detail-main-image">
-                            <img src="../../assets/images/appKIWI.jpg" alt="Kiwi Talkboard application main screen">
+                            <!-- アップロードされたアイコン画像をメインビジュアルとして設定 -->
+                            <img src="../../assets/images/appAIjyanken.png" alt="AI Janken application icon showing Rock Paper Scissors symbols">
                         </div>
                         <div class="detail-meta-grid">
                             <div class="detail-meta-item">
                                 <span class="detail-meta-label">Category</span>
-                                <span class="detail-meta-value">Web Application</span>
+                                <span class="detail-meta-value">Web Application / AI</span>
                             </div>
                             <div class="detail-meta-item">
                                 <span class="detail-meta-label">Year</span>
-                                <span class="detail-meta-value">2025</span>
+                                <span class="detail-meta-value">2026</span>
                             </div>
                             <div class="detail-meta-item">
                                 <span class="detail-meta-label">Role</span>
-                                <span class="detail-meta-value">Full-stack Dev</span>
+                                <span class="detail-meta-value">Frontend & AI Logic</span>
                             </div>
                             <div class="detail-meta-item">
                                 <span class="detail-meta-label">Timeline</span>
-                                <span class="detail-meta-value">6h</span>
+                                <span class="detail-meta-value">12h</span>
                             </div>
                         </div>
                     </div>
 
                     <div class="detail-content-header">
                         <span class="detail-category">App Development</span>
-                        <h1 class="detail-title">Kiwi Talkboard</h1>
+                        <h1 class="detail-title">AI Janken App</h1>
                         <p class="detail-subtitle">
-                            A secure, thread-based community board connecting Japanese residents in New Zealand. Built with PHP & MySQL backend and Tailwind CSS for a modern, near-realtime posting experience.
+                            A real-time "Rock-Paper-Scissors" game against AI using browser-based hand tracking. Experience advanced image analysis and serverless execution with MediaPipe Hands.
                         </p>
                     </div>
                 </div>
@@ -84,7 +84,7 @@
                     <h2 class="section-heading">Project Overview</h2>
                     <div class="section-content">
                         <p>
-                            Kiwi Talkboard is a hierarchical (thread-based) bulletin board application designed to facilitate smooth information exchange for life in New Zealand. By combining backend processing using PHP and MySQL with a modern UI via Tailwind CSS, I developed an environment where posts and replies feel near-instant and seamless.
+                            AI Janken is a browser-based application that recognizes human hand gestures in real-time to play against an AI opponent. By leveraging Google's <strong>MediaPipe Hands</strong> on the frontend, the system achieves low-latency image analysis without a dedicated backend server. As a <strong>PWA (Progressive Web App)</strong>, it provides a native-like experience without the need for installation.
                         </p>
                     </div>
                 </article>
@@ -94,24 +94,23 @@
                     <h2 class="section-heading">Background & Purpose</h2>
                     <div class="section-content">
                         <p>
-                            This project was inspired by my plans to relocate to New Zealand in August 2026. I wanted to build a practical tool to help with local community integration and information gathering before and after my move, while also demonstrating my technical capabilities.
+                            This project began as a challenge: "How can AI technology be integrated into everyday play to maximize UX?" I aimed to create a tool where anyone can experience the power of AI instantly via a single URL, removing the psychological hurdles of complex equipment or app store downloads.
                         </p>
                     </div>
                 </article>
 
                 <article class="detail-section highlight-section">
                     <span class="section-number">03</span>
-                    <h2 class="section-heading">Key Focus: Risk Management & Security</h2>
+                    <h2 class="section-heading">Key Focus: UI and AI Logic</h2>
                     <div class="section-content">
-                        <p><strong>IP Address Logging for Traceability</strong></p>
-                        <ul>
-                            <li>
-                                <strong>Purpose:</strong> To deter online harassment and spam caused by anonymous posting, ensuring a mechanism to identify the source in case of trouble.
-                            </li>
-                            <li>
-                                <strong>Implementation:</strong> Utilizing PHP's <code>$_SERVER['REMOTE_ADDR']</code>, the system automatically logs the sender's IP address into the <code>ip_address</code> column of the database during every post or reply. This silently enhances security on the backend without compromising user convenience.
-                            </li>
-                        </ul>
+                        <p><strong>Mobile Optimization & Immersive Layout</strong></p>
+                        <p>
+                            Standard video layouts often separate the player and CPU vertically on mobile screens, breaking the sense of "confrontation." I utilized <strong>CSS Grid</strong> to maintain a horizontal side-by-side layout even on mobile, minimizing eye movement and creating an intuitive, face-to-face gameplay feel.
+                        </p>
+                        <p><strong>High-Precision Hand Tracking</strong></p>
+                        <p>
+                            I implemented an algorithm that analyzes 21 landmark coordinates from MediaPipe Hands. By calculating the relative positions of finger tips and joints in JavaScript, I developed a custom logic to determine gestures based on the "count of standing fingers."
+                        </p>
                     </div>
                 </article>
 
@@ -122,19 +121,19 @@
                         <div class="tech-stack-grid">
                             <div class="tech-stack-item">
                                 <span class="tech-label">Frontend</span>
-                                <p class="tech-value">HTML5, Tailwind CSS, JavaScript (Fetch API)</p>
+                                <p class="tech-value">HTML5, Tailwind CSS, JavaScript (ES6+)</p>
                             </div>
                             <div class="tech-stack-item">
-                                <span class="tech-label">Backend</span>
-                                <p class="tech-value">PHP 8.x</p>
+                                <span class="tech-label">AI Engine</span>
+                                <p class="tech-value">MediaPipe Hands</p>
                             </div>
                             <div class="tech-stack-item">
-                                <span class="tech-label">Database</span>
-                                <p class="tech-value">MySQL (MariaDB)</p>
+                                <span class="tech-label">Web API</span>
+                                <p class="tech-value">Camera API, Service Worker (PWA)</p>
                             </div>
                             <div class="tech-stack-item">
-                                <span class="tech-label">Infrastructure</span>
-                                <p class="tech-value">Lolipop Rental Server</p>
+                                <span class="tech-label">Development</span>
+                                <p class="tech-value">GitHub</p>
                             </div>
                         </div>
                     </div>
@@ -144,14 +143,14 @@
                     <span class="section-number">05</span>
                     <h2 class="section-heading">Design Philosophy & Commitment</h2>
                     <div class="section-content">
-                        <p><strong>Accessibility-First Design</strong></p>
+                        <p><strong>Accessibility and UX Consistency</strong></p>
                         <p>
-                            Guided by the principle of "leaving no one behind," I prioritized high visual contrast and implemented an instant filtering search function using JavaScript. I focused intensely on making information easy to find and read for everyone.
+                            Following my "Accessibility-First" principle, I utilized <code>aria-live</code> attributes so that screen readers immediately announce AI judgments and game results. PWA implementation further enhances user convenience by allowing offline access and direct launching from the home screen.
                         </p>
 
-                        <p><strong>Awareness of Legal Compliance</strong></p>
+                        <p><strong>Privacy & Security</strong></p>
                         <p>
-                            Beyond simple functionality, the design considers the legal and ethical aspects of operating a web service, such as requiring agreement to Terms of Service and logging IP addresses for safe community management.
+                            The design is "Privacy-Focused," completing all image analysis on the client-side within the browser. No video data is ever sent to a server. For security, I strictly used <code>textContent</code> for DOM updates to prevent injection attacks.
                         </p>
                     </div>
                 </article>
@@ -165,7 +164,7 @@
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
                     </svg>
-                    Back to All Works
+                    Back to Works
                 </a>
                 
                 <a href="../../contact.html" class="contact-btn" style="margin: 0;">

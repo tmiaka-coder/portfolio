@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Works | Vicky</title>
-    <link rel="stylesheet" href="../portfolio/style.css">
+    <title>Works | Miaka</title>
+    <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
@@ -12,28 +12,20 @@
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="../portfolio/index.html">Vicky</a></div>
-            <nav class="main-nav">
+            <div class="logo"><a href="index.html">Miaka</a></div>
+            <nav class="main-nav" aria-label="Main navigation">
                 <ul class="nav-links">
-                    <li><a href="../portfolio/index.html">Home</a></li>
-                    <li class="dropdown">
-                        <a href="../portfolio/works.html" class="active" aria-haspopup="true" aria-expanded="false">Works<span class="arrow">▾</span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="../portfolio/works-app.html">App Development</a></li>
-                            <li><a href="../portfolio/works-banner.html">Banner Design</a></li>
-                            <li><a href="../portfolio/works-movie.html">Video Production</a></li>
-                        </ul>
-                    </li>
-            
-                    <li><a href="../portfolio/services.html">Service</a></li>
-                    <li><a href="../portfolio/about.html">About</a></li>
-                    <li><a href="../portfolio/contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="works.html" class="active">Works</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../portfolio/works.html" class="lang-btn active">EN</a>
+                <a href="works.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="../portfolio/jp/works.html" class="lang-btn">JP</a>
+                <a href="jp/works.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
@@ -46,43 +38,59 @@
             <p style="color: var(--color-gray-text); max-width: 600px;">A collection of projects focused on high quality, legal compliance, and inclusive design for everyone.</p>
         </section>
 
-        <!-- Works Grid -->
-        <section class="container" style="padding-bottom: 100px;">
+        <!-- App Development Section -->
+        <section class="container" style="padding-bottom: 80px;" aria-labelledby="section-app">
+            <h2 id="section-app" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">APP DEVELOPMENT</h2>
             <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
                 
-                <!-- Work Item 1: App -->
-                <a href="../portfolio/works-app.html" class="work-item">
+                <!-- Kiwi Talkboard -->
+                <a href="works/app/app-kiwitalkboard.html" class="work-item">
                     <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
-                        <!-- Image placeholder -->
-                        <img src="../portfolio/assets/images/appKIWI.jpg" alt="Kiwi Talkboard アプリ開発画面のプレビュー" style="width: 100%; height: auto; border-radius: 4px;">
+                        <img src="assets/images/appKIWI.jpg" alt="Kiwi Talkboard app preview" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Development</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">App Development</h2>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">A collection of accessible and user-friendly applications.</p>
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Web Application</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">Kiwi Talkboard</h2>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">A secure, accessible community board connecting Japanese residents in New Zealand.</p>
                     </div>
                 </a>
 
-                <!-- Work Item 2: Banner -->
-                <a href="../portfolio/works-banner.html" class="work-item">
+            </div>
+        </section>
+
+        <!-- Banner Design Section -->
+        <section class="container" style="padding-bottom: 80px;" aria-labelledby="section-banner">
+            <h2 id="section-banner" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">BANNER DESIGN</h2>
+            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
+                
+                <!-- Bread Shop Banner -->
+                <a href="works/banner/banner-bread.html" class="work-item">
                     <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
-                        <img src="../portfolio/assets/images/banner-salt-pan.jpg" alt="パン屋さん広告のプレビュー" style="width: 100%; height: auto; border-radius: 4px;">
+                        <img src="assets/images/banner-salt-pan.jpg" alt="Bakery advertisement preview" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Design</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">Banner Design</h2>
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Advertisement</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">Bakery Advertisement</h2>
                         <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">Visual strategies tailored to specific target audiences.</p>
                     </div>
                 </a>
 
-                <!-- Work Item 3: Movie -->
-                <a href="../portfolio/works-movie.html" class="work-item">
+            </div>
+        </section>
+
+        <!-- Video Production Section -->
+        <section class="container" style="padding-bottom: 100px;" aria-labelledby="section-movie">
+            <h2 id="section-movie" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">VIDEO PRODUCTION</h2>
+            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
+                
+                <!-- Showcase Movie -->
+                <a href="works/movie/movie-showcase.html" class="work-item">
                     <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
-                        <img src="../portfolio/assets/images/shotyakitori.png" alt="ショート焼き鳥屋紹介サムネ" style="width: 100%; height: auto; border-radius: 4px;">
+                        <img src="assets/images/shotyakitori.png" alt="Yakitori shop short video thumbnail" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Movie</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">Video Production</h2>
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Short Form</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">Yakitori Shop Video</h2>
                         <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">Short-form high-impact videos for social media.</p>
                     </div>
                 </a>
@@ -94,7 +102,7 @@
         <section style="background: var(--color-accent); color: #fff; padding: 100px 0; text-align: center;">
             <div class="container">
                 <h2 style="font-size: 2rem; font-weight: 800; margin-bottom: 20px;">Interested in working together?</h2>
-                <a href="../portfolio/contact.html" class="cta-button">Contact Me</a>
+                <a href="contact.html" class="cta-button">Contact Me</a>
             </div>
         </section>
     </main>

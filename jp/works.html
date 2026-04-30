@@ -3,38 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>アプリ開発 | Miaka</title>
+    <title>実績 | Miaka</title>
     <link rel="stylesheet" href="../style.css">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
 
-    <!-- ヘッダー -->
     <header class="site-header">
-    <div class="container header-container">
-        <div class="logo"><a href="../index.html">Miaka</a></div>
-        <nav class="main-nav">
-            <ul class="nav-links">
-                <li><a href="../jp/index.html" >ホーム</a></li>
-                <li class="dropdown">
-                    <a href="../jp/works.html" class="active" aria-haspopup="true" aria-expanded="false">実績<span class="arrow">▾</span></a>
-                    <ul class="dropdown-menu">
-                        <li><a href="../jp/works-app.html">アプリ制作</a></li>
-                        <li><a href="../jp/works-banner.html">バナー制作</a></li>
-                        <li><a href="../jp/works-movie.html">動画編集</a></li>
-                    </ul>
-                </li>
-                <li><a href="../jp/services.html">サービス</a></li>
-                <li><a href="../jp/about.html">プロフィール</a></li>
-                <li><a href="../jp/contact.html">お問い合わせ</a></li>
-            </ul>
-        </nav>
-        <div class="lang-switch">
-            <a href="../works.html" class="lang-btn">EN</a>
-            <span class="separator">|</span>
-            <a href="../jp/works.html" class="lang-btn active">JP</a>
+        <div class="container header-container">
+            <div class="logo"><a href="../index.html">Miaka</a></div>
+            <nav class="main-nav" aria-label="メインナビゲーション">
+                <ul class="nav-links">
+                    <li><a href="../jp/index.html">ホーム</a></li>
+                    <li><a href="../jp/works.html" class="active">実績</a></li>
+                    <li><a href="../jp/services.html">サービス</a></li>
+                    <li><a href="../jp/about.html">プロフィール</a></li>
+                    <li><a href="../jp/contact.html">お問い合わせ</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switch">
+                <a href="../works.html" class="lang-btn">EN</a>
+                <span class="separator">|</span>
+                <a href="../jp/works.html" class="lang-btn active">JP</a>
+            </div>
         </div>
-    </div>
+    </header>
+
     <main id="main-content">
         <!-- Page Header -->
         <section class="container" style="padding: 80px 20px 40px;">
@@ -42,43 +37,60 @@
             <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Selected <br>Works.</h1>
             <p style="color: var(--color-gray-text); max-width: 600px;">テスターとして培った品質へのこだわりと、誰もが使いやすいインクルーシブなデザインを意識しました。</p>
         </section>
-        <!-- Works Grid -->
-        <section class="container" style="padding-bottom: 100px;">
+
+        <!-- App Development Section -->
+        <section class="container" style="padding-bottom: 80px;" aria-labelledby="section-app">
+            <h2 id="section-app" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">APP DEVELOPMENT</h2>
             <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
                 
-                <!-- Work Item 1: App -->
-                <a href="../jp/works-app.html" class="work-item">
+                <!-- Kiwi Talkboard -->
+                <a href="works/app/app-kiwitalkboard.html" class="work-item">
                     <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
-                        <!-- Image placeholder -->
-                        <img src="../assets/images/appKIWI.jpg" alt="Kiwi Talkboard アプリ開発画面のプレビュー" style="width: 100%; height: auto; border-radius: 4px;">
+                        <img src="../assets/images/appKIWI.jpg" alt="Kiwi Talkboard アプリのプレビュー" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Development</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">アプリ制作</h2>
-                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">アクセシビリティと使いやすさを追求したアプリケーション。</p>
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Web Application</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">Kiwi Talkboard</h2>
+                        <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">ニュージランド移住者と現地をつなぐ安全でアクセシブルな掲示板アプリ</p>
                     </div>
                 </a>
 
-                <!-- Work Item 2: Banner -->
-                <a href="../jp/works-banner.html" class="work-item">
+            </div>
+        </section>
+
+        <!-- Banner Design Section -->
+        <section class="container" style="padding-bottom: 80px;" aria-labelledby="section-banner">
+            <h2 id="section-banner" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">BANNER DESIGN</h2>
+            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
+                
+                <!-- Bread Shop Banner -->
+                <a href="works/banner/banner-bread.html" class="work-item">
                     <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
                         <img src="../assets/images/banner-salt-pan.jpg" alt="パン屋さん広告のプレビュー" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Design</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">バナー制作</h2>
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Advertisement</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">パン屋さん広告</h2>
                         <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">ターゲット層に響くビジュアル戦略。</p>
                     </div>
                 </a>
 
-                <!-- Work Item 3: Movie -->
-                <a href="../jp/works-movie.html" class="work-item">
+            </div>
+        </section>
+
+        <!-- Video Production Section -->
+        <section class="container" style="padding-bottom: 100px;" aria-labelledby="section-movie">
+            <h2 id="section-movie" class="section-label" style="font-size: 0.75rem; letter-spacing: 0.15em; margin-bottom: 24px;">VIDEO PRODUCTION</h2>
+            <div class="work-preview-grid" style="grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 40px;">
+                
+                <!-- Showcase Movie -->
+                <a href="works/movie/movie-showcase.html" class="work-item">
                     <div class="work-thumb" style="aspect-ratio: 16/9; background: #f0f0f0;">
-                        <img src="../assets/images/shotyakitori.png" alt="ショート焼き鳥屋紹介サムネ" style="width: 100%; height: auto; border-radius: 4px;">
+                        <img src="../assets/images/shotyakitori.png" alt="焼き鳥屋ショート動画サムネイル" style="width: 100%; height: auto; border-radius: 4px;">
                     </div>
                     <div style="margin-top: 15px;">
-                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Movie</span>
-                        <h2 class="work-title" style="font-size: 1.25rem;">動画編集</h2>
+                        <span class="section-label" style="font-size: 0.6rem; letter-spacing: 0.1em; margin-bottom: 5px;">Short Form</span>
+                        <h2 class="work-title" style="font-size: 1.25rem;">焼き鳥屋ショート動画</h2>
                         <p style="font-size: 0.9rem; color: var(--color-gray-text); margin-top: 8px;">SNS向け短尺動画制作。</p>
                     </div>
                 </a>
