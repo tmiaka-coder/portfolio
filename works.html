@@ -228,77 +228,77 @@
         document.addEventListener('DOMContentLoaded', init);
     </script>
 
-    <!-- CSSはcss/style.cssに統合 -->
-        /* Filter button styles */
-        .filter-buttons {
-            display: flex;
-            gap: 8px;
-            flex-wrap: wrap;
-            justify-content: flex-start;
-        }
+    <style>
+    /* Filter button styles */
+    .filter-buttons {
+        display: flex;
+        gap: 8px;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
 
-        .filter-btn {
-            padding: 10px 20px;
-            border: 1px solid #e5e5e5;
-            background: #fff;
-            color: #666;
-            font-size: 0.875rem;
-            font-family: 'Inter', sans-serif;
-            cursor: pointer;
-            transition: all 0.2s ease;
-            border-radius: 2px;
-        }
+    .filter-btn {
+        padding: 10px 20px;
+        border: 1px solid #e5e5e5;
+        background: #fff;
+        color: #666;
+        font-size: 0.875rem;
+        font-family: 'Inter', sans-serif;
+        cursor: pointer;
+        transition: all 0.2s ease;
+        border-radius: 2px;
+    }
 
-        .filter-btn:hover {
-            border-color: #333;
-            color: #333;
-        }
+    .filter-btn:hover {
+        border-color: #333;
+        color: #333;
+    }
 
-        .filter-btn.active {
-            background: #1a1a1a;
-            border-color: #1a1a1a;
-            color: #fff;
-        }
+    .filter-btn.active {
+        background: #1a1a1a;
+        border-color: #1a1a1a;
+        color: #fff;
+    }
 
-        .filter-btn:focus {
-            outline: 2px solid #1a1a1a;
-            outline-offset: 2px;
-        }
+    .filter-btn:focus {
+        outline: 2px solid #1a1a1a;
+        outline-offset: 2px;
+    }
 
-        /* Grid layout */
-        .grid {
-            display: grid;
-        }
+    /* Grid layout */
+    .grid {
+        display: grid;
+    }
 
-        .grid-cols-1 {
-            grid-template-columns: repeat(1, minmax(0, 1fr));
-        }
+    .grid-cols-1 {
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
 
-        @media (min-width: 768px) {
-            .md\:grid-cols-2 {
-                grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
+    @media (min-width: 768px) {
+        .md\:grid-cols-2 {
+            grid-template-columns: repeat(2, minmax(0, 1fr));
         }
+    }
 
-        @media (min-width: 1024px) {
-            .lg\:grid-cols-3 {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
+    @media (min-width: 1024px) {
+        .lg\:grid-cols-3 {
+            grid-template-columns: repeat(3, minmax(0, 1fr));
         }
+    }
 
-        .gap-8 {
-            gap: 2rem;
-        }
+    .gap-8 {
+        gap: 2rem;
+    }
 
-        /* Work item transitions */
-        .work-item {
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
+    /* Work item transitions */
+    .work-item {
+        opacity: 1;
+        transition: opacity 0.3s ease;
+    }
 
-        .work-item[hidden] {
-            display: none;
-        }
+    .work-item[hidden] {
+        display: none;
+    }
     </style>
 </body>
 </html>
