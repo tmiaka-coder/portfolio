@@ -33,14 +33,14 @@
 
     <main id="main-content">
         <!-- Page Header -->
-        <section class="container" style="padding: 80px 20px 40px;">
+        <section class="container section-padding-lg">
             <span class="section-label">Archive</span>
-            <h1 class="hero-title" style="font-size: clamp(2.5rem, 8vw, 4rem);">Selected <br>Works.</h1>
-            <p style="color: var(--color-gray-text); max-width: 600px;">テスターとして培った品質へのこだわりと、誰もが使いやすいインクルーシブなデザインを意識しました。</p>
+            <h1 class="hero-title hero-title-small">Selected <br>Works.</h1>
+            <p class="lead-text">テスターとして培った品質へのこだわりと、誰もが使いやすいインクルーシブなデザインを意識しました。</p>
         </section>
 
         <!-- Filter Buttons -->
-        <nav class="container" style="padding-bottom: 40px;" aria-label="作品カテゴリフィルタ">
+        <nav class="container padding-bottom-40" aria-label="作品カテゴリフィルタ">
             <div class="filter-buttons" role="group" aria-label="カテゴリで絞り込み">
                 <button type="button" class="filter-btn active" data-category="all" aria-pressed="true">All</button>
                 <button type="button" class="filter-btn" data-category="app" aria-pressed="false">App</button>
@@ -50,18 +50,18 @@
         </nav>
 
         <!-- Works Grid -->
-        <section class="container" style="padding-bottom: 100px;">
+        <section class="container padding-bottom-100">
             <div id="works-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Works will be dynamically inserted here by JavaScript -->
             </div>
-            <p id="no-results" class="text-center text-gray-500 py-12" style="display: none;">該当する作品がありません</p>
+            <p id="no-results" class="text-center text-gray-500 py-12 hidden">該当する作品がありません</p>
         </section>
 
         <!-- CTA Section -->
-        <section style="background: var(--color-accent); color: #fff; padding: 100px 0; text-align: center;">
+        <section class="section-accent">
             <div class="container">
-                <h2 style="font-size: 2rem; margin-bottom: 20px;">Let's build something honest.</h2>
-                <p style="opacity: 0.8; margin-bottom: 40px;">法的遵守とアクセシビリティを、一過性のトレンドではなく「基盤」に。</p>
+                <h2 class="section-cta-title">Let's build something honest.</h2>
+                <p class="muted-lead">法的遵守とアクセシビリティを、一過性のトレンドではなく「基盤」に。</p>
                 <a href="../jp/contact.html" class="cta-button">お問い合わせ</a>
             </div>
         </section>
@@ -229,77 +229,5 @@
         document.addEventListener('DOMContentLoaded', init);
     </script>
 
-    <style>
-    /* フィルタボタンのスタイル */
-    .filter-buttons {
-        display: flex;
-        gap: 8px;
-        flex-wrap: wrap;
-        justify-content: flex-start;
-    }
-
-    .filter-btn {
-        padding: 10px 20px;
-        border: 1px solid #e5e5e5;
-        background: #fff;
-        color: #666;
-        font-size: 0.875rem;
-        font-family: 'Inter', sans-serif;
-        cursor: pointer;
-        transition: all 0.2s ease;
-        border-radius: 2px;
-    }
-
-    .filter-btn:hover {
-        border-color: #333;
-        color: #333;
-    }
-
-    .filter-btn.active {
-        background: #1a1a1a;
-        border-color: #1a1a1a;
-        color: #fff;
-    }
-
-    .filter-btn:focus {
-        outline: 2px solid #1a1a1a;
-        outline-offset: 2px;
-    }
-
-    /* グリッドレイアウト */
-    .grid {
-        display: grid;
-    }
-
-    .grid-cols-1 {
-        grid-template-columns: repeat(1, minmax(0, 1fr));
-    }
-
-    @media (min-width: 768px) {
-        .md\:grid-cols-2 {
-            grid-template-columns: repeat(2, minmax(0, 1fr));
-            }
-        }
-
-        @media (min-width: 1024px) {
-            .lg\:grid-cols-3 {
-                grid-template-columns: repeat(3, minmax(0, 1fr));
-            }
-        }
-
-        .gap-8 {
-            gap: 2rem;
-        }
-
-        /* 作品の inúmer */
-        .work-item {
-            opacity: 1;
-            transition: opacity 0.3s ease;
-        }
-
-        .work-item[hidden] {
-            display: none;
-        }
-    </style>
-</body>
+    </body>
 </html>
