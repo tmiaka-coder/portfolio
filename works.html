@@ -182,7 +182,7 @@
          */
         async function loadWorksData() {
             try {
-                const response = await fetch('works/works-data.json');
+                const response = await fetch('works/works-data-en.json');
                 if (!response.ok) throw new Error('Failed to load works data');
                 worksData = await response.json();
                 init();
