@@ -5,7 +5,7 @@
     "categoryLabel": "WEB APPLICATION",
     "title": "Kiwi Talkboard",
     "description": "ニュージランド移住者と現地をつなぐ安全でアクセシブルな掲示板アプリ",
-    "image": "../../assets/images/appKIWI.jpg",
+    "image": "../assets/images/appKIWI.jpg",
     "imageAlt": "Kiwi Talkboard アプリのプレビュー",
     "link": "works/app/app-kiwitalkboard.html"
   },
@@ -15,7 +15,7 @@
     "categoryLabel": "ADVERTISEMENT",
     "title": "パン屋さん広告",
     "description": "ターゲット層に響くビジュアル戦略。",
-    "image": "../../assets/images/banner-salt-pan.jpg",
+    "image": "../assets/images/banner-salt-pan.jpg",
     "imageAlt": "パン屋さん広告のプレビュー",
     "link": "works/banner/banner-bread.html"
   },
@@ -25,7 +25,7 @@
     "categoryLabel": "SHORT FORM",
     "title": "焼き鳥屋ショート動画",
     "description": "SNS向け短尺動画制作。",
-    "image": "../../assets/images/shotyakitori.png",
+    "image": "../assets/images/shotyakitori.png",
     "imageAlt": "焼き鳥屋ショート動画サムネイル",
     "link": "works/movie/movie-showcase.html"
   },
@@ -35,7 +35,7 @@
     "categoryLabel": "SHORT FORM",
     "title": "電気代管理アプリ 紹介動画",
     "description": "家庭の電力消費を可視化する架空アプリのプロモーションビデオ。Adobe Premiere Proを使用し、クリーンなモーショングラフィックスと直感的なUXを伝えるストーリーテリングを重視して編集しました。",
-    "image": "../../assets/images/electricity-app.png",
+    "image": "../assets/images/electricity-app.png",
     "imageAlt": "電気代管理アプリ紹介動画サムネイル",
     "link": "works/movie/movie-electric.html"
   }
