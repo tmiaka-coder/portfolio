@@ -28,5 +28,14 @@
     "image": "assets/images/shotyakitori.png",
     "imageAlt": "Yakitori shop short video thumbnail",
     "link": "works/movie/movie-showcase.html"
+  {
+    "id": 4,
+    "category": "movie",
+    "categoryLabel": "SHORT FORM",
+    "title": "Electricity Management App Showcase",
+    "description": "A promotional video for a fictional application that visualizes household energy consumption. Edited with Adobe Premiere Pro, focusing on clean motion graphics and intuitive UX storytelling.",
+    "image": "assets/images/electricity-app.png",
+    "imageAlt": "Electricity Management App video thumbnail",
+    "link": "works/movie/movie-electric.html"
   }
 ]

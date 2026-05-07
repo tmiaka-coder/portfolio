@@ -28,5 +28,14 @@
     "image": "../../assets/images/shotyakitori.png",
     "imageAlt": "焼き鳥屋ショート動画サムネイル",
     "link": "works/movie/movie-showcase.html"
+  {
+    "id": 4,
+    "category": "movie",
+    "categoryLabel": "SHORT FORM",
+    "title": "電気代管理アプリ 紹介動画",
+    "description": "家庭の電力消費を可視化する架空アプリのプロモーションビデオ。Adobe Premiere Proを使用し、クリーンなモーショングラフィックスと直感的なUXを伝えるストーリーテリングを重視して編集しました。",
+    "image": "../../assets/images/electricity-app.png",
+    "imageAlt": "電気代管理アプリ紹介動画サムネイル",
+    "link": "works/movie/movie-electric.html"
   }
 ]
