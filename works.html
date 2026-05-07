@@ -73,55 +73,8 @@
     </footer>
 
     <script>
-        /**
-         * Works Data Array
-         * To add new works, append objects to this array.
-         * Required fields: id, category, title, description, image, link
-         * category: 'app' | 'banner' | 'movie'
-         */
-        const worksData = [
-            {
-                id: 1,
-                category: 'app',
-                categoryLabel: 'WEB APPLICATION',
-                title: 'Kiwi Talkboard',
-                description: 'A secure, accessible community board connecting Japanese residents in New Zealand.',
-                image: 'assets/images/appKIWI.jpg',
-                imageAlt: 'Kiwi Talkboard app preview',
-                link: 'works/app/app-kiwitalkboard.html'
-            },
-            {
-                id: 2,
-                category: 'banner',
-                categoryLabel: 'ADVERTISEMENT',
-                title: 'Bakery Advertisement',
-                description: 'Visual strategies tailored to specific target audiences.',
-                image: 'assets/images/banner-salt-pan.jpg',
-                imageAlt: 'Bakery advertisement preview',
-                link: 'works/banner/banner-bread.html'
-            },
-            {
-                id: 3,
-                category: 'movie',
-                categoryLabel: 'SHORT FORM',
-                title: 'Yakitori Shop Video',
-                description: 'Short-form high-impact videos for social media.',
-                image: 'assets/images/shotyakitori.png',
-                imageAlt: 'Yakitori shop short video thumbnail',
-                link: 'works/movie/movie-showcase.html'
-            }
-            // To add new works:
-            // {
-            //     id: 4,
-            //     category: 'lp',
-            //     categoryLabel: 'LANDING PAGE',
-            //     title: 'New Work Title',
-            //     description: 'Work description',
-            //     image: 'image path',
-            //     imageAlt: 'Image description',
-            //     link: 'detail page path'
-            // }
-        ];
+        // Works data loaded from JSON
+        let worksData = [];
 
         /**
          * Category definitions
@@ -224,8 +177,24 @@
             });
         }
 
-        // Initialize after DOM loads
-        document.addEventListener('DOMContentLoaded', init);
+        /**
+         * Load works data from JSON file
+         */
+        async function loadWorksData() {
+            try {
+                const response = await fetch('works/works-data.json');
+                if (!response.ok) throw new Error('Failed to load works data');
+                worksData = await response.json();
+                init();
+            } catch (error) {
+                console.error('Error loading works data:', error);
+                // Fallback: show error message
+                document.getElementById('works-grid').innerHTML = '<p>Unable to load works data</p>';
+            }
+        }
+
+        // Load works data and initialize after DOM loads
+        document.addEventListener('DOMContentLoaded', loadWorksData);
     </script>
 
 </body>

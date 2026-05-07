@@ -74,13 +74,8 @@
     </footer>
 
     <script>
-        /**
-         * 作品データ配列
-         * 新しい作品を追加するには、この配列にオブジェクトを追加してください。
-         * 必須フィールド: id, category, title, description, image, link
-         * category: 'app' | 'banner' | 'movie' のいずれかを指定
-         */
-        const worksData = [
+        // 作品データを JSON から読み込み
+        let worksData = [];
             {
                 id: 1,
                 category: 'app',
@@ -199,6 +194,21 @@
         }
 
         /**
+         * JSONファイルから作品データを読み込む関数
+         */
+        async function loadWorksData() {
+            try {
+                const response = await fetch('../works/works-data-jp.json');
+                if (!response.ok) throw new Error('作品データの読み込みに失敗しました');
+                worksData = await response.json();
+                init();
+            } catch (error) {
+                console.error('作品データ読み込みエラー:', error);
+                document.getElementById('works-grid').innerHTML = '<p>作品データを読み込むことができませんでした</p>';
+            }
+        }
+
+        /**
          * 初期化関数
          */
         function init() {
@@ -223,10 +233,8 @@
                     }
                 });
             });
-        }
-
-        // DOM読み込み後に初期化
-        document.addEventListener('DOMContentLoaded', init);
+        }        // JSONデータを読み込んで初期化
+        document.addEventListener('DOMContentLoaded', loadWorksData);
     </script>
 
     </body>
