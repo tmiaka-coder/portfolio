@@ -5,9 +5,9 @@
     "categoryLabel": "WEB APPLICATION",
     "title": "Kiwi Talkboard",
     "description": "A secure, accessible community board connecting Japanese residents in New Zealand.",
-    "image": "/assets/images/appKIWI.jpg",
+    "image": "assets/images/appKIWI.jpg",
     "imageAlt": "Kiwi Talkboard app preview",
-    "link": "/works/app/app-kiwitalkboard.html"
+    "link": "works/app/app-kiwitalkboard.html"
   },
   {
     "id": 2,
@@ -15,9 +15,9 @@
     "categoryLabel": "ADVERTISEMENT",
     "title": "Bakery Advertisement",
     "description": "Visual strategies tailored to specific target audiences.",
-    "image": "/assets/images/banner-salt-pan.jpg",
+    "image": "assets/images/banner-salt-pan.jpg",
     "imageAlt": "Bakery advertisement preview",
-    "link": "/works/banner/banner-bread.html"
+    "link": "works/banner/banner-bread.html"
   },
   {
     "id": 3,
@@ -25,8 +25,8 @@
     "categoryLabel": "SHORT FORM",
     "title": "Yakitori Shop Video",
     "description": "Short-form high-impact videos for social media.",
-    "image": "/assets/images/shotyakitori.png",
+    "image": "assets/images/shotyakitori.png",
     "imageAlt": "Yakitori shop short video thumbnail",
-    "link": "/works/movie/movie-showcase.html"
+    "link": "works/movie/movie-showcase.html"
   }
 ]
