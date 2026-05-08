@@ -250,7 +250,7 @@ img, svg {
     color: var(--color-accent) !important;
 }
 
-..contact-btn:focus {
+.contact-btn:focus {
     outline: var(--focus-outline);
     outline-offset: 4px;
 }
@@ -1228,4 +1228,44 @@ img, svg {
 .hero-title {
     line-height: 1.3;
     letter-spacing: 0.02em;
+}
+/* --- Footer SNS Styles --- */
+.footer-container {
+    padding: 60px 0 40px;
+    text-align: center;
+    border-top: 1px solid var(--color-gray-mid);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.social-links {
+    display: flex;
+    gap: 25px; /* アイコン同士の程よい距離 */
+}
+
+.social-links a {
+    color: var(--color-text); /* 文字と同じ色（黒系）を適用 */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+/* マウスを乗せた時の動き：誠実な印象を与えるために控えめに */
+.social-links a:hover {
+    opacity: 0.6;
+    transform: translateY(-2px); /* 少し上に動く */
+}
+
+/* モバイルでの押しやすさを確保（アクセシビリティ：44px以上のタップ領域） */
+.social-links a svg {
+    width: 24px;
+    height: 24px;
+    display: block;
+}
+
+.copyright {
+    font-size: 0.8rem;
+    color: var(--color-gray-text);
+    letter-spacing: 0.05em;
 }
