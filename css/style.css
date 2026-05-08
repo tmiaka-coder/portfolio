@@ -650,6 +650,11 @@ img, svg {
     .scroll-indicator { margin-top: 40px; }
     .site-footer { padding: 40px 0; }
     .contact-card { padding: 30px 20px; }
+    .featured-section { grid-template-columns: 1fr; gap: 40px; }
+    .work-preview-grid { grid-template-columns: 1fr; gap: 20px; }
+    .works-grid { grid-template-columns: 1fr; }
+    .about-grid { grid-template-columns: 1fr; }
+    .detail-hero-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 600px) {
@@ -662,6 +667,8 @@ img, svg {
     .section-accent, .section-black { padding: 60px 0; }
     .featured-section { gap: 32px; }
     .work-preview-grid { gap: 16px; }
+    .work-preview-grid .work-item { padding: 0; }
+    .works-grid { gap: 32px; }
 }
 
 @media (prefers-reduced-motion: reduce) {
