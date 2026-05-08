@@ -38,5 +38,15 @@
     "image": "../assets/images/electricity-app.png",
     "imageAlt": "電気代管理アプリ紹介動画サムネイル",
     "link": "works/movie/movie-electric.html"
+  },
+  {
+    "id": 5,
+    "category": "app",
+    "categoryLabel": "WEB APPLICATION",
+    "title": "AIじゃんけんアプリ",
+    "description": "ブラウザのカメラを通じてユーザーの手をリアルタイムに認識し、AIと対戦できるアプリ。GoogleのMediaPipe Handsを活用し、サーバーレスで高度な画像解析を実現しました。",
+    "image": "../assets/images/appjynken.png",
+    "imageAlt": "AIじゃんけんアプリのアイコン",
+    "link": "works/app/app-AIjanken.html"
   }
 ]

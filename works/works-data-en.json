@@ -38,5 +38,15 @@
     "image": "assets/images/electricity-app.png",
     "imageAlt": "Electricity Management App video thumbnail",
     "link": "works/movie/movie-electric.html"
+  },
+  {
+    "id": 5,
+    "category": "app",
+    "categoryLabel": "WEB APPLICATION",
+    "title": "AI Janken App",
+    "description": "A real-time rock-paper-scissors game against AI using browser-based hand tracking. Experience advanced image analysis and serverless execution with MediaPipe Hands.",
+    "image": "assets/images/appjynken.png",
+    "imageAlt": "AI Janken App icon",
+    "link": "works/app/app-AIjanken.html"
   }
 ]
