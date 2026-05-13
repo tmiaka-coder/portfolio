@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NZ Trace & Memory | Vicky</title>
+    <link rel="stylesheet" href="../../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .screenshot-item {
+            border-radius: 8px;
+            overflow: hidden;
+            background: #f4f4f4;
+            aspect-ratio: 9/16;
+        }
+        .screenshot-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        .screenshot-caption {
+            font-size: 0.75rem;
+            color: #666;
+            text-align: center;
+            margin-top: 6px;
+        }
+        .screenshot-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+        .highlight-section {
+            background: #f9f9f9;
+            border-left: 3px solid #000 !important;
+            padding: 30px 40px !important;
+            border-radius: 0 8px 8px 0;
+        }
+        .live-demo-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: #16a34a;
+            color: #fff !important;
+            text-decoration: none;
+            padding: 12px 28px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            border: 2px solid #16a34a;
+            margin-top: 16px;
+        }
+        .live-demo-btn:hover {
+            background: #fff;
+            color: #16a34a !important;
+        }
+        @media (max-width: 600px) {
+            .screenshot-grid { grid-template-columns: 1fr 1fr; gap: 10px; }
+            .highlight-section { padding: 20px !important; }
+        }
+    </style>
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <header class="site-header">
+        <div class="container header-container">
+            <div class="logo"><a href="../../index.html">Vicky</a></div>
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../works.html" class="active">Works</a></li>
+                    <li><a href="../../services.html">Service</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="lang-switch">
+                <a href="../../works/app/app-nztripapp.html" class="lang-btn active">EN</a>
+                <span class="separator">|</span>
+                <a href="../../jp/works/app/app-nztripapp.html" class="lang-btn">JP</a>
+            </div>
+        </div>
+    </header>
+
+    <main id="main-content">
+        <!-- Hero Section -->
+        <section class="detail-hero">
+            <div class="container">
+                <div class="detail-hero-grid">
+                    <!-- Left: Visuals -->
+                    <div class="detail-visual-wrapper">
+                        <div class="detail-main-image">
+                            <img src="../../assets/images/appNZtrip-main.jpg" alt="NZ Trace & Memory app main screen showing map of New Zealand">
+                        </div>
+                        <div class="screenshot-grid">
+                            <div class="screenshot-wrapper">
+                                <div class="screenshot-item">
+                                    <img src="../../assets/images/appNZtrip-map.jpg" alt="Map tab with GPS route tracking and memory pins">
+                                </div>
+                                <p class="screenshot-caption">Map & Route Tracking</p>
+                            </div>
+                            <div class="screenshot-wrapper">
+                                <div class="screenshot-item">
+                                    <img src="../../assets/images/appNZtrip-diary.jpg" alt="Memories diary tab showing photos and text entries">
+                                </div>
+                                <p class="screenshot-caption">Travel Memories</p>
+                            </div>
+                            <div class="screenshot-wrapper">
+                                <div class="screenshot-item">
+                                    <img src="../../assets/images/appNZtrip-stats.jpg" alt="Statistics tab showing distance progress bars">
+                                </div>
+                                <p class="screenshot-caption">Distance Stats</p>
+                            </div>
+                            <div class="screenshot-wrapper">
+                                <div class="screenshot-item">
+                                    <img src="../../assets/images/appNZtrip-settings.jpg" alt="Settings tab with theme and pin color options">
+                                </div>
+                                <p class="screenshot-caption">Customisation</p>
+                            </div>
+                        </div>
+                        <div class="detail-meta-grid">
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Category</span>
+                                <span class="detail-meta-value">PWA / Mobile App</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Year</span>
+                                <span class="detail-meta-value">2026</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Role</span>
+                                <span class="detail-meta-value">Full-stack Dev</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Platform</span>
+                                <span class="detail-meta-value">iOS / Android / Web</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Right: Header Content -->
+                    <div class="detail-content-header">
+                        <span class="detail-category">App Development</span>
+                        <h1 class="detail-title">NZ Trace & Memory</h1>
+                        <p class="detail-subtitle">
+                            A private PWA for two users to record travel routes and memories across New Zealand. Built with React, Firebase, and Leaflet — featuring real-time GPS tracking, hand-drawn route snapping to actual roads, photo memory pins on the map, and live distance statistics toward an 11,000 km goal.
+                        </p>
+                        
+                            href="https://nztripapp-99050--demo-gh9hluhm.web.app"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="live-demo-btn"
+                            aria-label="Open live demo of NZ Trace & Memory (opens in new tab)"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
+                            Live Demo
+                        </a>
+                        <p style="font-size:0.75rem;color:#999;margin-top:8px;">
+                            * Demo mode — no login required. GPS and save features disabled.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Main Content -->
+        <section class="detail-body">
+            <div class="container">
+
+                <!-- 01: Overview -->
+                <article class="detail-section">
+                    <span class="section-number">01</span>
+                    <h2 class="section-heading">Project Overview</h2>
+                    <div class="section-content">
+                        <p>
+                            NZ Trace & Memory is a Progressive Web App (PWA) built for two specific users — my partner and me — to document our road trip across New Zealand. The app lets us record GPS routes in real time, manually draw routes on the map (which are then snapped to actual roads via the Overpass API), and drop memory pins with photos and text at meaningful locations.
+                        </p>
+                        <p>
+                            All data is stored in Firebase Firestore and Storage, with Google Authentication restricting access to our two accounts only. The app is fully installable on both iOS and Android as a PWA.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 02: Background -->
+                <article class="detail-section">
+                    <span class="section-number">02</span>
+                    <h2 class="section-heading">Background & Purpose</h2>
+                    <div class="section-content">
+                        <p>
+                            Ahead of our move to New Zealand in August 2026, I wanted to build something we would actually use every day on the road — not just a portfolio piece. The idea was simple: record where we go, how far we travel, and capture the moments that matter, all in one place.
+                        </p>
+                        <p>
+                            It also became an opportunity to deepen my skills with React, real-time databases, geolocation APIs, and mobile-first PWA design in a real, production context.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 03: Security Highlight -->
+                <article class="detail-section highlight-section">
+                    <span class="section-number">03</span>
+                    <h2 class="section-heading">Key Focus: Security & Privacy by Design</h2>
+                    <div class="section-content">
+                        <p><strong>Two-User Access Control</strong></p>
+                        <ul>
+                            <li>
+                                <strong>Google Authentication:</strong> Only two specific Google accounts are permitted. Any other account is immediately rejected after sign-in — even if the URL is known.
+                            </li>
+                            <li>
+                                <strong>Firestore allowlist:</strong> An <code>allowedUsers</code> collection in Firestore stores the two permitted UIDs. All security rules are enforced server-side, ensuring no data can be read or written by unauthorised users regardless of client-side code.
+                            </li>
+                            <li>
+                                <strong>Environment variables:</strong> All Firebase credentials are stored in <code>.env.local</code> and excluded from version control via <code>.gitignore</code>, ensuring no secrets are exposed in the public repository.
+                            </li>
+                        </ul>
+                        <p><strong>Firestore & Storage Security Rules</strong></p>
+                        <ul>
+                            <li>
+                                All read/write operations require authentication and membership in the allowlist. Data validation (field types, string length limits) is enforced at the rule level, not just the client.
+                            </li>
+                            <li>
+                                Storage uploads are limited to image files under 2MB, with write access restricted to the owning user's UID path.
+                            </li>
+                        </ul>
+                    </div>
+                </article>
+
+                <!-- 04: Tech Stack -->
+                <article class="detail-section">
+                    <span class="section-number">04</span>
+                    <h2 class="section-heading">Tech Stack</h2>
+                    <div class="section-content">
+                        <div class="tech-stack-grid">
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Frontend</span>
+                                <p class="tech-value">React (Vite), Tailwind CSS, Lucide React</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Map</span>
+                                <p class="tech-value">Leaflet.js, OpenStreetMap, CartoDB Voyager</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Backend / DB</span>
+                                <p class="tech-value">Firebase Auth, Firestore, Cloud Storage</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">External APIs</span>
+                                <p class="tech-value">Overpass API (road snapping), Nominatim (search)</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">PWA</span>
+                                <p class="tech-value">vite-plugin-pwa, Service Worker, Web Manifest</p>
+                            </div>
+                            <div class="tech-stack-item">
+                                <span class="tech-label">Hosting / CI</span>
+                                <p class="tech-value">Firebase Hosting, GitHub Actions</p>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- 05: Design Philosophy -->
+                <article class="detail-section">
+                    <span class="section-number">05</span>
+                    <h2 class="section-heading">Design Philosophy & Key Features</h2>
+                    <div class="section-content">
+                        <p><strong>Accessibility-First</strong></p>
+                        <p>
+                            All interactive elements include appropriate ARIA labels and roles. Progress bars use <code>role="progressbar"</code> with <code>aria-valuenow</code> for screen reader compatibility. The safety modal on first load captures focus automatically, and all navigation is keyboard-accessible.
+                        </p>
+
+                        <p><strong>Mobile-First PWA</strong></p>
+                        <p>
+                            Designed as a smartphone-first experience with a fixed bottom navigation bar, touch-optimised controls, and full PWA support — installable on the home screen of both iOS and Android devices without an app store.
+                        </p>
+
+                        <p><strong>Personalisation</strong></p>
+                        <p>
+                            Each user can customise their pin colour (9 options), choose from three themed colour schemes (NZ Nature, Ocean, ALL Blacks), and set a personal avatar from preset icons or a custom uploaded photo.
+                        </p>
+
+                        <p><strong>Legal & Safety Compliance</strong></p>
+                        <p>
+                            A mandatory safety modal on first load warns against operating the app while driving and includes a liability disclaimer. GPS location data is only accessed after explicit user interaction, with purpose clearly communicated in the UI.
+                        </p>
+                    </div>
+                </article>
+
+                <!-- 06: GitHub -->
+                <article class="detail-section">
+                    <span class="section-number">06</span>
+                    <h2 class="section-heading">Repository</h2>
+                    <div class="section-content">
+                        <p>
+                            The full source code is available on GitHub. The <code>main</code> branch contains the production build (login required), and the <code>demo</code> branch contains the login-free demo version deployed above.
+                        </p>
+                        
+                            href="https://github.com/tmiaka-coder/my-works/tree/main/NZtripApp"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            class="contact-btn no-margin"
+                            style="display:inline-flex;align-items:center;gap:8px;width:auto;padding:12px 24px;margin-top:16px;"
+                            aria-label="View source code on GitHub (opens in new tab)"
+                        >
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+                            View on GitHub
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Navigation -->
+        <nav class="detail-nav" aria-label="Page navigation">
+            <div class="container flex-between-center">
+                <a href="../../works.html" class="nav-link">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
+                    </svg>
+                    Back to All Works
+                </a>
+                <a href="../../contact.html" class="contact-btn no-margin">
+                    Contact Me
+                </a>
+            </div>
+        </nav>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container footer-container">
+            <div class="social-links">
+                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                        <rect x="2" y="9" width="4" height="12"></rect>
+                        <circle cx="4" cy="4" r="2"></circle>
+                    </svg>
+                </a>
+                <a href="https://github.com/tmiaka-coder" target="_blank" rel="noopener" aria-label="GitHub profile">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                </a>
+            </div>
+            <p class="copyright">&copy; 2026 Vicky. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
