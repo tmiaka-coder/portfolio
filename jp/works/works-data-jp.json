@@ -48,5 +48,15 @@
     "image": "../assets/images/appjynken.png",
     "imageAlt": "AIじゃんけんアプリのアイコン",
     "link": "works/app/app-AIjanken.html"
+  },
+  {
+    "id": 6,
+    "category": "app",
+    "categoryLabel": "PWA / モバイルアプリ",
+    "title": "NZ Trace & Memory",
+    "description": "ニュージーランドをふたりで旅しながら、GPSルート・手描きコース・写真付き思い出ピンを記録するプライベートPWA。11,000km目標に対する走行距離統計もリアルタイムで表示。",
+    "image": "../assets/images/appNZtrip-main.jpg",
+    "imageAlt": "NZ Trace & Memoryアプリの地図画面",
+    "link": "works/app/app-nztripapp.html"
   }
 ]

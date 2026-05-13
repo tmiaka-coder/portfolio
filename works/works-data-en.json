@@ -48,5 +48,15 @@
     "image": "assets/images/appjynken.png",
     "imageAlt": "AI Janken App icon",
     "link": "works/app/app-AIjanken.html"
+  },
+  {
+    "id": 6,
+    "category": "app",
+    "categoryLabel": "PWA / MOBILE APP",
+    "title": "NZ Trace & Memory",
+    "description": "A private PWA for two users to record GPS routes, hand-drawn paths, and photo memories across New Zealand — with real-time distance stats toward an 11,000 km goal.",
+    "image": "assets/images/appNZtrip-main.jpg",
+    "imageAlt": "NZ Trace & Memory app map screen",
+    "link": "works/app/app-nztripapp.html"
   }
 ]
