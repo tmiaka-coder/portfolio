@@ -6,13 +6,21 @@
     <title>Contact | Vicky</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <!-- Google Analytics: GA_MEASUREMENT_ID を取得後に置き換えてください -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="../index.html">Vicky</a></div>
+            <div class="logo"><a href="index.html">Vicky</a></div>
             <nav class="main-nav">
                 <ul class="nav-links">
                     <li><a href="index.html">Home</a></li>
@@ -23,9 +31,9 @@
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../portfolio/contact.html" class="lang-btn active">EN</a>
+                <a href="contact.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="../portfolio/jp/contact.html" class="lang-btn">JP</a>
+                <a href="jp/contact.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
@@ -41,8 +49,8 @@
         <!-- Contact Section -->
         <section class="container padding-bottom-120">
             <div class="two-col-grid-wide">
-                
-                <!-- Information & Privacy -->
+
+                <!-- Left: Info & Privacy -->
                 <div class="contact-info">
                     <div class="mb-40">
                         <h2 class="section-subheading">Integrity in Data</h2>
@@ -50,32 +58,66 @@
                             To ensure your privacy, this website does not store your personal information on any third-party databases. When you click the contact button, your local email client will open to send the message directly to me.
                         </p>
                     </div>
-
                     <div class="top-divider">
                         <h3 class="small-uppercase">Response Time</h3>
                         <p class="text-muted">I typically respond within 1-2 business days. Based in Japan (GMT+9).</p>
                     </div>
                 </div>
 
-                <!-- Contact Action Card -->
-                <div class="info-card">
-                    <div class="mb-30">
-                        <!-- Email Icon (Inline SVG) -->
-                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-text mb-20">
-                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
-                            <polyline points="22,6 12,13 2,6"></polyline>
-                        </svg>
-                        <h3 class="subheading">Direct Email</h3>
-                        <p class="text-muted">Send an inquiry via your preferred email app.</p>
+                <!-- Right: Cards -->
+                <div class="contact-cards-stack">
+
+                    <!-- Card 1: General Contact -->
+                    <div class="info-card mb-30">
+                        <div class="mb-30">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-text mb-20" aria-hidden="true">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                            <h3 class="subheading">Direct Email</h3>
+                            <p class="text-muted">Send an inquiry via your preferred email app.</p>
+                        </div>
+                        <a href="mailto:t.miaka1023@gmail.com" class="cta-button button-fullwidth-dark">Send Message</a>
+                        <p class="fine-print">t.miaka1023@gmail.com</p>
                     </div>
 
-                    <a href="mailto:t.miaka1023@gmail.com" class="cta-button button-fullwidth-dark">Send Message</a>
-                    
-                    <p class="fine-print">
-                        t.miaka1023@gmail.com
-                    </p>
-                </div>
+                    <!-- Card 2: CV Password Request -->
+                    <div class="info-card cv-request-card">
+                        <div class="mb-30">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-text mb-20" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            <h3 class="subheading">Request CV (English)</h3>
+                            <p class="text-muted">Enter your name to request the PDF password. I'll reply within 1–2 business days.</p>
+                        </div>
 
+                        <div class="cv-form">
+                            <label for="cv-requester-name" class="cv-form-label">Your Name <span class="cv-required" aria-hidden="true">*</span></label>
+                            <input
+                                type="text"
+                                id="cv-requester-name"
+                                class="cv-form-input"
+                                placeholder="e.g. John Smith"
+                                autocomplete="name"
+                                maxlength="80"
+                                aria-required="true"
+                            >
+                            <p id="cv-name-error" class="cv-error" role="alert" hidden>Please enter your name.</p>
+                            <button type="button" id="cv-send-btn" class="cta-button button-fullwidth-dark" style="margin-top:16px;">
+                                Request CV Password
+                            </button>
+                        </div>
+
+                        <p class="fine-print">
+                            Clicking the button opens your email app with a pre-filled message. No data is stored.
+                        </p>
+                    </div>
+
+                </div>
             </div>
         </section>
     </main>
@@ -83,7 +125,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="social-links">
-                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <a href="https://www.linkedin.com/in/miaka-taniai" target="_blank" rel="noopener" aria-label="LinkedIn profile">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
@@ -99,5 +141,37 @@
             <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
         </div>
     </footer>
+
+    <script>
+        document.getElementById('cv-send-btn').addEventListener('click', function() {
+            const nameInput = document.getElementById('cv-requester-name');
+            const errorEl  = document.getElementById('cv-name-error');
+            const name = nameInput.value.trim();
+
+            // バリデーション
+            if (!name) {
+                errorEl.hidden = false;
+                nameInput.focus();
+                return;
+            }
+            errorEl.hidden = true;
+
+            // メール本文を生成（textContentで組み立て、XSS対策）
+            const subject = encodeURIComponent('CV Password Request');
+            const body    = encodeURIComponent(
+                'Hi Vicky,\n\n' +
+                'My name is ' + name + '.\n' +
+                'I would like to request the password for your English CV PDF.\n\n' +
+                'Thank you!'
+            );
+
+            window.location.href = 'mailto:t.miaka1023@gmail.com?subject=' + subject + '&body=' + body;
+        });
+
+        // Enterキーでも送信できるように
+        document.getElementById('cv-requester-name').addEventListener('keydown', function(e) {
+            if (e.key === 'Enter') document.getElementById('cv-send-btn').click();
+        });
+    </script>
 </body>
 </html>

@@ -4,35 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Vicky | Quality & Accessibility Design</title>
-    <!-- 外部CSSを参照 -->
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <!-- Google Analytics: GA_MEASUREMENT_ID を取得後に置き換えてください -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="../portfolio/index.html">Vicky</a></div>
+            <div class="logo"><a href="index.html">Vicky</a></div>
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="../portfolio/index.html" class="active">Home</a></li>
-                    <li><a href="../portfolio/works.html">Works</a></li>
-                    <li><a href="../portfolio/services.html">Services</a></li>
-                    <li><a href="../portfolio/about.html">About</a></li>
-                    <li><a href="../portfolio/contact.html">Contact</a></li>
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../portfolio/index.html" class="lang-btn active">EN</a>
+                <a href="index.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="../portfolio/jp/index.html" class="lang-btn">JP</a>
+                <a href="jp/index.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <!-- Hero Section: Maximum Impact -->
         <section class="container section-hero-large">
             <h1 class="hero-title">
                 Beyond <br>Standard.
@@ -41,7 +47,6 @@
             <div class="scroll-indicator">Scroll to explore</div>
         </section>
 
-        <!-- Featured Section: Philosophy & Work -->
         <section class="container featured-section">
             <div class="statement-box">
                 <span class="section-label">Vision</span>
@@ -61,13 +66,13 @@
                 <div class="work-preview-grid">
                     <a href="works.html" class="work-item">
                         <div class="work-thumb">
-                            <img src="assets/images/appKIWI.jpg" alt="Kiwi Talkboard アプリ開発画面のプレビュー" class="fullwidth-img">
+                            <img src="assets/images/appKIWI.jpg" alt="Kiwi Talkboard アプリ開発画面のプレビュー" class="fullwidth-img lightbox-trigger" data-lightbox="assets/images/appKIWI.jpg" data-alt="Kiwi Talkboard app preview">
                         </div>
                         <p class="work-title">App Development</p>
                     </a>
                     <a href="works.html" class="work-item">
                         <div class="work-thumb">
-                            <img src="assets/images/banner-salt-pan.jpg" alt="パン屋さん塩パンのプレビュー" class="fullwidth-img">
+                            <img src="assets/images/banner-salt-pan.jpg" alt="パン屋さん塩パンのプレビュー" class="fullwidth-img lightbox-trigger" data-lightbox="assets/images/banner-salt-pan.jpg" data-alt="Bakery banner preview">
                         </div>
                         <p class="work-title">Banner Design</p>
                     </a>
@@ -75,12 +80,10 @@
             </div>
         </section>
 
-        <!-- CTA Section: Improved Visibility -->
         <section class="section-accent">
             <div class="container">
                 <h2 class="hero-title-medium">Let's build something honest.</h2>
                 <p class="hero-subtitle-light">Making compliance and accessibility the foundation, not just a trend.</p>
-                <!-- Application of cta-button class defined in style.css -->
                 <a href="contact.html" class="cta-button">Inquiry</a>
             </div>
         </section>
@@ -89,7 +92,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="social-links">
-                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <a href="https://www.linkedin.com/in/miaka-taniai" target="_blank" rel="noopener" aria-label="LinkedIn profile">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
@@ -105,5 +108,33 @@
             <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Lightbox (index page) -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">✕</button>
+        <img id="lightbox-img" src="" alt="" class="lightbox-image">
+    </div>
+    <script>
+        document.querySelectorAll('.lightbox-trigger').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function(e) {
+                e.preventDefault();
+                document.getElementById('lightbox-img').src = this.dataset.lightbox;
+                document.getElementById('lightbox-img').alt = this.dataset.alt || '';
+                document.getElementById('lightbox').hidden = false;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        document.getElementById('lightbox-close').addEventListener('click', () => {
+            document.getElementById('lightbox').hidden = true;
+            document.body.style.overflow = '';
+        });
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) { this.hidden = true; document.body.style.overflow = ''; }
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { document.getElementById('lightbox').hidden = true; document.body.style.overflow = ''; }
+        });
+    </script>
 </body>
 </html>

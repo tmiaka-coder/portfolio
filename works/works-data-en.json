@@ -7,7 +7,13 @@
     "description": "A secure, accessible community board connecting Japanese residents in New Zealand.",
     "image": "assets/images/appKIWI.jpg",
     "imageAlt": "Kiwi Talkboard app preview",
-    "link": "works/app/app-kiwitalkboard.html"
+    "link": "works/app/app-kiwitalkboard.html",
+    "meta": {
+      "category": "Web Application",
+      "platform": "Browser",
+      "timeline": "—",
+      "tool": "HTML / CSS / JS"
+    }
   },
   {
     "id": 2,
@@ -17,7 +23,13 @@
     "description": "Visual strategies tailored to specific target audiences.",
     "image": "assets/images/banner-salt-pan.jpg",
     "imageAlt": "Bakery advertisement preview",
-    "link": "works/banner/banner-bread.html"
+    "link": "works/banner/banner-bread.html",
+    "meta": {
+      "category": "Banner Design",
+      "platform": "Print / Digital",
+      "timeline": "—",
+      "tool": "Illustrator"
+    }
   },
   {
     "id": 3,
@@ -27,7 +39,13 @@
     "description": "Short-form high-impact videos for social media.",
     "image": "assets/images/shotyakitori.png",
     "imageAlt": "Yakitori shop short video thumbnail",
-    "link": "works/movie/movie-showcase.html"
+    "link": "works/movie/movie-showcase.html",
+    "meta": {
+      "category": "Short Film",
+      "platform": "Instagram / TikTok",
+      "timeline": "—",
+      "tool": "Premiere Pro"
+    }
   },
   {
     "id": 4,
@@ -37,7 +55,13 @@
     "description": "A promotional video for a fictional application that visualizes household energy consumption. Edited with Adobe Premiere Pro, focusing on clean motion graphics and intuitive UX storytelling.",
     "image": "assets/images/electricity-app.png",
     "imageAlt": "Electricity Management App video thumbnail",
-    "link": "works/movie/movie-electric.html"
+    "link": "works/movie/movie-electric.html",
+    "meta": {
+      "category": "Promotional Video",
+      "platform": "Web / Social",
+      "timeline": "—",
+      "tool": "Premiere Pro"
+    }
   },
   {
     "id": 5,
@@ -47,7 +71,13 @@
     "description": "A real-time rock-paper-scissors game against AI using browser-based hand tracking. Experience advanced image analysis and serverless execution with MediaPipe Hands.",
     "image": "assets/images/appjynken.png",
     "imageAlt": "AI Janken App icon",
-    "link": "works/app/app-AIjanken.html"
+    "link": "works/app/app-AIjanken.html",
+    "meta": {
+      "category": "Web Application / AI",
+      "platform": "Browser (PWA)",
+      "timeline": "6h",
+      "tool": "HTML / JS / MediaPipe"
+    }
   },
   {
     "id": 6,
@@ -57,6 +87,12 @@
     "description": "A private PWA for two users to record GPS routes, hand-drawn paths, and photo memories across New Zealand — with real-time distance stats toward an 11,000 km goal.",
     "image": "assets/images/appNZtrip-main.jpg",
     "imageAlt": "NZ Trace & Memory app map screen",
-    "link": "works/app/app-nztripapp.html"
+    "link": "works/app/app-nztripapp.html",
+    "meta": {
+      "category": "PWA / Mobile App",
+      "platform": "iOS / Android / Web",
+      "timeline": "—",
+      "tool": "HTML / CSS / JS"
+    }
   }
 ]

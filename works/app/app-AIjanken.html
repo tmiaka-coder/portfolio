@@ -6,6 +6,14 @@
     <title>AI Janken | Vicky</title>
     <link rel="stylesheet" href="../../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <!-- Google Analytics: GA_MEASUREMENT_ID を取得後に置き換えてください -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -35,8 +43,11 @@
                 <div class="detail-hero-grid">
                     <div class="detail-visual-wrapper">
                         <div class="detail-main-image">
-                            <!-- アップロードされたアイコン画像をメインビジュアルとして設定 -->
-                            <img src="../../assets/images/appjynken.png" alt="AI Janken application icon showing Rock Paper Scissors symbols">
+                            <img src="../../assets/images/appjynken.png"
+                                 alt="AI Janken application icon showing Rock Paper Scissors symbols"
+                                 class="lightbox-trigger"
+                                 data-lightbox="../../assets/images/appjynken.png"
+                                 data-alt="AI Janken application icon">
                         </div>
                         <div class="detail-meta-grid">
                             <div class="detail-meta-item">
@@ -64,6 +75,16 @@
                         <p class="detail-subtitle">
                             A real-time "Rock-Paper-Scissors" game against AI using browser-based hand tracking. Experience advanced image analysis and serverless execution with MediaPipe Hands.
                         </p>
+                        <!-- Live Demo Button -->
+                        <a href="https://tmiaka-coder.github.io/my-works/ai-janken/"
+                           target="_blank"
+                           rel="noopener"
+                           class="live-demo-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
+                            </svg>
+                            Play Live
+                        </a>
                     </div>
                 </div>
             </div>
@@ -140,7 +161,6 @@
                         <p>
                             Following my "Accessibility-First" principle, I utilized <code>aria-live</code> attributes so that screen readers immediately announce AI judgments and game results. PWA implementation further enhances user convenience by allowing offline access and direct launching from the home screen.
                         </p>
-
                         <p><strong>Privacy & Security</strong></p>
                         <p>
                             The design is "Privacy-Focused," completing all image analysis on the client-side within the browser. No video data is ever sent to a server. For security, I strictly used <code>textContent</code> for DOM updates to prevent injection attacks.
@@ -159,10 +179,7 @@
                     </svg>
                     Back to Works
                 </a>
-                
-                <a href="../../contact.html" class="contact-btn no-margin">
-                    Contact Me
-                </a>
+                <a href="../../contact.html" class="contact-btn no-margin">Contact Me</a>
             </div>
         </nav>
     </main>
@@ -170,7 +187,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="social-links">
-                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <a href="https://www.linkedin.com/in/miaka-taniai" target="_blank" rel="noopener" aria-label="LinkedIn profile">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
@@ -186,5 +203,32 @@
             <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">✕</button>
+        <img id="lightbox-img" src="" alt="" class="lightbox-image">
+    </div>
+    <script>
+        document.querySelectorAll('.lightbox-trigger').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                document.getElementById('lightbox-img').src = this.dataset.lightbox;
+                document.getElementById('lightbox-img').alt = this.dataset.alt || '';
+                document.getElementById('lightbox').hidden = false;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        document.getElementById('lightbox-close').addEventListener('click', () => {
+            document.getElementById('lightbox').hidden = true;
+            document.body.style.overflow = '';
+        });
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) { this.hidden = true; document.body.style.overflow = ''; }
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { document.getElementById('lightbox').hidden = true; document.body.style.overflow = ''; }
+        });
+    </script>
 </body>
 </html>

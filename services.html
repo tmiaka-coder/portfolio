@@ -6,32 +6,39 @@
     <title>Services | Vicky</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <!-- Google Analytics: GA_MEASUREMENT_ID を取得後に置き換えてください -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
 
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="../portfolio/services.html">Vicky</a></div>
+            <div class="logo"><a href="index.html">Vicky</a></div>
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="../portfolio/index.html">Home</a></li>
-                    <li><a href="works.html">Works</a></li>            
-                    <li><a href="../portfolio/services.html" class="active">Services</a></li>
-                    <li><a href="../portfolio/about.html">About</a></li>
-                    <li><a href="../portfolio/contact.html">Contact</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="works.html">Works</a></li>
+                    <li><a href="services.html" class="active">Services</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../portfolio/services.html" class="lang-btn active">EN</a>
+                <a href="services.html" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="../portfolio/jp/services.html" class="lang-btn">JP</a>
+                <a href="jp/services.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <!-- Page Header -->
         <section class="container section-padding-lg">
             <span class="section-label">Our Value</span>
             <h1 class="hero-title hero-title-small">Beyond <br>Development.</h1>
@@ -41,9 +48,8 @@
         <!-- Services Section -->
         <section class="container padding-bottom-100">
             <div class="grid-auto-fit-320">
-                
-                <!-- Service 1: Accessibility -->
-                <div class="feature-card">
+
+                <div class="feature-card feature-card-bordered">
                     <span class="section-label feature-card-label">01. Compliance</span>
                     <h2 class="feature-card-title">Inclusive Web Design</h2>
                     <p class="feature-card-text">Ensuring your website meets WCAG 2.1/2.2 and NZ's Web Accessibility Standards. We don't just fix errors; we design for everyone, regardless of their ability or device.</p>
@@ -54,8 +60,7 @@
                     </ul>
                 </div>
 
-                <!-- Service 2: QA & Quality -->
-                <div class="feature-card">
+                <div class="feature-card feature-card-bordered">
                     <span class="section-label feature-card-label">02. Integrity</span>
                     <h2 class="feature-card-title">Quality Assurance (QA)</h2>
                     <p class="feature-card-text">Leveraging experience in enterprise ERP testing. We provide rigorous multi-device testing and bug tracking to ensure your product is stable and reliable from launch.</p>
@@ -66,8 +71,7 @@
                     </ul>
                 </div>
 
-                <!-- Service 3: Visual & Frontend -->
-                <div class="feature-card">
+                <div class="feature-card feature-card-bordered">
                     <span class="section-label feature-card-label">03. Creativity</span>
                     <h2 class="feature-card-title">Frontend Development</h2>
                     <p class="feature-card-text">Creating clean, performant, and maintainable code. Specializing in modern CSS frameworks and mobile-first responsive design for a seamless user journey.</p>
@@ -99,11 +103,10 @@
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="section-accent">
             <div class="container">
                 <h2 class="hero-section-title">Ready to elevate your quality?</h2>
-                <a href="../portfolio/contact.html" class="cta-button">Start a Conversation</a>
+                <a href="contact.html" class="cta-button">Start a Conversation</a>
             </div>
         </section>
     </main>
@@ -111,7 +114,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="social-links">
-                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedIn profile">
+                <a href="https://www.linkedin.com/in/miaka-taniai" target="_blank" rel="noopener" aria-label="LinkedIn profile">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
