@@ -89,11 +89,9 @@
     </header>
 
     <main id="main-content">
-        <!-- Hero Section -->
         <section class="detail-hero">
             <div class="container">
                 <div class="detail-hero-grid">
-                    <!-- Left: Visuals -->
                     <div class="detail-visual-wrapper">
                         <div class="detail-main-image">
                             <img src="../../../assets/images/appNZtrip-main.jpg" alt="NZ Trace & Memoryアプリのメイン画面（ニュージーランドの地図表示）">
@@ -144,93 +142,61 @@
                         </div>
                     </div>
 
-                    <!-- Right: Header Content -->
                     <div class="detail-content-header">
                         <span class="detail-category">App Development</span>
                         <h1 class="detail-title">NZ Trace & Memory</h1>
                         <p class="detail-subtitle">
                             ニュージーランドの旅の軌跡と思い出を2人で記録するプライベートPWAアプリ。React・Firebase・Leafletを用いて、リアルタイムGPSトラッキング、手動描画ルートの道路スナップ、写真付き思い出ピン、11,000km目標に対する走行距離統計などを実現。
                         </p>
-                        
-                            href="https://nztripapp-99050--demo-gh9hluhm.web.app"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="live-demo-btn"
-                            aria-label="NZ Trace & Memoryのライブデモを開く（新しいタブで開きます）"
-                        >
+                        <a href="https://nztripapp-99050--demo-gh9hluhm.web.app" target="_blank" rel="noopener noreferrer" class="live-demo-btn" aria-label="NZ Trace and Memoryのライブデモを開く（新しいタブで開きます）">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/></svg>
                             ライブデモを見る
                         </a>
-                        <p style="font-size:0.75rem;color:#999;margin-top:8px;">
-                            ※ デモモード — ログイン不要。GPS・保存機能は無効です。
-                        </p>
+                        <p style="font-size:0.75rem;color:#999;margin-top:8px;">※ デモモード — ログイン不要。GPS・保存機能は無効です。</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Main Content -->
         <section class="detail-body">
             <div class="container">
 
-                <!-- 01: 作品概要 -->
                 <article class="detail-section">
                     <span class="section-number">01</span>
                     <h2 class="section-heading">作品概要</h2>
                     <div class="section-content">
-                        <p>
-                            NZ Trace & Memoryは、パートナーと2人でニュージーランドのロードトリップを記録するために開発したProgressuve Web App（PWA）です。リアルタイムGPSによるルート記録、地図上の手動描画（Overpass APIで実際の道路にスナップ）、写真とテキストを添えた思い出ピンの設置など、旅の記録に必要な機能をひとつのアプリに集約しました。
-                        </p>
-                        <p>
-                            データはFirebase FirestoreとStorageに保存され、Googleアカウント認証により2人のアカウントのみアクセスを制限しています。iOS・Android両方にPWAとしてインストール可能です。
-                        </p>
+                        <p>NZ Trace & Memoryは、パートナーと2人でニュージーランドのロードトリップを記録するために開発したProgressive Web App（PWA）です。リアルタイムGPSによるルート記録、地図上の手動描画（Overpass APIで実際の道路にスナップ）、写真とテキストを添えた思い出ピンの設置など、旅の記録に必要な機能をひとつのアプリに集約しました。</p>
+                        <p>データはFirebase FirestoreとStorageに保存され、Googleアカウント認証により2人のアカウントのみアクセスを制限しています。iOS・Android両方にPWAとしてインストール可能です。</p>
                     </div>
                 </article>
 
-                <!-- 02: 開発の背景 -->
                 <article class="detail-section">
                     <span class="section-number">02</span>
                     <h2 class="section-heading">開発の背景と目的</h2>
                     <div class="section-content">
-                        <p>
-                            2026年8月のニュージーランド移住を控え、実際に現地で毎日使えるものを作りたいと考えたのがきっかけです。「どこを旅して、どれだけ走って、どんな瞬間があったか」をひとつのアプリで残せる仕組みを、ポートフォリオではなく実用ツールとして開発しました。
-                        </p>
-                        <p>
-                            同時に、Reactのコンポーネント設計、リアルタイムデータベース、位置情報API、モバイルファーストPWA設計を実践的な本番環境で深める機会にもなりました。
-                        </p>
+                        <p>2026年8月のニュージーランド移住を控え、実際に現地で毎日使えるものを作りたいと考えたのがきっかけです。「どこを旅して、どれだけ走って、どんな瞬間があったか」をひとつのアプリで残せる仕組みを、ポートフォリオではなく実用ツールとして開発しました。</p>
+                        <p>同時に、Reactのコンポーネント設計、リアルタイムデータベース、位置情報API、モバイルファーストPWA設計を実践的な本番環境で深める機会にもなりました。</p>
                     </div>
                 </article>
 
-                <!-- 03: セキュリティ（Highlight） -->
                 <article class="detail-section highlight-section">
                     <span class="section-number">03</span>
                     <h2 class="section-heading">特に注力した機能：セキュリティとプライバシー設計</h2>
                     <div class="section-content">
                         <p><strong>2人限定アクセス制御</strong></p>
                         <ul>
-                            <li>
-                                <strong>Google認証：</strong>特定の2つのGoogleアカウントのみ許可。サインイン後も即座に弾かれる仕組みで、URLが知られても不正アクセスは不可能です。
-                            </li>
-                            <li>
-                                <strong>Firestoreの許可リスト：</strong><code>allowedUsers</code>コレクションに許可済みUIDを登録し、全セキュリティルールをサーバーサイドで適用。クライアントコードに関わらず不正な読み書きを防止しています。
-                            </li>
-                            <li>
-                                <strong>環境変数管理：</strong>Firebaseの認証情報は<code>.env.local</code>に保存し<code>.gitignore</code>で除外。公開リポジトリにシークレットが漏れない設計です。
-                            </li>
+                            <li><strong>Google認証：</strong>特定の2つのGoogleアカウントのみ許可。サインイン後も即座に弾かれる仕組みで、URLが知られても不正アクセスは不可能です。</li>
+                            <li><strong>Firestoreの許可リスト：</strong><code>allowedUsers</code>コレクションに許可済みUIDを登録し、全セキュリティルールをサーバーサイドで適用。クライアントコードに関わらず不正な読み書きを防止しています。</li>
+                            <li><strong>環境変数管理：</strong>Firebaseの認証情報は<code>.env.local</code>に保存し<code>.gitignore</code>で除外。公開リポジトリにシークレットが漏れない設計です。</li>
                         </ul>
                         <p><strong>Firestore・Storageセキュリティルール</strong></p>
                         <ul>
-                            <li>
-                                全読み書き操作は認証と許可リストへの登録を必須とし、データバリデーション（フィールド型・文字数制限）もルールレベルで実装しています。
-                            </li>
-                            <li>
-                                Storageへのアップロードは2MB以下の画像のみ許可し、書き込みは本人のUIDパスに限定しています。
-                            </li>
+                            <li>全読み書き操作は認証と許可リストへの登録を必須とし、データバリデーション（フィールド型・文字数制限）もルールレベルで実装しています。</li>
+                            <li>Storageへのアップロードは2MB以下の画像のみ許可し、書き込みは本人のUIDパスに限定しています。</li>
                         </ul>
                     </div>
                 </article>
 
-                <!-- 04: 使用技術 -->
                 <article class="detail-section">
                     <span class="section-number">04</span>
                     <h2 class="section-heading">使用技術（テックスタック）</h2>
@@ -264,49 +230,30 @@
                     </div>
                 </article>
 
-                <!-- 05: こだわりのポイント -->
                 <article class="detail-section">
                     <span class="section-number">05</span>
                     <h2 class="section-heading">こだわりのポイント</h2>
                     <div class="section-content">
                         <p><strong>アクセシビリティ最優先の設計</strong></p>
-                        <p>
-                            全インタラクティブ要素にARIAラベルとロールを付与。プログレスバーは<code>role="progressbar"</code>と<code>aria-valuenow</code>でスクリーンリーダー対応。初回表示の安全警告モーダルは自動フォーカス制御を実装し、キーボードのみで全ナビゲーションにアクセスできます。
-                        </p>
+                        <p>全インタラクティブ要素にARIAラベルとロールを付与。プログレスバーは<code>role="progressbar"</code>と<code>aria-valuenow</code>でスクリーンリーダー対応。初回表示の安全警告モーダルは自動フォーカス制御を実装し、キーボードのみで全ナビゲーションにアクセスできます。</p>
 
                         <p><strong>モバイルファーストPWA</strong></p>
-                        <p>
-                            スマートフォン最優先のUXを設計し、固定ボトムナビゲーション、タッチ最適化されたコントロール、フルPWAサポートを実現。iOS・Android双方にアプリストアなしでホーム画面へインストール可能です。
-                        </p>
+                        <p>スマートフォン最優先のUXを設計し、固定ボトムナビゲーション、タッチ最適化されたコントロール、フルPWAサポートを実現。iOS・Android双方にアプリストアなしでホーム画面へインストール可能です。</p>
 
                         <p><strong>パーソナライズ機能</strong></p>
-                        <p>
-                            ピンカラー（9色）、3種類のテーマ（NZの自然・オーシャン・ALL Blacks）、プリセットアイコンまたはアップロード写真によるアバター設定など、ユーザーごとのカスタマイズを実装しました。
-                        </p>
+                        <p>ピンカラー（9色）、3種類のテーマ（NZの自然・オーシャン・ALL Blacks）、プリセットアイコンまたはアップロード写真によるアバター設定など、ユーザーごとのカスタマイズを実装しました。</p>
 
                         <p><strong>法的・安全要件への対応</strong></p>
-                        <p>
-                            初回起動時に運転中の操作を禁じる安全警告モーダル（免責事項含む）を表示し、同意を得てから利用開始する設計にしています。GPS位置情報は明示的なユーザー操作後にのみ取得します。
-                        </p>
+                        <p>初回起動時に運転中の操作を禁じる安全警告モーダル（免責事項含む）を表示し、同意を得てから利用開始する設計にしています。GPS位置情報は明示的なユーザー操作後にのみ取得します。</p>
                     </div>
                 </article>
 
-                <!-- 06: リポジトリ -->
                 <article class="detail-section">
                     <span class="section-number">06</span>
                     <h2 class="section-heading">リポジトリ</h2>
                     <div class="section-content">
-                        <p>
-                            ソースコードはGitHubで公開しています。<code>main</code>ブランチが本番（ログイン必須）、<code>demo</code>ブランチがログイン不要のデモ版です。
-                        </p>
-                        
-                            href="https://github.com/tmiaka-coder/my-works/tree/main/NZtripApp"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            class="contact-btn no-margin"
-                            style="display:inline-flex;align-items:center;gap:8px;width:auto;padding:12px 24px;margin-top:16px;"
-                            aria-label="GitHubでソースコードを見る（新しいタブで開きます）"
-                        >
+                        <p>ソースコードはGitHubで公開しています。<code>main</code>ブランチが本番（ログイン必須）、<code>demo</code>ブランチがログイン不要のデモ版です。</p>
+                        <a href="https://github.com/tmiaka-coder/my-works/tree/main/NZtripApp" target="_blank" rel="noopener noreferrer" class="contact-btn no-margin" style="display:inline-flex;align-items:center;gap:8px;width:auto;padding:12px 24px;margin-top:16px;" aria-label="GitHubでソースコードを見る（新しいタブで開きます）">
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
                             GitHubで見る
                         </a>
@@ -316,18 +263,13 @@
             </div>
         </section>
 
-        <!-- Navigation -->
         <nav class="detail-nav" aria-label="ページナビゲーション">
             <div class="container flex-between-center">
                 <a href="../../../jp/works.html" class="nav-link">
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                        <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
-                    </svg>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
                     実績一覧へ戻る
                 </a>
-                <a href="../../../jp/contact.html" class="contact-btn no-margin">
-                    お問い合わせ
-                </a>
+                <a href="../../../jp/contact.html" class="contact-btn no-margin">お問い合わせ</a>
             </div>
         </nav>
     </main>
@@ -336,16 +278,10 @@
         <div class="container footer-container">
             <div class="social-links">
                 <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedInプロフィール">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
-                        <rect x="2" y="9" width="4" height="12"></rect>
-                        <circle cx="4" cy="4" r="2"></circle>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
                 </a>
                 <a href="https://github.com/tmiaka-coder" target="_blank" rel="noopener" aria-label="GitHubプロフィール">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
                 </a>
             </div>
             <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
