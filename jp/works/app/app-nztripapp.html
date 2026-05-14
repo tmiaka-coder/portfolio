@@ -33,55 +33,11 @@
     <main id="main-content">
         <section class="detail-hero">
             <div class="container">
-                <div class="detail-hero-grid">
-                    <div class="detail-visual-wrapper">
-                        <div class="detail-main-image">
-                            <img src="../../../assets/images/appNZtrip-main.jpg" alt="NZ Trace & Memoryアプリのメイン画面（ニュージーランドの地図表示）">
-                        </div>
-                        <div class="screenshot-grid">
-                            <div class="screenshot-wrapper">
-                                <div class="screenshot-item">
-                                    <img src="../../../assets/images/appNZtrip-map.jpg" alt="GPSルート記録と思い出ピンが表示された地図タブ">
-                                </div>
-                                <p class="screenshot-caption">地図・ルート記録</p>
-                            </div>
-                            <div class="screenshot-wrapper">
-                                <div class="screenshot-item">
-                                    <img src="../../../assets/images/appNZtrip-diary.jpg" alt="写真とテキストが表示された思い出一覧タブ">
-                                </div>
-                                <p class="screenshot-caption">思い出の記録</p>
-                            </div>
-                            <div class="screenshot-wrapper">
-                                <div class="screenshot-item">
-                                    <img src="../../../assets/images/appNZtrip-stats.jpg" alt="走行距離のプログレスバーが表示された統計タブ">
-                                </div>
-                                <p class="screenshot-caption">走行距離統計</p>
-                            </div>
-                            <div class="screenshot-wrapper">
-                                <div class="screenshot-item">
-                                    <img src="../../../assets/images/appNZtrip-settings.jpg" alt="テーマとピンカラーのカスタマイズ設定タブ">
-                                </div>
-                                <p class="screenshot-caption">カスタマイズ</p>
-                            </div>
-                        </div>
-                        <div class="detail-meta-grid">
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Category</span>
-                                <span class="detail-meta-value">PWA / モバイルアプリ</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Year</span>
-                                <span class="detail-meta-value">2026</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Role</span>
-                                <span class="detail-meta-value">フルスタック開発</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Platform</span>
-                                <span class="detail-meta-value">iOS / Android / Web</span>
-                            </div>
-                        </div>
+
+                <!-- 上段：メイン画像 ＋ テキスト 横並び -->
+                <div class="nztrip-hero-grid">
+                    <div class="detail-main-image">
+                        <img src="../../../assets/images/appNZtrip-main.jpg" alt="NZ Trace & Memoryアプリのメイン画面（ニュージーランドの地図表示）">
                     </div>
 
                     <div class="detail-content-header">
@@ -97,6 +53,55 @@
                         <p style="font-size:0.75rem;color:#999;margin-top:8px;">※ デモモード — ログイン不要。GPS・保存機能は無効です。</p>
                     </div>
                 </div>
+
+                <!-- 下段：4枚のスクリーンショット（全幅） -->
+                <div class="screenshot-grid">
+                    <div class="screenshot-wrapper">
+                        <div class="screenshot-item">
+                            <img src="../../../assets/images/appNZtrip-map.jpg" alt="GPSルート記録と思い出ピンが表示された地図タブ">
+                        </div>
+                        <p class="screenshot-caption">地図・ルート記録</p>
+                    </div>
+                    <div class="screenshot-wrapper">
+                        <div class="screenshot-item">
+                            <img src="../../../assets/images/appNZtrip-diary.jpg" alt="写真とテキストが表示された思い出一覧タブ">
+                        </div>
+                        <p class="screenshot-caption">思い出の記録</p>
+                    </div>
+                    <div class="screenshot-wrapper">
+                        <div class="screenshot-item">
+                            <img src="../../../assets/images/appNZtrip-stats.jpg" alt="走行距離のプログレスバーが表示された統計タブ">
+                        </div>
+                        <p class="screenshot-caption">走行距離統計</p>
+                    </div>
+                    <div class="screenshot-wrapper">
+                        <div class="screenshot-item">
+                            <img src="../../../assets/images/appNZtrip-settings.jpg" alt="テーマとピンカラーのカスタマイズ設定タブ">
+                        </div>
+                        <p class="screenshot-caption">カスタマイズ</p>
+                    </div>
+                </div>
+
+                <!-- 下段：メタ情報（全幅） -->
+                <div class="detail-meta-grid">
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Category</span>
+                        <span class="detail-meta-value">PWA / モバイルアプリ</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Year</span>
+                        <span class="detail-meta-value">2026</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Role</span>
+                        <span class="detail-meta-value">フルスタック開発</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Platform</span>
+                        <span class="detail-meta-value">iOS / Android / Web</span>
+                    </div>
+                </div>
+
             </div>
         </section>
 
@@ -178,13 +183,10 @@
                     <div class="section-content">
                         <p><strong>アクセシビリティ最優先の設計</strong></p>
                         <p>全インタラクティブ要素にARIAラベルとロールを付与。プログレスバーは<code>role="progressbar"</code>と<code>aria-valuenow</code>でスクリーンリーダー対応。初回表示の安全警告モーダルは自動フォーカス制御を実装し、キーボードのみで全ナビゲーションにアクセスできます。</p>
-
                         <p><strong>モバイルファーストPWA</strong></p>
                         <p>スマートフォン最優先のUXを設計し、固定ボトムナビゲーション、タッチ最適化されたコントロール、フルPWAサポートを実現。iOS・Android双方にアプリストアなしでホーム画面へインストール可能です。</p>
-
                         <p><strong>パーソナライズ機能</strong></p>
                         <p>ピンカラー（9色）、3種類のテーマ（NZの自然・オーシャン・ALL Blacks）、プリセットアイコンまたはアップロード写真によるアバター設定など、ユーザーごとのカスタマイズを実装しました。</p>
-
                         <p><strong>法的・安全要件への対応</strong></p>
                         <p>初回起動時に運転中の操作を禁じる安全警告モーダル（免責事項含む）を表示し、同意を得てから利用開始する設計にしています。GPS位置情報は明示的なユーザー操作後にのみ取得します。</p>
                     </div>
