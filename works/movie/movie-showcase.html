@@ -34,36 +34,40 @@
         <section class="detail-hero">
             <div class="container">
                 <div class="detail-hero-grid">
+                    <!-- 左：動画のみ -->
                     <div class="detail-visual-wrapper">
                         <div class="detail-main-video video-frame-wrap">
                             <iframe width="100%" height="100%" src="https://www.youtube.com/embed/6oMqAQQnYYs" title="Yakitori Shop Promotion Video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
-                        <div class="detail-meta-grid">
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Category</span>
-                                <span class="detail-meta-value">Short Form Video</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Duration</span>
-                                <span class="detail-meta-value">15 seconds</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Platform</span>
-                                <span class="detail-meta-value">Instagram / TikTok</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Tool</span>
-                                <span class="detail-meta-value">Premiere Pro</span>
-                            </div>
-                        </div>
                     </div>
 
+                    <!-- 右：テキスト -->
                     <div class="detail-content-header">
                         <span class="detail-category">Video Production</span>
                         <h1 class="detail-title">Yakitori Shop Promo Video</h1>
                         <p class="detail-subtitle">
                             An energetic short-form video designed to maximize engagement and drive foot traffic to a yakitori restaurant. Optimized for SNS with dynamic motion and strong sensory appeal.
                         </p>
+                    </div>
+                </div>
+
+                <!-- メタ情報：全幅4列 -->
+                <div class="detail-meta-grid" style="grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;">
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Category</span>
+                        <span class="detail-meta-value">Short Form Video</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Platform</span>
+                        <span class="detail-meta-value">Instagram / TikTok</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Timeline</span>
+                        <span class="detail-meta-value">15 sec</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Tool</span>
+                        <span class="detail-meta-value">Premiere Pro</span>
                     </div>
                 </div>
             </div>
@@ -155,10 +159,7 @@
                     </svg>
                     Back to All Works
                 </a>
-
-                <a href="../../contact.html" class="contact-btn no-margin">
-                    Contact Me
-                </a>
+                <a href="../../contact.html" class="contact-btn no-margin">Contact Me</a>
             </div>
         </nav>
     </main>
@@ -182,5 +183,32 @@
             <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Lightbox（動画ページは画像がないためJS定義のみ残す） -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+        <img id="lightbox-img" src="" alt="" class="lightbox-image">
+    </div>
+    <script>
+        document.querySelectorAll('.lightbox-trigger').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                document.getElementById('lightbox-img').src = this.dataset.lightbox;
+                document.getElementById('lightbox-img').alt = this.dataset.alt || '';
+                document.getElementById('lightbox').hidden = false;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        document.getElementById('lightbox-close').addEventListener('click', () => {
+            document.getElementById('lightbox').hidden = true;
+            document.body.style.overflow = '';
+        });
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) { this.hidden = true; document.body.style.overflow = ''; }
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { document.getElementById('lightbox').hidden = true; document.body.style.overflow = ''; }
+        });
+    </script>
 </body>
 </html>

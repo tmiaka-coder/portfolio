@@ -34,36 +34,44 @@
         <section class="detail-hero">
             <div class="container">
                 <div class="detail-hero-grid">
+                    <!-- 左：画像のみ -->
                     <div class="detail-visual-wrapper">
                         <div class="detail-main-image">
-                            <img src="../../assets/images/banner-salt-pan.jpg" alt="Opening announcement banner for a salt bread specialty store">
-                        </div>
-                        <div class="detail-meta-grid">
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Category</span>
-                                <span class="detail-meta-value">Banner Design</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Year</span>
-                                <span class="detail-meta-value">2025</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Tool</span>
-                                <span class="detail-meta-value">Photoshop</span>
-                            </div>
-                            <div class="detail-meta-item">
-                                <span class="detail-meta-label">Format</span>
-                                <span class="detail-meta-value">1200×628px</span>
-                            </div>
+                            <img src="../../assets/images/banner-salt-pan.jpg"
+                                 alt="Opening announcement banner for a salt bread specialty store"
+                                 class="lightbox-trigger"
+                                 data-lightbox="../../assets/images/banner-salt-pan.jpg"
+                                 data-alt="Opening announcement banner for a salt bread specialty store">
                         </div>
                     </div>
 
+                    <!-- 右：テキスト -->
                     <div class="detail-content-header">
                         <span class="detail-category">Banner Design</span>
                         <h1 class="detail-title">Salt Bread Specialty Store<br>Opening Announcement</h1>
                         <p class="detail-subtitle">
                             A banner design engineered to project expertise and brand authority, utilizing color theory-based visual strategies and deep target audience analysis.
                         </p>
+                    </div>
+                </div>
+
+                <!-- メタ情報：全幅4列 -->
+                <div class="detail-meta-grid" style="grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;">
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Category</span>
+                        <span class="detail-meta-value">Banner Design</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Platform</span>
+                        <span class="detail-meta-value">SNS / Web Ad</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Timeline</span>
+                        <span class="detail-meta-value">—</span>
+                    </div>
+                    <div class="detail-meta-item">
+                        <span class="detail-meta-label">Tool</span>
+                        <span class="detail-meta-value">Photoshop</span>
                     </div>
                 </div>
             </div>
@@ -90,7 +98,6 @@
                         <p>
                             By adopting a blue background—a near-complementary color to the golden-brown (orange) of the bread—the main product is visually accentuated. This color scheme ensures the banner captures attention instantly.
                         </p>
-
                         <p><strong>Building Trust with Vertical Copy</strong></p>
                         <p>
                             Utilizing vertical catchphrases conveys the formality and reliability expected of a "specialty store." It subtly promotes themes of Japanese-sourced ingredients and professional skill through a sophisticated aesthetic.
@@ -121,10 +128,7 @@
                     </svg>
                     Back to Banner Works
                 </a>
-                
-                <a href="../../contact.html" class="contact-btn no-margin">
-                    Contact Me
-                </a>
+                <a href="../../contact.html" class="contact-btn no-margin">Contact Me</a>
             </div>
         </nav>
     </main>
@@ -148,5 +152,32 @@
             <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
         </div>
     </footer>
+
+    <!-- Lightbox -->
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close">✕</button>
+        <img id="lightbox-img" src="" alt="" class="lightbox-image">
+    </div>
+    <script>
+        document.querySelectorAll('.lightbox-trigger').forEach(img => {
+            img.style.cursor = 'zoom-in';
+            img.addEventListener('click', function() {
+                document.getElementById('lightbox-img').src = this.dataset.lightbox;
+                document.getElementById('lightbox-img').alt = this.dataset.alt || '';
+                document.getElementById('lightbox').hidden = false;
+                document.body.style.overflow = 'hidden';
+            });
+        });
+        document.getElementById('lightbox-close').addEventListener('click', () => {
+            document.getElementById('lightbox').hidden = true;
+            document.body.style.overflow = '';
+        });
+        document.getElementById('lightbox').addEventListener('click', function(e) {
+            if (e.target === this) { this.hidden = true; document.body.style.overflow = ''; }
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') { document.getElementById('lightbox').hidden = true; document.body.style.overflow = ''; }
+        });
+    </script>
 </body>
 </html>
