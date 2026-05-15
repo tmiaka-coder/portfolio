@@ -6,6 +6,14 @@
     <title>サービス | Miaka</title>
     <link rel="stylesheet" href="../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <!-- Google Analytics: GA_MEASUREMENT_ID を取得後に置き換えてください -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'GA_MEASUREMENT_ID');
+    </script>
 </head>
 <body>
     <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
@@ -25,32 +33,25 @@
             <div class="lang-switch">
                 <a href="../services.html" class="lang-btn">EN</a>
                 <span class="separator">|</span>
-                <a href="../jp/services.html" class="lang-btn active">JP</a>
+                <a href="services.html" class="lang-btn active">JP</a>
             </div>
         </div>
     </header>
 
     <main id="main-content">
-        <!-- Page Header -->
         <section class="container section-padding-lg">
             <span class="section-label">Our Value</span>
             <h1 class="hero-title hero-title-small">Quality <br>& Inclusion.</h1>
-            <p class="lead-text">
-                単なる「制作」の枠を超え、アクセシビリティへの深い理解と、厳格な品質管理（QA）に基づいた信頼性の高いWebソリューションを提供します。
-            </p>
+            <p class="lead-text">単なる「制作」の枠を超え、アクセシビリティへの深い理解と、厳格な品質管理（QA）に基づいた信頼性の高いWebソリューションを提供します。</p>
         </section>
 
-        <!-- Services Section -->
         <section class="container padding-bottom-100">
             <div class="grid-auto-fit-320">
-                
-                <!-- Service 1: Accessibility -->
-                <div class="feature-card">
+
+                <div class="feature-card feature-card-bordered">
                     <span class="section-label feature-card-label">01. Compliance</span>
                     <h2 class="feature-card-title">アクセシビリティ構築</h2>
-                    <p class="feature-card-text">
-                        WCAG 2.2やJIS X 8341-3に基づき、あらゆる利用環境で情報が正しく伝わるサイトを構築します。2024年4月に施行された改正障害者差別解消法に伴う「合理的配慮」への具体的な対応も、技術面からサポートいたします。
-                    </p>
+                    <p class="feature-card-text">WCAG 2.2やJIS X 8341-3に基づき、あらゆる利用環境で情報が正しく伝わるサイトを構築します。2024年4月に施行された改正障害者差別解消法に伴う「合理的配慮」への具体的な対応も、技術面からサポートいたします。</p>
                     <ul class="feature-card-list">
                         <li>・ウェブアクセシビリティ診断</li>
                         <li>・スクリーンリーダー最適化</li>
@@ -58,13 +59,10 @@
                     </ul>
                 </div>
 
-                <!-- Service 2: QA & Quality -->
-                <div class="feature-card">
+                <div class="feature-card feature-card-bordered">
                     <span class="section-label feature-card-label">02. Integrity</span>
                     <h2 class="feature-card-title">品質保証 (QA)</h2>
-                    <p class="feature-card-text">
-                        ERPシステムのテスター経験を活かし、緻密な検証を実施。バグの早期発見はもちろん、実機による網羅的なテストで、公開後のトラブルを最小限に抑えます。
-                    </p>
+                    <p class="feature-card-text">ERPシステムのテスター経験を活かし、緻密な検証を実施。バグの早期発見はもちろん、実機による網羅的なテストで、公開後のトラブルを最小限に抑えます。</p>
                     <ul class="feature-card-list">
                         <li>・機能テスト・回帰テスト</li>
                         <li>・マルチデバイス・ブラウザ検証</li>
@@ -72,13 +70,10 @@
                     </ul>
                 </div>
 
-                <!-- Service 3: Visual & Frontend -->
-                <div class="feature-card">
+                <div class="feature-card feature-card-bordered">
                     <span class="section-label feature-card-label">03. Creativity</span>
                     <h2 class="feature-card-title">フロントエンド開発</h2>
-                    <p class="feature-card-text">
-                        保守性が高く、パフォーマンスに優れたコーディングを行います。レスポンシブ対応はもちろん、SEOや表示速度まで考慮したモダンな開発を提供します。
-                    </p>
+                    <p class="feature-card-text">保守性が高く、パフォーマンスに優れたコーディングを行います。レスポンシブ対応はもちろん、SEOや表示速度まで考慮したモダンな開発を提供します。</p>
                     <ul class="feature-card-list">
                         <li>・カスタムWebサイト構築</li>
                         <li>・UIコンポーネント設計</li>
@@ -89,7 +84,6 @@
             </div>
         </section>
 
-        <!-- Why Choose Section -->
         <section class="section-light">
             <div class="container two-col-grid">
                 <div>
@@ -97,17 +91,12 @@
                     <h2 class="section-heading-large">接客の心と、<br>テスターの眼。</h2>
                 </div>
                 <div>
-                    <p class="body-copy">
-                        自動車業界での「接客」で培った、相手の不便に気づく想像力。そしてIT業界での「テスター」として培った、綻びを見逃さない厳格な視点。
-                    </p>
-                    <p class="body-copy">
-                        私はアクセシビリティを単なる「仕様」ではなく、デジタル上の「おもてなし」と捉えています。使う人が迷わず、安心できる体験を、確かな技術で形にします。
-                    </p>
+                    <p class="body-copy">自動車業界での「接客」で培った、相手の不便に気づく想像力。そしてIT業界での「テスター」として培った、綻びを見逃さない厳格な視点。</p>
+                    <p class="body-copy">私はアクセシビリティを単なる「仕様」ではなく、デジタル上の「おもてなし」と捉えています。使う人が迷わず、安心できる体験を、確かな技術で形にします。</p>
                 </div>
             </div>
         </section>
 
-        <!-- CTA Section -->
         <section class="section-accent">
             <div class="container">
                 <h2 class="hero-section-title">品質の高いWebサイトを、共に創りませんか？</h2>
@@ -119,7 +108,7 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="social-links">
-                <a href="https://linkedin.com/in/your-profile" target="_blank" rel="noopener" aria-label="LinkedInプロフィール">
+                <a href="https://www.linkedin.com/in/miaka-taniai" target="_blank" rel="noopener" aria-label="LinkedInプロフィール">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
