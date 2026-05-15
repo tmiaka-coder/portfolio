@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="ja">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AIじゃんけん | Miaka</title>
-    <link rel="stylesheet" href="../../../css/style.css">
+    <title>AI Janken | Vicky</title>
+    <link rel="stylesheet" href="../../css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <!-- Google Analytics: GA_MEASUREMENT_ID を取得後に置き換えてください -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID"></script>
@@ -16,23 +16,23 @@
     </script>
 </head>
 <body>
-    <a href="#main-content" class="skip-link">メインコンテンツへスキップ</a>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
     <header class="site-header">
         <div class="container header-container">
-            <div class="logo"><a href="../../../jp/index.html">Miaka</a></div>
+            <div class="logo"><a href="../../index.html">Vicky</a></div>
             <nav class="main-nav">
                 <ul class="nav-links">
-                    <li><a href="../../../jp/index.html">ホーム</a></li>
-                    <li><a href="../../../jp/works.html" class="active">実績</a></li>
-                    <li><a href="../../../jp/services.html">サービス</a></li>
-                    <li><a href="../../../jp/about.html">プロフィール</a></li>
-                    <li><a href="../../../jp/contact.html">お問い合わせ</a></li>
+                    <li><a href="../../index.html">Home</a></li>
+                    <li><a href="../../works.html" class="active">Works</a></li>
+                    <li><a href="../../services.html">Service</a></li>
+                    <li><a href="../../about.html">About</a></li>
+                    <li><a href="../../contact.html">Contact</a></li>
                 </ul>
             </nav>
             <div class="lang-switch">
-                <a href="../../../works/app/app-AIjanken.html" class="lang-btn">EN</a>
+                <a href="#" class="lang-btn active">EN</a>
                 <span class="separator">|</span>
-                <a href="#" class="lang-btn active">JP</a>
+                <a href="../../jp/works/app/app-AIjanken.html" class="lang-btn">JP</a>
             </div>
         </div>
     </header>
@@ -41,24 +41,41 @@
         <section class="detail-hero">
             <div class="container">
                 <div class="detail-hero-grid">
-                    <!-- 左：画像のみ -->
                     <div class="detail-visual-wrapper">
                         <div class="detail-main-image">
-                            <img src="../../../assets/images/appjynken.png"
-                                 alt="AIじゃんけんアプリのアイコン：グー・チョキ・パーの記号"
+                            <img src="../../assets/images/appjynken.png"
+                                 alt="AI Janken application icon showing Rock Paper Scissors symbols"
                                  class="lightbox-trigger"
-                                 data-lightbox="../../../assets/images/appjynken.png"
-                                 data-alt="AIじゃんけんアプリのアイコン">
+                                 data-lightbox="../../assets/images/appjynken.png"
+                                 data-alt="AI Janken application icon">
+                        </div>
+                        <div class="detail-meta-grid">
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Category</span>
+                                <span class="detail-meta-value">Web Application / AI</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Year</span>
+                                <span class="detail-meta-value">2026</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Role</span>
+                                <span class="detail-meta-value">Frontend & AI Logic</span>
+                            </div>
+                            <div class="detail-meta-item">
+                                <span class="detail-meta-label">Timeline</span>
+                                <span class="detail-meta-value">6h</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- 右：テキスト -->
                     <div class="detail-content-header">
                         <span class="detail-category">App Development</span>
-                        <h1 class="detail-title">AIじゃんけんアプリ</h1>
+                        <h1 class="detail-title">AI Janken App</h1>
                         <p class="detail-subtitle">
-                            ブラウザのカメラを通じてユーザーの手をリアルタイムに認識し、AIと対戦できるアプリ。GoogleのMediaPipe Handsを活用し、サーバーレスで高度な画像解析を実現しました。
+                            A real-time "Rock-Paper-Scissors" game against AI using browser-based hand tracking. Experience advanced image analysis and serverless execution with MediaPipe Hands.
                         </p>
+                        <!-- Live Demo Button -->
                         <a href="https://tmiaka-coder.github.io/my-works/ai-janken/"
                            target="_blank"
                            rel="noopener"
@@ -66,28 +83,8 @@
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <circle cx="12" cy="12" r="10"/><polygon points="10 8 16 12 10 16 10 8"/>
                             </svg>
-                            実際に遊んでみる
+                            Play Live Demo
                         </a>
-                    </div>
-                </div>
-
-                <!-- メタ情報：全幅4列 -->
-                <div class="detail-meta-grid" style="grid-template-columns:repeat(4,1fr);gap:16px;margin-top:32px;">
-                    <div class="detail-meta-item">
-                        <span class="detail-meta-label">Category</span>
-                        <span class="detail-meta-value">Web Application / AI</span>
-                    </div>
-                    <div class="detail-meta-item">
-                        <span class="detail-meta-label">Platform</span>
-                        <span class="detail-meta-value">Web / Browser</span>
-                    </div>
-                    <div class="detail-meta-item">
-                        <span class="detail-meta-label">Timeline</span>
-                        <span class="detail-meta-value">6h</span>
-                    </div>
-                    <div class="detail-meta-item">
-                        <span class="detail-meta-label">Tool</span>
-                        <span class="detail-meta-value">HTML, Tailwind CSS, JS, MediaPipe</span>
                     </div>
                 </div>
             </div>
@@ -98,34 +95,42 @@
 
                 <article class="detail-section">
                     <span class="section-number">01</span>
-                    <h2 class="section-heading">プロジェクト概要</h2>
+                    <h2 class="section-heading">Project Overview</h2>
                     <div class="section-content">
-                        <p>AIじゃんけんは、ユーザーの手の動きをリアルタイムで認識し、AI相手に対戦できるブラウザベースのアプリケーションです。フロントエンドで <strong>MediaPipe Hands</strong> を動作させることで、専用のバックエンドサーバーを介さずに低遅延な画像解析を可能にしました。また、<strong>PWA（Progressive Web App）</strong> に対応しており、インストール不要でネイティブアプリのような操作感を提供します。</p>
+                        <p>
+                            AI Janken is a browser-based application that recognizes human hand gestures in real-time to play against an AI opponent. By leveraging Google's <strong>MediaPipe Hands</strong> on the frontend, the system achieves low-latency image analysis without a dedicated backend server. As a <strong>PWA (Progressive Web App)</strong>, it provides a native-like experience without the need for installation.
+                        </p>
                     </div>
                 </article>
 
                 <article class="detail-section">
                     <span class="section-number">02</span>
-                    <h2 class="section-heading">開発の背景と目的</h2>
+                    <h2 class="section-heading">Background & Purpose</h2>
                     <div class="section-content">
-                        <p>「AI技術をいかに日常の遊びに落とし込み、UXを最大化できるか」という挑戦から始まりました。複雑な機材やアプリのインストールという心理的ハードルを排除し、URL一つで誰もがAIの凄さを体感できるツールを目指しました。</p>
+                        <p>
+                            This project began as a challenge: "How can AI technology be integrated into everyday play to maximize UX?" I aimed to create a tool where anyone can experience the power of AI instantly via a single URL, removing the psychological hurdles of complex equipment or app store downloads.
+                        </p>
                     </div>
                 </article>
 
                 <article class="detail-section highlight-section">
                     <span class="section-number">03</span>
-                    <h2 class="section-heading">注力ポイント：UIとAIロジック</h2>
+                    <h2 class="section-heading">Key Focus: UI and AI Logic</h2>
                     <div class="section-content">
-                        <p><strong>モバイル最適化と没入感のあるレイアウト</strong></p>
-                        <p>一般的な動画レイアウトではスマホ画面で自分とCPUが上下に離れてしまい、対戦の臨場感が損なわれる問題がありました。そこで <strong>CSS Grid</strong> を活用し、モバイル環境でも強制的に左右横並びのレイアウトを維持。視線の移動を最小限に抑え、対面でじゃんけんをしているような直感的な操作性を構築しました。</p>
-                        <p><strong>高精度なハンドトラッキングの実装</strong></p>
-                        <p>MediaPipe Handsから取得した21箇所の関節座標（Landmarks）を解析するアルゴリズムを実装。各指の先端と第2関節の相対位置をJavaScriptで計算し、「立っている指の数」からグー・チョキ・パーを判別する独自のロジックを開発しました。</p>
+                        <p><strong>Mobile Optimization & Immersive Layout</strong></p>
+                        <p>
+                            Standard video layouts often separate the player and CPU vertically on mobile screens, breaking the sense of "confrontation." I utilized <strong>CSS Grid</strong> to maintain a horizontal side-by-side layout even on mobile, minimizing eye movement and creating an intuitive, face-to-face gameplay feel.
+                        </p>
+                        <p><strong>High-Precision Hand Tracking</strong></p>
+                        <p>
+                            I implemented an algorithm that analyzes 21 landmark coordinates from MediaPipe Hands. By calculating the relative positions of finger tips and joints in JavaScript, I developed a custom logic to determine gestures based on the "count of standing fingers."
+                        </p>
                     </div>
                 </article>
 
                 <article class="detail-section">
                     <span class="section-number">04</span>
-                    <h2 class="section-heading">使用技術（テックスタック）</h2>
+                    <h2 class="section-heading">Tech Stack</h2>
                     <div class="section-content">
                         <div class="tech-stack-grid">
                             <div class="tech-stack-item">
@@ -150,12 +155,16 @@
 
                 <article class="detail-section">
                     <span class="section-number">05</span>
-                    <h2 class="section-heading">デザイン哲学とこだわり</h2>
+                    <h2 class="section-heading">Design Philosophy & Commitment</h2>
                     <div class="section-content">
-                        <p><strong>アクセシビリティとUXの一貫性</strong></p>
-                        <p>「アクセシビリティ最優先」の考えに基づき、<code>aria-live</code> 属性を活用。AIの判定結果や勝敗が決まった瞬間、スクリーンリーダーが即座に状況を読み上げる設計にしました。また、PWA化によりホーム画面からの直接起動を可能にし、利便性を高めています。</p>
-                        <p><strong>プライバシーとセキュリティ</strong></p>
-                        <p>カメラ映像の解析をすべてクライアントサイド（ブラウザ内）で完結させる「プライバシー重視」の設計を行い、映像データをサーバーに送信しません。また、DOM操作において <code>textContent</code> を徹底することで、インジェクション攻撃を防ぐセキュアな実装を心がけました。</p>
+                        <p><strong>Accessibility and UX Consistency</strong></p>
+                        <p>
+                            Following my "Accessibility-First" principle, I utilized <code>aria-live</code> attributes so that screen readers immediately announce AI judgments and game results. PWA implementation further enhances user convenience by allowing offline access and direct launching from the home screen.
+                        </p>
+                        <p><strong>Privacy & Security</strong></p>
+                        <p>
+                            The design is "Privacy-Focused," completing all image analysis on the client-side within the browser. No video data is ever sent to a server. For security, I strictly used <code>textContent</code> for DOM updates to prevent injection attacks.
+                        </p>
                     </div>
                 </article>
 
@@ -164,13 +173,13 @@
 
         <nav class="detail-nav">
             <div class="container flex-between-center">
-                <a href="../../../jp/works.html" class="nav-link">
+                <a href="../../works.html" class="nav-link">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                         <line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/>
                     </svg>
-                    制作実績一覧へ戻る
+                    Back to Works
                 </a>
-                <a href="../../../jp/contact.html" class="contact-btn no-margin">お問い合わせ</a>
+                <a href="../../contact.html" class="contact-btn no-margin">Contact Me</a>
             </div>
         </nav>
     </main>
@@ -178,14 +187,14 @@
     <footer class="site-footer">
         <div class="container footer-container">
             <div class="social-links">
-                <a href="https://www.linkedin.com/in/miaka-taniai" target="_blank" rel="noopener" aria-label="LinkedInプロフィール">
+                <a href="https://www.linkedin.com/in/miaka-taniai" target="_blank" rel="noopener" aria-label="LinkedIn profile">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                         <rect x="2" y="9" width="4" height="12"></rect>
                         <circle cx="4" cy="4" r="2"></circle>
                     </svg>
                 </a>
-                <a href="https://github.com/tmiaka-coder" target="_blank" rel="noopener" aria-label="GitHubプロフィール">
+                <a href="https://github.com/tmiaka-coder" target="_blank" rel="noopener" aria-label="GitHub profile">
                     <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                         <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
                     </svg>
@@ -196,8 +205,8 @@
     </footer>
 
     <!-- Lightbox -->
-    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="画像プレビュー" hidden>
-        <button class="lightbox-close" id="lightbox-close" aria-label="閉じる">✕</button>
+    <div id="lightbox" class="lightbox" role="dialog" aria-modal="true" aria-label="Image preview" hidden>
+        <button class="lightbox-close" id="lightbox-close" aria-label="Close image preview">✕</button>
         <img id="lightbox-img" src="" alt="" class="lightbox-image">
     </div>
     <script>
