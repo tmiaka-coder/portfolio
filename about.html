@@ -6,6 +6,30 @@
     <title>About | Vicky</title>
     <link rel="stylesheet" href="css/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;600;800&display=swap" rel="stylesheet">
+    <style>
+        /* PC: 左に写真+CV、右に自己紹介 */
+        .about-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            grid-template-rows: auto auto;
+            gap: 0 80px;
+            align-items: start;
+        }
+        .about-photo    { grid-column: 1; grid-row: 1; margin-bottom: 30px; }
+        .about-cv       { grid-column: 1; grid-row: 2; }
+        .about-bio      { grid-column: 2; grid-row: 1 / 3; }
+
+        /* スマホ: 写真→自己紹介→CV の順 */
+        @media (max-width: 768px) {
+            .about-layout {
+                display: flex;
+                flex-direction: column;
+            }
+            .about-photo { order: 1; margin-bottom: 24px; }
+            .about-bio   { order: 2; margin-bottom: 24px; }
+            .about-cv    { order: 3; }
+        }
+    </style>
 </head>
 <body>
     <a href="#main-content" class="skip-link">Skip to main content</a>
@@ -40,16 +64,49 @@
 
         <!-- Profile Section -->
         <section class="container section-padding-top-zero">
-            <div class="two-col-grid-wide">
+            <div class="about-layout">
 
-                <!-- Left Column: Visual + CV -->
-                <div>
-                    <div class="mb-30">
-                        <img src="assets/images/profile-photo.jpg" alt="Miaka's Portrait" class="fullwidth-img rounded-shadow">
+                <!-- 写真 -->
+                <div class="about-photo">
+                    <img src="assets/images/profile-photo.jpg" alt="Miaka's Portrait" class="fullwidth-img rounded-shadow">
+                </div>
+
+                <!-- 自己紹介（右カラム、PC時は2行分を占有） -->
+                <div class="about-bio about-text">
+                    <span class="section-label">Identity</span>
+                    <h1 class="hero-title hero-title-large">Vicky</h1>
+                    <p class="job-title accent-text mb-30">UI/UX Designer / Front-end Developer(QA Mindset)</p>
+
+                    <div class="body-copy">
+                        <p class="mb-20">
+                            After graduating from Nagasaki Junshin University, I began my career in the automotive industry, where I mastered the art of "Omotenashi" (hospitality) and user-centric communication through sales.
+                        </p>
+                        <p class="mb-20">
+                            Transitioning into the IT sector, I served as a QA tester for enterprise ERP systems. This experience ingrained in me a rigorous standard for quality and a deep understanding of software reliability.
+                        </p>
+                        <p class="mb-20">
+                            Today, I merge these two worlds: the empathetic perspective of service and the strict precision of a tester. I am committed to creating web experiences that are not only visually honest but also legally compliant and accessible to everyone, regardless of their environment.
+                        </p>
+                        <p>
+                            Relocating to New Zealand in August 2026, I aim to contribute to global projects with a focus on web accessibility and sustainable frontend architecture.
+                        </p>
                     </div>
 
+                    <div class="section-divider-top">
+                        <h3 class="section-subheading">Core Expertise</h3>
+                        <ul class="expertise-grid">
+                            <li>• Web Accessibility (WCAG 2.2)</li>
+                            <li>• Quality Assurance & Testing</li>
+                            <li>• Frontend (Tailwind, JS)</li>
+                            <li>• UI/UX Design Consistency</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Download CV + Request CV（左カラム下） -->
+                <div class="about-cv">
                     <!-- Download CV -->
-                    <div class="cv-download-section mt-30">
+                    <div class="cv-download-section">
                         <a href="assets/Miaka_Taniai_CV_EN.pdf" download="Miaka_Taniai_CV_EN.pdf" class="cta-button button-fullwidth-dark" aria-label="Download Miaka's CV (PDF)">
                             <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gap-right">
                                 <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
@@ -96,38 +153,6 @@
                         <p class="fine-print">
                             Clicking the button opens your email app with a pre-filled message. No data is stored.
                         </p>
-                    </div>
-                </div>
-
-                <!-- Right Column: Biography -->
-                <div class="about-text">
-                    <span class="section-label">Identity</span>
-                    <h1 class="hero-title hero-title-large">Vicky</h1>
-                    <p class="job-title accent-text mb-30">UI/UX Designer / Front-end Developer(QA Mindset)</p>
-
-                    <div class="body-copy">
-                        <p class="mb-20">
-                            After graduating from Nagasaki Junshin University, I began my career in the automotive industry, where I mastered the art of "Omotenashi" (hospitality) and user-centric communication through sales.
-                        </p>
-                        <p class="mb-20">
-                            Transitioning into the IT sector, I served as a QA tester for enterprise ERP systems. This experience ingrained in me a rigorous standard for quality and a deep understanding of software reliability.
-                        </p>
-                        <p class="mb-20">
-                            Today, I merge these two worlds: the empathetic perspective of service and the strict precision of a tester. I am committed to creating web experiences that are not only visually honest but also legally compliant and accessible to everyone, regardless of their environment.
-                        </p>
-                        <p>
-                            Relocating to New Zealand in August 2026, I aim to contribute to global projects with a focus on web accessibility and sustainable frontend architecture.
-                        </p>
-                    </div>
-
-                    <div class="section-divider-top">
-                        <h3 class="section-subheading">Core Expertise</h3>
-                        <ul class="expertise-grid">
-                            <li>• Web Accessibility (WCAG 2.2)</li>
-                            <li>• Quality Assurance & Testing</li>
-                            <li>• Frontend (Tailwind, JS)</li>
-                            <li>• UI/UX Design Consistency</li>
-                        </ul>
                     </div>
                 </div>
 
