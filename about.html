@@ -37,21 +37,74 @@
             <h1 class="hero-title hero-title-small">Selected <br>Works.</h1>
             <p class="lead-text">A collection of projects focused on high quality, legal compliance, and inclusive design for everyone.</p>
         </section>
+
         <!-- Profile Section -->
         <section class="container section-padding-top-zero">
             <div class="two-col-grid-wide">
-                <!-- Left Column: Visual -->
+
+                <!-- Left Column: Visual + CV -->
                 <div>
                     <div class="mb-30">
                         <img src="assets/images/profile-photo.jpg" alt="Miaka's Portrait" class="fullwidth-img rounded-shadow">
                     </div>
+
+                    <!-- Download CV -->
+                    <div class="cv-download-section mt-30">
+                        <a href="assets/Miaka_Taniai_CV_EN.pdf" download="Miaka_Taniai_CV_EN.pdf" class="cta-button button-fullwidth-dark" aria-label="Download Miaka's CV (PDF)">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gap-right">
+                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                                <polyline points="7 10 12 15 17 10"></polyline>
+                                <line x1="12" y1="15" x2="12" y2="3"></line>
+                            </svg>
+                            Download CV (PDF)
+                        </a>
+                        <p class="caption-note mt-12">
+                            *File size: approx. 50KB<br>
+                            <strong>Note:</strong> This PDF is password-protected. Please request the password below or use the one previously provided.
+                        </p>
+                    </div>
+
+                    <!-- Request CV Password -->
+                    <div class="info-card cv-request-card mt-30">
+                        <div class="mb-30">
+                            <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" class="accent-text mb-20" aria-hidden="true">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
+                                <polyline points="14 2 14 8 20 8"></polyline>
+                                <line x1="16" y1="13" x2="8" y2="13"></line>
+                                <line x1="16" y1="17" x2="8" y2="17"></line>
+                                <polyline points="10 9 9 9 8 9"></polyline>
+                            </svg>
+                            <h3 class="subheading">Request CV Password</h3>
+                            <p class="text-muted">Enter your name to request the PDF password. I'll reply within 1-2 business days.</p>
+                        </div>
+                        <div class="cv-form">
+                            <label for="cv-requester-name" class="cv-form-label">Your Name <span class="cv-required" aria-hidden="true">*</span></label>
+                            <input
+                                type="text"
+                                id="cv-requester-name"
+                                class="cv-form-input"
+                                placeholder="e.g. John Smith"
+                                autocomplete="name"
+                                maxlength="80"
+                                aria-required="true"
+                            >
+                            <p id="cv-name-error" class="cv-error" role="alert" hidden>Please enter your name.</p>
+                            <button type="button" id="cv-send-btn" class="cta-button button-fullwidth-dark" style="margin-top:16px;">
+                                Request CV Password
+                            </button>
+                        </div>
+                        <p class="fine-print">
+                            Clicking the button opens your email app with a pre-filled message. No data is stored.
+                        </p>
+                    </div>
                 </div>
+
                 <!-- Right Column: Biography -->
                 <div class="about-text">
                     <span class="section-label">Identity</span>
                     <h1 class="hero-title hero-title-large">Vicky</h1>
                     <p class="job-title accent-text mb-30">UI/UX Designer / Front-end Developer(QA Mindset)</p>
-                    
+
                     <div class="body-copy">
                         <p class="mb-20">
                             After graduating from Nagasaki Junshin University, I began my career in the automotive industry, where I mastered the art of "Omotenashi" (hospitality) and user-centric communication through sales.
@@ -67,21 +120,6 @@
                         </p>
                     </div>
 
-                    <div class="cv-download-section mt-30">
-                        <a href="assets/Miaka_Taniai_CV_EN.pdf" download="Miaka_Taniai_CV_EN.pdf" class="cta-button button-fullwidth-dark" aria-label="Download Miaka's CV (PDF)">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon-gap-right">
-                                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-                                <polyline points="7 10 12 15 17 10"></polyline>
-                                <line x1="12" y1="15" x2="12" y2="3"></line>
-                            </svg>
-                            Download CV (PDF)
-                        </a>
-                        <p class="caption-note mt-12">
-                            *File size: approx. 50KB<br>
-                            <strong>Note:</strong> This PDF is password-protected. Please <a href="contact.html">contact me</a> to request the password or use the one previously provided.
-                        </p>
-                    </div>
-
                     <div class="section-divider-top">
                         <h3 class="section-subheading">Core Expertise</h3>
                         <ul class="expertise-grid">
@@ -92,9 +130,11 @@
                         </ul>
                     </div>
                 </div>
+
             </div>
         </section>
         <br>
+
         <!-- Vision Section -->
         <section class="section-black">
             <div class="container">
@@ -126,5 +166,7 @@
             <p class="copyright">&copy; 2026 Miaka. All rights reserved.</p>
         </div>
     </footer>
+
+    <script src="js/main.js"></script>
 </body>
 </html>
