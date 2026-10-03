@@ -728,8 +728,7 @@ img, svg {
 }
 
 .home-page .page-header-padding {
-    padding-top: 64px;
-    padding-bottom: 24px;
+    padding: 80px 20px 40px;
 }
 
 .home-page .hero-title {
@@ -739,8 +738,7 @@ img, svg {
 }
 
 .home-page .featured-section {
-    padding-top: 72px;
-    padding-bottom: 72px;
+    padding: 72px 20px;
     gap: 64px;
 }
 
@@ -1813,7 +1811,7 @@ img, svg {
     }
 
     .home-page .featured-section {
-        padding: 48px 0;
+        padding: 48px 16px;
         gap: 32px;
     }
 }
