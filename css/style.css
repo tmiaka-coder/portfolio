@@ -727,6 +727,23 @@ img, svg {
     letter-spacing: -0.02em;
 }
 
+.home-page .page-header-padding {
+    padding-top: 64px;
+    padding-bottom: 24px;
+}
+
+.home-page .hero-title {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+
+.home-page .featured-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    gap: 64px;
+}
+
 .hero-accent {
     color: var(--color-gray-text);
     display: block;
@@ -1778,4 +1795,25 @@ img, svg {
 .lightbox-close:focus {
     outline: var(--focus-outline);
     outline-offset: 3px;
+}
+
+@media (max-width: 1000px) {
+    .home-page .featured-section {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page .page-header-padding {
+        padding: 48px 16px 16px;
+    }
+
+    .home-page .hero-title {
+        font-size: clamp(2.25rem, 9vw, 3rem);
+    }
+
+    .home-page .featured-section {
+        padding: 48px 0;
+        gap: 32px;
+    }
 }
