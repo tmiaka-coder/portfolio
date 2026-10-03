@@ -728,7 +728,7 @@ img, svg {
 }
 
 .home-page .page-header-padding {
-    padding: 80px 20px 40px;
+    padding: 80px 32px 40px;
 }
 
 .home-page .hero-title {
@@ -738,7 +738,7 @@ img, svg {
 }
 
 .home-page .featured-section {
-    padding: 72px 20px;
+    padding: 72px 32px;
     gap: 64px;
 }
 
@@ -1803,7 +1803,7 @@ img, svg {
 
 @media (max-width: 600px) {
     .home-page .page-header-padding {
-        padding: 48px 16px 16px;
+        padding: 48px 24px 16px;
     }
 
     .home-page .hero-title {
@@ -1811,7 +1811,7 @@ img, svg {
     }
 
     .home-page .featured-section {
-        padding: 48px 16px;
+        padding: 48px 24px;
         gap: 32px;
     }
 }
