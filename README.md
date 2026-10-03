@@ -1,4 +1,4 @@
-# Vicky's Portfolio
+# Mia's Portfolio
 
 Personal portfolio website showcasing my work in frontend development, UI/UX design, and video production.
 
@@ -8,7 +8,7 @@ Personal portfolio website showcasing my work in frontend development, UI/UX des
 
 ## About
 
-Hi, I'm Vicky — a frontend developer and UI/UX designer with a background in Quality Assurance for enterprise ERP systems. I care deeply about web accessibility, legal compliance, and building products that are genuinely usable by everyone.
+Hi, I'm Mia — a frontend developer and UI/UX designer with a background in Quality Assurance for enterprise ERP systems. I care deeply about web accessibility, legal compliance, and building products that are genuinely usable by everyone.
 
 Relocating to New Zealand in August 2026.
 

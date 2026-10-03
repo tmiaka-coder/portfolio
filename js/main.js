@@ -23,7 +23,7 @@ if (cvSendBtn) {
         errorEl.hidden = true;
         const subject = encodeURIComponent('CV Password Request');
         const body = encodeURIComponent(
-            'Hi Vicky,\n\nMy name is ' + name + '.\n' +
+            'Hi Mia,\n\nMy name is ' + name + '.\n' +
             'I would like to request the password for your English CV PDF.\n\nThank you!'
         );
         window.location.href = 'mailto:t.miaka1023@gmail.com?subject=' + subject + '&body=' + body;
