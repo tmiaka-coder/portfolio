@@ -603,6 +603,28 @@ img, svg {
     display: none;
 }
 
+@media (max-width: 767px) {
+    #works-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem 1rem;
+    }
+
+    #works-grid .section-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.12em;
+    }
+
+    #works-grid .work-title {
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    #works-grid p {
+        font-size: 0.85rem;
+        line-height: 1.55;
+    }
+}
+
 .hidden {
     display: none;
 }
@@ -1758,3 +1780,135 @@ img, svg {
     outline-offset: 3px;
 }
 
+/* Shared masthead and page-title treatment */
+.site-header {
+    padding: 12px 0 37px;
+}
+
+.header-container {
+    max-width: none;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+    padding-right: 28px;
+    padding-left: 28px;
+}
+
+.site-header .header-container {
+    max-width: none;
+}
+
+.logo a {
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.main-nav {
+    margin-top: 7px;
+}
+
+.nav-links a {
+    font-size: 1.75rem;
+}
+
+.nav-links a.active {
+    border-bottom-width: 2px;
+}
+
+.lang-btn,
+.separator {
+    font-size: 1.5rem;
+}
+
+.lang-switch {
+    margin-top: 28px;
+}
+
+.section-padding-lg,
+.page-header-padding {
+    max-width: none;
+    padding: 0 28px 40px;
+}
+
+.section-padding-lg.container,
+.page-header-padding.container,
+.section-hero-large.container {
+    max-width: none;
+}
+
+.section-padding-lg .section-label,
+.page-header-padding .section-label {
+    font-size: 1.5rem;
+    margin-bottom: 56px;
+}
+
+.section-padding-lg .hero-title-small,
+.page-header-padding .hero-title-small,
+.section-hero-large .hero-title {
+    font-size: clamp(3.5rem, 10vw, 8rem);
+    line-height: 1.3;
+}
+
+.section-hero-large {
+    max-width: none;
+    padding: 90px 28px 60px;
+}
+
+@media (max-width: 767px) {
+    .site-header {
+        padding: 12px 0 32px;
+    }
+
+    .header-container {
+        gap: 28px;
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .main-nav {
+        margin-top: 0;
+    }
+
+    .lang-switch {
+        margin-top: 12px;
+    }
+
+    .logo a {
+        font-size: 2.25rem;
+    }
+
+    .nav-links {
+        gap: 1.25rem;
+    }
+
+    .nav-links a {
+        font-size: 1.25rem;
+    }
+
+    .lang-btn,
+    .separator {
+        font-size: 1.125rem;
+    }
+
+    .section-padding-lg,
+    .page-header-padding {
+        padding-right: 20px;
+        padding-left: 20px;
+    }
+
+    .section-padding-lg .section-label,
+    .page-header-padding .section-label {
+        font-size: 1.125rem;
+        margin-bottom: 32px;
+    }
+
+    .section-padding-lg .hero-title-small,
+    .page-header-padding .hero-title-small,
+    .section-hero-large .hero-title {
+        font-size: clamp(3rem, 12vw, 5rem);
+    }
+
+    .section-hero-large {
+        padding: 72px 20px 40px;
+    }
+}
