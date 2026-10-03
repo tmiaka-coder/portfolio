@@ -603,6 +603,28 @@ img, svg {
     display: none;
 }
 
+@media (max-width: 767px) {
+    #works-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1.5rem 1rem;
+    }
+
+    #works-grid .section-label {
+        font-size: 0.6rem;
+        letter-spacing: 0.12em;
+    }
+
+    #works-grid .work-title {
+        font-size: 1rem;
+        line-height: 1.35;
+    }
+
+    #works-grid p {
+        font-size: 0.85rem;
+        line-height: 1.55;
+    }
+}
+
 .hidden {
     display: none;
 }
@@ -1757,4 +1779,3 @@ img, svg {
     outline: var(--focus-outline);
     outline-offset: 3px;
 }
-
