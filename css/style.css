@@ -6,6 +6,7 @@
     --color-gray-light: #f4f4f4;
     --color-gray-mid: #E5E5E5;
     --color-gray-text: #4A4A4A;
+    --page-gutter: 24px;
     --font-main: 'Inter', "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
     --transition: all 0.3s ease;
     --focus-outline: 3px solid #007AFF; /* アクセシビリティ：視認性の高い青 */
@@ -37,10 +38,10 @@ img, svg {
     display: block;
 }
 
-.container {
+body .container {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 var(--page-gutter);
     width: 100%;
 }
 
@@ -292,7 +293,8 @@ img, svg {
     letter-spacing: -0.02em;
 }
 .section-padding-lg {
-    padding: 80px 20px 40px;
+    padding-top: 80px;
+    padding-bottom: 40px;
 }
 .padding-bottom-40 {
     padding-bottom: 40px;
@@ -478,7 +480,8 @@ img, svg {
     margin-bottom: 40px;
 }
 .section-hero-large {
-    padding: 120px 20px 60px;
+    padding-top: 120px;
+    padding-bottom: 60px;
 }
 .section-heading-large {
     font-size: 2.2rem;
@@ -506,10 +509,11 @@ img, svg {
     margin-top: 30px;
 }
 .page-header-padding {
-    padding: 80px 20px 20px;
+    padding-top: 80px;
+    padding-bottom: 20px;
 }
 .section-padding-top-zero {
-    padding: 20px 20px 0;
+    padding-top: 20px;
 }
 .section-cta-title {
     font-size: 2rem;
@@ -671,7 +675,7 @@ img, svg {
     .lang-switch { margin-top: 14px; }
     .contact-grid { grid-template-columns: 1fr; }
     .hero-title { font-size: 2.2rem; }
-    .featured-section { grid-template-columns: 1fr; gap: 40px; padding: 80px 0; }
+    .featured-section { grid-template-columns: 1fr; gap: 40px; padding: 80px var(--page-gutter); }
     .statement-box { border-left: none; border-top: 2px solid var(--color-accent); padding: 30px 0 0; }
     .work-preview-grid { grid-template-columns: 1fr; }
     .section-accent, .section-black { padding: 80px 0; }
@@ -680,8 +684,7 @@ img, svg {
 }
 
 @media (max-width: 768px) {
-    .container { padding: 0 16px; }
-    .section-hero-large { padding: 100px 0 40px; }
+    .section-hero-large { padding-top: 100px; padding-bottom: 40px; }
     .hero-title { font-size: clamp(2.4rem, 10vw, 3.6rem); }
     .statement-text { font-size: 1.25rem; }
     .cta-button { padding: 16px 26px; }
@@ -727,6 +730,23 @@ img, svg {
     letter-spacing: -0.02em;
 }
 
+.home-page .page-header-padding {
+    padding-top: 80px;
+    padding-bottom: 40px;
+}
+
+.home-page .hero-title {
+    font-size: clamp(2.4rem, 6vw, 4rem);
+    line-height: 1.15;
+    margin-bottom: 16px;
+}
+
+.home-page .featured-section {
+    padding-top: 72px;
+    padding-bottom: 72px;
+    gap: 64px;
+}
+
 .hero-accent {
     color: var(--color-gray-text);
     display: block;
@@ -758,7 +778,8 @@ img, svg {
     grid-template-columns: 1.2fr 1fr;
     gap: 80px;
     align-items: center;
-    padding: 120px 0;
+    padding-top: 120px;
+    padding-bottom: 120px;
 }
 
 .section-label {
@@ -1359,7 +1380,7 @@ img, svg {
 }
 /* --- Footer SNS Styles --- */
 .footer-container {
-    padding: 60px 0 40px;
+    padding: 60px var(--page-gutter) 40px;
     text-align: center;
     border-top: 1px solid var(--color-gray-mid);
     display: flex;
@@ -1910,5 +1931,28 @@ img, svg {
 
     .section-hero-large {
         padding: 72px 20px 40px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .home-page .featured-section {
+        gap: 40px;
+    }
+}
+
+@media (max-width: 600px) {
+    .home-page .page-header-padding {
+        padding-top: 48px;
+        padding-bottom: 16px;
+    }
+
+    .home-page .hero-title {
+        font-size: clamp(2.25rem, 9vw, 3rem);
+    }
+
+    .home-page .featured-section {
+        padding-top: 48px;
+        padding-bottom: 48px;
+        gap: 32px;
     }
 }
