@@ -41,54 +41,105 @@
 
     <main id="main-content" class="home-page">
         <section class="container page-header-padding home-hero">
-            <span class="section-label">About Me</span>
-            <h1 class="hero-title">テストから開発へ。<br>品質とユーザー視点を両立。</h1>
-            <p class="lead-text">「使われるプロダクト」を作るエンジニア。</p>
+            <span class="section-label">Hello, I'm Miaka</span>
+            <h1 class="hero-title">品質とアクセシビリティを大切にする<br>Webデベロッパー</h1>
+            <p class="lead-text">こんにちは、Miakaです。ERPシステムのQA経験を活かし、品質とユーザー視点を大切にしたWeb・アプリ開発に取り組んでいます。</p>
+            <div class="two-col-grid mt-30">
+                <a href="#featured-projects" class="contact-btn">作品を見る</a>
+                <a href="contact.html" class="contact-btn">お問い合わせ</a>
+            </div>
         </section>
 
-        <section class="container featured-section">
-            <div class="statement-box">
-                <span class="section-label">Vision</span>
-                <p class="statement-text">
-                    「動けばいい」を、卒業する。<br>
-                    テスターの眼で品質を担保し、<br>
-                    ユーザーに寄り添うプロダクトを。
-                </p>
-                <p class="text-muted">
-                    車業界からIT業界へ転職し、テスターとしてERPシステムの品質管理を経験。
-                    現在はフロントエンドを中心に、自作ツールやUI開発に取り組んでいます。
-                    「動く」だけでなく「使われる」プロダクトを重視しています。
-                </p>
-                <a href="about.html" class="contact-btn mt-30">詳しく見る</a>
+        <section class="container padding-bottom-100" id="featured-projects">
+            <span class="section-label">Featured Projects</span>
+            <h2 class="section-heading-large">代表作ピックアップ</h2>
+            <div class="work-preview-grid">
+                <a href="works/app/app-smart-budget-nz.html" class="work-item">
+                    <div class="work-thumb">
+                        <img src="../assets/images/app-smartbudget-nz.png" alt="SmartBudget NZアプリのアイコン" class="fullwidth-img">
+                    </div>
+                    <p class="work-title">SmartBudget NZ</p>
+                    <p class="text-muted">レシート入力や店舗別の価格比較で、ニュージーランドの家計を管理するモバイルアプリ。</p>
+                    <div class="item-tags" aria-label="使用技術">
+                        <span class="item-tag">React Native</span>
+                        <span class="item-tag">Expo</span>
+                        <span class="item-tag">TypeScript</span>
+                    </div>
+                </a>
+                <a href="works/app/app-kiwitalkboard.html" class="work-item">
+                    <div class="work-thumb">
+                        <img src="../assets/images/appKIWI.jpg" alt="Kiwi Talkboardのプレビュー" class="fullwidth-img">
+                    </div>
+                    <p class="work-title">Kiwi Talkboard</p>
+                    <p class="text-muted">ニュージーランド在住の日本人向けに、情報共有を支援する掲示板アプリ。</p>
+                    <div class="item-tags" aria-label="使用技術">
+                        <span class="item-tag">HTML</span>
+                        <span class="item-tag">CSS</span>
+                        <span class="item-tag">JavaScript</span>
+                    </div>
+                </a>
             </div>
-            <div class="works-preview">
-                <span class="section-label">Selected Works</span>
-                <div class="work-preview-grid">
-                    <a href="works.html" class="work-item">
-                        <img src="../assets/images/appKIWI.jpg" alt="KIWI Talkboard"
-                             class="lightbox-trigger"
-                             data-lightbox="../assets/images/appKIWI.jpg"
-                             data-alt="KIWI Talkboard">
-                        <p class="work-title">KIWI Talkboard</p>
-                        <p class="text-muted">NZ在住日本人向けの情報共有トークボード</p>
-                    </a>
-                    <a href="works.html" class="work-item">
-                        <img src="../assets/images/banner-salt-pan.jpg" alt="バナー制作"
-                             class="lightbox-trigger"
-                             data-lightbox="../assets/images/banner-salt-pan.jpg"
-                             data-alt="バナー制作">
-                        <p class="work-title">バナー制作</p>
-                        <p class="text-muted">視認性と訴求力を意識したデザイン</p>
-                    </a>
+            <a href="works.html" class="contact-btn mt-30">すべての作品を見る →</a>
+        </section>
+
+        <section class="section-light">
+            <div class="container padding-bottom-100">
+                <span class="section-label">Skills &amp; Tools</span>
+                <h2 class="section-heading-large">技術スタック</h2>
+                <div class="tech-stack-grid">
+                    <div class="tech-stack-item">
+                        <span class="tech-label">Frontend</span>
+                        <div class="item-tags">
+                            <span class="item-tag">HTML</span>
+                            <span class="item-tag">CSS</span>
+                            <span class="item-tag">JavaScript</span>
+                            <span class="item-tag">TypeScript</span>
+                            <span class="item-tag">React Native</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack-item">
+                        <span class="tech-label">App &amp; Data</span>
+                        <div class="item-tags">
+                            <span class="item-tag">Expo</span>
+                            <span class="item-tag">SQLite</span>
+                            <span class="item-tag">Firebase</span>
+                        </div>
+                    </div>
+                    <div class="tech-stack-item">
+                        <span class="tech-label">Tools &amp; Quality</span>
+                        <div class="item-tags">
+                            <span class="item-tag">Git</span>
+                            <span class="item-tag">GitHub</span>
+                            <span class="item-tag">QA Testing</span>
+                            <span class="item-tag">Accessibility</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-light">
+            <div class="container two-col-grid">
+                <div>
+                    <span class="section-label">About Me / Mindset</span>
+                    <h2 class="section-heading-large">品質と使いやすさを、開発の土台に。</h2>
+                </div>
+                <div>
+                    <p class="body-copy">ERPシステムのテスト経験を通じて、細部まで確認する品質意識と、利用者の視点で課題を見つける姿勢を培いました。</p>
+                    <p class="body-copy">アクセシビリティやWeb標準にも配慮し、誰にとっても分かりやすく、安心して使えるプロダクトを目指しています。</p>
+                    <a href="about.html" class="contact-btn mt-30">詳しく見る →</a>
                 </div>
             </div>
         </section>
 
         <section class="section-accent">
             <div class="container">
-                <h2 class="section-cta-title">開発のご相談・お仕事依頼はこちら</h2>
-                <p class="muted-lead">品質と使いやすさを両立したプロダクトを一緒に作りませんか？</p>
+                <span class="section-label">Contact</span>
+                <h2 class="section-cta-title">お気軽にご連絡ください</h2>
+                <p class="muted-lead">お仕事のご相談やお問い合わせをお待ちしています。</p>
                 <a href="contact.html" class="cta-button">お問い合わせ</a>
+                <a href="https://github.com/tmiaka-coder" target="_blank" rel="noopener noreferrer" class="cta-button">GitHub</a>
+                <a href="https://www.linkedin.com/in/miaka-taniai" target="_blank" rel="noopener noreferrer" class="cta-button">LinkedIn</a>
             </div>
         </section>
 
