@@ -103,7 +103,7 @@
     "description": "レシート入力や店舗別のクイック選択で、ニュージーランドでの日々の支出を管理するミニマルな家計簿アプリ。パートナーとの支出共有やNZドルから日本円への換算にも対応しています。",
     "image": "../assets/images/app-smartbudget-nz.png",
     "imageAlt": "SmartBudget NZアプリのアイコン",
-    "link": "https://github.com/tmiaka-coder/my-works/tree/main/smart-budget-nz",
+    "link": "works/app/app-smart-budget-nz.html",
     "meta": {
       "category": "モバイルアプリ",
       "platform": "iOS / Android",

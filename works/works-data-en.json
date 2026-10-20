@@ -103,7 +103,7 @@
     "description": "A minimalist expense tracker for everyday spending in New Zealand, with receipt logging, store shortcuts, shared household expenses, and NZD-to-JPY reference.",
     "image": "assets/images/app-smartbudget-nz.png",
     "imageAlt": "SmartBudget NZ app icon",
-    "link": "https://github.com/tmiaka-coder/my-works/tree/main/smart-budget-nz",
+    "link": "works/app/app-smart-budget-nz.html",
     "meta": {
       "category": "Mobile App",
       "platform": "iOS / Android",
