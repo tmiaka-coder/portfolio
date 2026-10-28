@@ -110,5 +110,37 @@
       "timeline": "—",
       "tool": "React Native / Expo / TypeScript"
     }
+  },
+  {
+    "id": 8,
+    "category": "lp",
+    "categoryLabel": "LANDING PAGE",
+    "title": "Megan English",
+    "description": "「話せる英語」をテーマにした、オンライン英会話サービスのランディングページ。",
+    "image": "https://images.unsplash.com/photo-1521737711867-e3b97375f902?auto=format&fit=crop&w=1200&q=85",
+    "imageAlt": "オンラインで英会話を楽しむ人たち",
+    "link": "https://tmiaka-coder.github.io/my-works/Megan_english-lp/",
+    "meta": {
+      "category": "ランディングページ",
+      "platform": "Web",
+      "timeline": "—",
+      "tool": "HTML / CSS / JavaScript"
+    }
+  },
+  {
+    "id": 9,
+    "category": "lp",
+    "categoryLabel": "LANDING PAGE",
+    "title": "Beginner English",
+    "description": "英会話初心者向けオンライン英会話サービスのサンプルランディングページ。",
+    "image": "https://tmiaka-coder.github.io/my-works/beginner_english_lp/images/01.jpg",
+    "imageAlt": "初心者向けオンライン英会話LPのメインビジュアル",
+    "link": "https://tmiaka-coder.github.io/my-works/beginner_english_lp/",
+    "meta": {
+      "category": "ランディングページ",
+      "platform": "Web",
+      "timeline": "—",
+      "tool": "HTML / CSS / JavaScript"
+    }
   }
 ]
